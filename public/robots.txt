@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Staging / build artifacts (if ever exposed)
+Disallow: /dist/
+Disallow: /node_modules/
+
+# Sitemap
+Sitemap: https://bharatvow.com/sitemap.xml
+
+# Crawl-delay not required for Google; omit unless specific bot issues arise.

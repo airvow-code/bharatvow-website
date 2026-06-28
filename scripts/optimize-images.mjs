@@ -1,0 +1,326 @@
+/**
+ * Generates optimised WebP assets and src/generated/screenshots.js
+ * Run: npm run optimize:images (also runs before build)
+ */
+import { mkdirSync, existsSync, writeFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const root = path.resolve(__dirname, '..');
+const assetsDir = path.join(root, 'assets');
+const screenshotsDir = path.join(assetsDir, 'screenshots');
+const outDir = path.join(root, 'public', 'images');
+const screenshotsOutDir = path.join(outDir, 'screenshots');
+const generatedDir = path.join(root, 'src', 'generated');
+
+/** Canonical screenshot IDs → source filenames (first match wins; raster preferred over SVG). */
+const SCREENSHOT_CATALOG = [
+  {
+    id: 'bharatvow-splash',
+    files: [
+      'bharatvow-splash.webp',
+      'bharatvow-splash.png',
+      'bharatvow-splash.jpg',
+    ],
+  },
+  {
+    id: 'main-dashboard',
+    files: [
+      'home-dashboard.webp',
+      'home-dashboard.png',
+      'home-dashboard.jpg',
+      'main-dashboard.webp',
+      'main-dashboard.png',
+      'main-dashboard.svg',
+    ],
+  },
+  {
+    id: 'smart-khata',
+    files: [
+      'smart-khata-dashboard.webp',
+      'smart-khata.webp',
+      'smart-khata.png',
+      'smart-khata.jpg',
+      'smart-khata.svg',
+    ],
+  },
+  {
+    id: 'budget-pocket',
+    files: [
+      'budget-pocket-dashboard.webp',
+      'budget-pocket.webp',
+      'budget-pocket.png',
+      'budget-pocket.jpg',
+    ],
+  },
+  {
+    id: 'expenses-diary',
+    files: [
+      'expenses-dashboard.webp',
+      'expenses-diary-dashboard.webp',
+      'expenses-diary.webp',
+      'expenses-diary.png',
+    ],
+  },
+  {
+    id: 'event-book',
+    files: [
+      'event-book-dashboard.webp',
+      'event-book.webp',
+      'event-book.png',
+    ],
+  },
+  {
+    id: 'trip-ledger',
+    files: [
+      'trip-ledger-dashboard.webp',
+      'trip-ledger.webp',
+      'trip-ledger.png',
+    ],
+  },
+  {
+    id: 'vehicle-vault',
+    files: [
+      'vehicle-vault-dashboard.webp',
+      'vehicle-vault.webp',
+      'vehicle-vault.png',
+    ],
+  },
+  {
+    id: 'home-vault',
+    files: [
+      'home-vault-dashboard.webp',
+      'home-vault-dashboard.png',
+      'home-vault-dashboard.jpg',
+      'home-vault.webp',
+      'home-vault.png',
+      'home-vault.svg',
+    ],
+  },
+  {
+    id: 'days-reminder',
+    files: [
+      'days-reminder-dashboard.webp',
+      'days-reminder.webp',
+      'days-reminder.png',
+      'days-reminder.jpg',
+      'days-reminder.svg',
+    ],
+  },
+  {
+    id: 'grocery-bag',
+    files: [
+      'grocery-bag-dashboard.webp',
+      'grocery-bag.webp',
+      'grocery-bag.png',
+    ],
+  },
+  {
+    id: 'link-vault',
+    files: [
+      'link-vault-dashboard.webp',
+      'link-vault.webp',
+      'link-vault.png',
+      'link-vault.jpg',
+      'link-vault.svg',
+    ],
+  },
+  {
+    id: 'status-viewer',
+    files: [
+      'status-viewer-dashboard.webp',
+      'status-viewer.webp',
+      'status-viewer.png',
+    ],
+  },
+  {
+    id: 'place-store',
+    files: [
+      'place-store-dashboard.webp',
+      'place-store.webp',
+      'place-store.png',
+    ],
+  },
+];
+
+const RESPONSIVE_WIDTHS = [360, 480, 720];
+const DEFAULT_MAX_WIDTH = 720;
+
+const STATIC_ASSETS = [
+  {
+    input: path.join(assetsDir, 'icons', 'app-icon.png'),
+    output: path.join(outDir, 'app-mockup.webp'),
+    width: 560,
+    quality: 82,
+  },
+  {
+    input: path.join(assetsDir, 'logos', 'dashboard-header-logo.png'),
+    output: path.join(outDir, 'logo-header.webp'),
+    width: 320,
+    quality: 85,
+  },
+  {
+    /** Official app icon — navy field, white B mark; for dark footer per Logo_Usage.md */
+    input: path.join(assetsDir, 'icons', 'app-icon.png'),
+    output: path.join(outDir, 'logo-footer.webp'),
+    width: 96,
+    quality: 88,
+  },
+];
+
+function resolveSource(files) {
+  const raster = [];
+  const vector = [];
+  for (const file of files) {
+    const full = path.join(screenshotsDir, file);
+    if (!existsSync(full)) continue;
+    if (/\.svg$/i.test(file)) vector.push(full);
+    else raster.push(full);
+  }
+  if (raster.length) return { path: raster[0], isRaster: true };
+  if (vector.length) return { path: vector[0], isRaster: false };
+  return null;
+}
+
+function isPlaceholderSource(filePath, isRaster) {
+  if (!filePath) return true;
+  if (isRaster) return false;
+  return true;
+}
+
+async function optimiseScreenshot(sharp, source, id, isPlaceholder) {
+  const meta = await sharp(source).metadata();
+  const nativeWidth = meta.width ?? 560;
+  const nativeHeight = meta.height ?? 1120;
+
+  const outputs = [];
+  const widths = [
+    ...new Set(
+      RESPONSIVE_WIDTHS.filter((w) => w <= nativeWidth).concat(
+        nativeWidth <= DEFAULT_MAX_WIDTH ? [nativeWidth] : [DEFAULT_MAX_WIDTH],
+      ),
+    ),
+  ].sort((a, b) => a - b);
+
+  for (const w of widths) {
+    const outPath = path.join(screenshotsOutDir, `${id}-${w}.webp`);
+    await sharp(source)
+      .resize({ width: w, withoutEnlargement: true, fit: 'inside' })
+      .webp({ quality: 88 })
+      .toFile(outPath);
+
+    const optimised = await sharp(outPath).metadata();
+    outputs.push({
+      width: w,
+      path: `/images/screenshots/${id}-${w}.webp`,
+      displayWidth: optimised.width ?? w,
+      displayHeight: optimised.height ?? Math.round((w * nativeHeight) / nativeWidth),
+    });
+  }
+
+  const defaultOutput = outputs.find((o) => o.width === DEFAULT_MAX_WIDTH)
+    ?? outputs[outputs.length - 1];
+
+  const srcSet = outputs.map((o) => `${o.path} ${o.width}w`).join(', ');
+
+  return {
+    id,
+    width: nativeWidth,
+    height: nativeHeight,
+    src: defaultOutput.path,
+    srcSet,
+    sizes: '(max-width: 640px) 360px, (max-width: 1024px) 480px, 720px',
+    isPlaceholder,
+  };
+}
+
+async function optimiseFallbackMockup(sharp) {
+  const fallbackInput = path.join(assetsDir, 'icons', 'app-icon.png');
+  if (!existsSync(fallbackInput)) {
+    return {
+      width: 560,
+      height: 1120,
+      src: '/images/app-mockup.webp',
+      srcSet: '/images/app-mockup.webp 560w',
+      sizes: '560px',
+      isPlaceholder: true,
+    };
+  }
+  const meta = await sharp(fallbackInput).metadata();
+  return {
+    width: meta.width ?? 560,
+    height: meta.height ?? 1120,
+    src: '/images/app-mockup.webp',
+    srcSet: '/images/app-mockup.webp 560w',
+    sizes: '560px',
+    isPlaceholder: true,
+  };
+}
+
+function writeManifest(manifest, fallback) {
+  mkdirSync(generatedDir, { recursive: true });
+  const outPath = path.join(generatedDir, 'screenshots.js');
+  const body = `/** Auto-generated by scripts/optimize-images.mjs — do not edit manually */
+export const PLACEHOLDER_SCREENSHOT = ${JSON.stringify(fallback, null, 2)};
+
+export const SCREENSHOT_MANIFEST = ${JSON.stringify(manifest, null, 2)};
+
+export function getScreenshot(id) {
+  return SCREENSHOT_MANIFEST[id] ?? PLACEHOLDER_SCREENSHOT;
+}
+
+export function hasPlaceholderScreenshots(ids) {
+  return ids.some((id) => (SCREENSHOT_MANIFEST[id] ?? PLACEHOLDER_SCREENSHOT).isPlaceholder);
+}
+`;
+  writeFileSync(outPath, body, 'utf8');
+  console.log(`Generated → ${path.relative(root, outPath)}`);
+}
+
+async function run() {
+  let sharp;
+  try {
+    sharp = (await import('sharp')).default;
+  } catch {
+    console.warn('sharp not installed — skipping image optimisation. Run: npm install -D sharp');
+    process.exit(0);
+  }
+
+  mkdirSync(outDir, { recursive: true });
+  mkdirSync(screenshotsOutDir, { recursive: true });
+
+  for (const { input, output, width, quality } of STATIC_ASSETS) {
+    if (!existsSync(input)) {
+      console.warn(`Skip (missing): ${input}`);
+      continue;
+    }
+    await sharp(input).resize({ width, withoutEnlargement: true, fit: 'inside' }).webp({ quality }).toFile(output);
+    console.log(`Optimised → ${path.relative(root, output)}`);
+  }
+
+  const fallback = await optimiseFallbackMockup(sharp);
+  const manifest = {};
+
+  for (const { id, files } of SCREENSHOT_CATALOG) {
+    const resolved = resolveSource(files);
+    if (!resolved) {
+      console.warn(`No source for ${id} — using placeholder`);
+      manifest[id] = { id, ...fallback, isPlaceholder: true };
+      continue;
+    }
+
+    const placeholder = isPlaceholderSource(resolved.path, resolved.isRaster);
+    manifest[id] = await optimiseScreenshot(sharp, resolved.path, id, placeholder);
+    console.log(
+      `Optimised → ${id} (${placeholder ? 'placeholder' : 'real'}) from ${path.basename(resolved.path)}`,
+    );
+  }
+
+  writeManifest(manifest, fallback);
+}
+
+run().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

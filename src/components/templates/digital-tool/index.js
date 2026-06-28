@@ -1,0 +1,13 @@
+export { default as DigitalToolPageTemplate } from './DigitalToolPageTemplate';
+export { default as DigitalToolSection } from './DigitalToolSection';
+export { default as DigitalToolHero } from './DigitalToolHero';
+export { default as DigitalToolWhyExists } from './DigitalToolWhyExists';
+export { default as DigitalToolWhoShouldUse } from './DigitalToolWhoShouldUse';
+export { default as DigitalToolFeatures } from './DigitalToolFeatures';
+export { default as DigitalToolHowItWorks } from './DigitalToolHowItWorks';
+export { default as DigitalToolRealLifeExamples } from './DigitalToolRealLifeExamples';
+export { default as DigitalToolScreenshots } from './DigitalToolScreenshots';
+export { default as DigitalToolConnected } from './DigitalToolConnected';
+export { default as DigitalToolFaq } from './DigitalToolFaq';
+export { default as DigitalToolFinalCta } from './DigitalToolFinalCta';
+export { default as DigitalToolDashboardNav } from './DigitalToolDashboardNav';
