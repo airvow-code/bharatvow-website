@@ -32,6 +32,16 @@ export default function Header() {
     menuButtonRef.current?.focus();
   }, []);
 
+  const handleMobileNavClick = useCallback(() => {
+    closeMenu();
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: prefersReduced ? 'auto' : 'smooth',
+    });
+  }, [closeMenu]);
+
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
     return () => {
@@ -118,16 +128,7 @@ export default function Header() {
         </nav>
 
         {/* Desktop actions */}
-        <div className="hidden items-center justify-end gap-3 lg:flex xl:gap-4">
-          <span
-            className="inline-flex items-center gap-2 rounded-xl px-2 py-1.5 font-body text-sm font-medium text-muted"
-            aria-label="Sign in — coming soon"
-          >
-            Sign In
-            <span className="rounded-full bg-primary-soft px-2 py-0.5 font-display text-[10px] font-bold uppercase tracking-wide text-primary">
-              Soon
-            </span>
-          </span>
+        <div className="hidden items-center justify-end lg:flex">
           <Button
             href={SITE.playStoreUrl}
             size="sm"
@@ -192,7 +193,10 @@ export default function Header() {
           </button>
         </div>
 
-        <nav className="flex flex-1 flex-col gap-1 overflow-y-auto overscroll-contain px-3 py-4" aria-label="Mobile navigation">
+        <nav
+          className="flex flex-1 flex-col gap-1.5 overflow-y-auto overscroll-contain px-3 py-4 pb-[max(1rem,env(safe-area-inset-bottom))]"
+          aria-label="Mobile navigation"
+        >
           {HEADER_NAV.map((item) => (
             <HeaderNavLink
               key={item.id}
@@ -200,32 +204,10 @@ export default function Header() {
               label={item.label}
               active={isHeaderNavActive(item, pathname, hash)}
               mobile
-              onClick={closeMenu}
+              onClick={handleMobileNavClick}
             />
           ))}
         </nav>
-
-        <div className="space-y-3 border-t border-border p-4">
-          <span
-            className="flex items-center justify-between rounded-xl bg-canvas px-4 py-3 font-body text-sm font-medium text-muted"
-            aria-label="Sign in — coming soon"
-          >
-            Sign In
-            <span className="rounded-full bg-primary-soft px-2 py-0.5 font-display text-[10px] font-bold uppercase tracking-wide text-primary">
-              Soon
-            </span>
-          </span>
-          <Button
-            href={SITE.playStoreUrl}
-            size="md"
-            variant="secondary"
-            external
-            className="w-full rounded-xl shadow-md transition-transform duration-200 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
-            onClick={closeMenu}
-          >
-            Download App
-          </Button>
-        </div>
       </aside>
     </header>
   );
