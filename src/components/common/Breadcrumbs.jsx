@@ -7,7 +7,7 @@ export default function Breadcrumbs({ items, className }) {
 
   return (
     <nav aria-label="Breadcrumb" className={cn('border-b border-border bg-surface/80', className)}>
-      <ol className="mx-auto flex max-w-prose flex-wrap items-center gap-1 px-4 py-3 text-sm md:px-6 lg:px-8">
+      <ol className="mx-auto flex w-full max-w-container flex-wrap items-center gap-x-1 gap-y-1.5 px-4 py-3 text-sm md:px-6 lg:px-8">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
           const isFirst = index === 0;

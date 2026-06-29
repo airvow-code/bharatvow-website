@@ -105,10 +105,10 @@ export default function HeroPhonePreview({ className }) {
               role="tab"
               aria-selected={i === index}
               aria-label={screen.label}
-              className={cn(
-                'h-1.5 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2',
-                i === index ? 'w-6 bg-primary' : 'w-1.5 bg-border-strong',
-              )}
+                className={cn(
+                  'inline-flex h-11 min-w-[44px] items-center justify-center rounded-full px-2 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2',
+                  i === index ? 'w-8 bg-primary' : 'w-2 bg-border-strong',
+                )}
               onClick={() => setIndex(i)}
             />
           ))}

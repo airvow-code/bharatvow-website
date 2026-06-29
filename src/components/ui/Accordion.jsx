@@ -24,7 +24,7 @@ export function AccordionItem({
           id={`${id}-trigger`}
           aria-expanded={open}
           aria-controls={`${id}-panel`}
-          className="flex w-full items-start gap-3 rounded-2xl px-5 py-4 text-left transition-colors duration-200 hover:bg-canvas/60 md:gap-4 md:px-6 md:py-5"
+          className="flex w-full min-h-[44px] items-start gap-3 rounded-2xl px-5 py-4 text-left transition-colors duration-200 hover:bg-canvas/60 md:gap-4 md:px-6 md:py-5"
           onClick={() => onToggle(id)}
         >
           {Icon && (

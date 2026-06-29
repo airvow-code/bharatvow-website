@@ -23,8 +23,14 @@
   }
 
   body {
-    @apply bg-canvas font-body text-body antialiased;
+    @apply overflow-x-clip bg-canvas font-body text-body antialiased;
     -webkit-tap-highlight-color: transparent;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
   }
 
   h1,
@@ -50,5 +56,9 @@
 
   .contain-layout {
     contain: layout style;
+  }
+
+  .break-anywhere {
+    overflow-wrap: anywhere;
   }
 }

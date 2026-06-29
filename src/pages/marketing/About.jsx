@@ -198,14 +198,14 @@ export default function About() {
               <div className="space-y-4">
                 <a
                   href={`mailto:${ABOUT_PAGE.contact.email}`}
-                  className="flex items-center gap-3 text-primary-light hover:text-primary"
+                  className="flex break-anywhere items-center gap-3 text-primary-light hover:text-primary"
                 >
                   <Mail size={20} strokeWidth={2} aria-hidden />
                   <span className="font-medium">{ABOUT_PAGE.contact.email}</span>
                 </a>
                 <a
                   href={`tel:${ABOUT_PAGE.contact.phone.replace(/\s/g, '')}`}
-                  className="flex items-center gap-3 text-primary-light hover:text-primary"
+                  className="flex break-anywhere items-center gap-3 text-primary-light hover:text-primary"
                 >
                   <Phone size={20} strokeWidth={2} aria-hidden />
                   <span className="font-medium">{ABOUT_PAGE.contact.phone}</span>
@@ -214,7 +214,7 @@ export default function About() {
                   href={ABOUT_PAGE.contact.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-primary-light hover:text-primary"
+                  className="flex break-anywhere items-center gap-3 text-primary-light hover:text-primary"
                 >
                   <Globe size={20} strokeWidth={2} aria-hidden />
                   <span className="font-medium">{ABOUT_PAGE.contact.website}</span>

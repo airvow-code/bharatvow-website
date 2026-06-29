@@ -11,8 +11,8 @@ export default function DigitalToolHero({ module, valueProposition, heroScreen }
 
   return (
     <header className="border-b border-border bg-gradient-to-b from-primary-soft/70 via-primary-soft/30 to-canvas">
-      <div className="mx-auto grid max-w-container gap-10 px-4 py-12 md:px-6 md:py-16 lg:grid-cols-2 lg:items-center lg:gap-14 lg:px-8 lg:py-20">
-        <AnimateIn>
+      <div className="mx-auto grid min-w-0 max-w-container gap-10 px-4 py-12 md:px-6 md:py-16 lg:grid-cols-2 lg:items-center lg:gap-14 lg:px-8 lg:py-20">
+        <AnimateIn className="min-w-0">
           <p className="font-display text-[11px] font-bold uppercase tracking-[0.08em] text-eyebrow">
             Digital Tool
           </p>
@@ -22,10 +22,10 @@ export default function DigitalToolHero({ module, valueProposition, heroScreen }
             </div>
             {module.free && <Badge variant="free">Free</Badge>}
           </div>
-          <h1 className="mt-5 font-display text-3xl font-bold tracking-tight text-heading md:text-4xl lg:text-[2.75rem] lg:leading-tight">
+          <h1 className="mt-5 text-balance font-display text-2xl font-bold tracking-tight text-heading sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-tight">
             {module.name}
           </h1>
-          <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted md:text-xl">
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg md:text-xl">
             {valueProposition}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">

@@ -21,7 +21,7 @@ export default function DeleteAccount() {
   return (
     <LegalDocumentLayout page={page}>
       <InfoCard title={DELETE_ACCOUNT.warning.title} variant="warning">
-        <div className="flex gap-3">
+        <div className="flex flex-col gap-3 sm:flex-row">
           <AlertTriangle size={22} strokeWidth={2} className="shrink-0 text-secondary-dark" aria-hidden />
           <div>
             <p className="font-medium text-heading">Warning: {DELETE_ACCOUNT.warning.items[0]}</p>

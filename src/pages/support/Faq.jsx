@@ -126,7 +126,7 @@ export default function Faq() {
             type="button"
             onClick={() => handleCategory('all')}
             className={cn(
-              'rounded-xl border p-4 text-left transition-all duration-200 motion-safe:hover:-translate-y-0.5',
+              'min-h-[44px] rounded-xl border p-4 text-left transition-all duration-200 motion-safe:hover:-translate-y-0.5',
               category === 'all'
                 ? 'border-primary bg-primary-soft shadow-sm ring-1 ring-primary/10'
                 : 'border-border bg-surface hover:border-primary-mid',
@@ -144,7 +144,7 @@ export default function Faq() {
                 type="button"
                 onClick={() => handleCategory(cat.id)}
                 className={cn(
-                  'rounded-xl border p-4 text-left transition-all duration-200 motion-safe:hover:-translate-y-0.5',
+                  'min-h-[44px] rounded-xl border p-4 text-left transition-all duration-200 motion-safe:hover:-translate-y-0.5',
                   active
                     ? 'border-primary bg-primary-soft shadow-sm ring-1 ring-primary/10'
                     : 'border-border bg-surface hover:border-primary-mid',

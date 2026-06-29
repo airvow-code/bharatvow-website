@@ -10,7 +10,7 @@ export default function PageCtaBand({
   secondaryTo = digitalLifePath(),
 }) {
   return (
-    <div className="rounded-2xl border border-border bg-gradient-to-br from-primary-soft/40 to-canvas px-6 py-10 text-center md:px-10 md:py-12">
+    <div className="rounded-2xl border border-border bg-gradient-to-br from-primary-soft/40 to-canvas px-5 py-8 text-center sm:px-6 md:px-10 md:py-12">
       <p className="font-display text-xl font-bold text-heading md:text-2xl">{title}</p>
       {description && (
         <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-muted md:text-base">

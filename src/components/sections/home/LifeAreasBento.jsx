@@ -50,22 +50,22 @@ function LifeAreaCard({ area, delay }) {
             }
           }}
         >
-          <div className="flex items-start justify-between gap-3">
+          <div className="flex flex-wrap items-start justify-between gap-3">
             <div
               className={cn(
-                'flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl transition-transform duration-200 motion-safe:group-hover:scale-105',
+                'flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl transition-transform duration-200 motion-safe:group-hover:scale-105 sm:h-14 sm:w-14',
                 chipWrap(area.chip),
               )}
             >
               <Icon size={28} strokeWidth={1.75} aria-hidden />
             </div>
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-canvas px-2.5 py-1 font-body text-[11px] font-semibold uppercase tracking-wide text-primary">
+            <span className="inline-flex max-w-full shrink-0 items-center gap-1.5 rounded-full bg-canvas px-2.5 py-1 font-body text-[10px] font-semibold uppercase tracking-wide text-primary sm:text-[11px]">
               <span className="h-1.5 w-1.5 rounded-full bg-secondary" aria-hidden />
               {area.toolLabel}
             </span>
           </div>
 
-          <h3 className="mt-5 font-display text-xl font-bold leading-snug text-heading">
+          <h3 className="mt-5 font-display text-lg font-bold leading-snug text-heading sm:text-xl">
             {area.title}
           </h3>
           <p className="mt-2 flex-1 text-base leading-relaxed text-muted">{area.description}</p>

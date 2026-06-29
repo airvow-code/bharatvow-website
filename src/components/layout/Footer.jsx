@@ -8,8 +8,8 @@ export default function Footer() {
   return (
     <footer className="bg-primary-dark text-white">
       <Container className="py-section-y md:py-section-y-lg">
-        <div className="grid gap-12 lg:grid-cols-[1.5fr_repeat(3,1fr)]">
-          <div>
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_repeat(3,1fr)] lg:gap-12">
+          <div className="min-w-0 sm:col-span-2 lg:col-span-1">
             <OptimizedImage
               src={FOOTER_LOGO}
               alt=""
@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
 
           {FOOTER_COLUMNS.map(({ title, links }) => (
-            <div key={title}>
+            <div key={title} className="min-w-0">
               <h3 className="font-display text-xs font-bold uppercase tracking-wider text-on-dark-muted">
                 {title}
               </h3>

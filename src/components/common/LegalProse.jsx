@@ -119,7 +119,7 @@ export function ExternalLink({ href, children }) {
   return (
     <a
       href={href}
-      className="font-medium text-primary-light underline-offset-2 hover:text-primary hover:underline"
+      className="font-medium text-primary-light underline-offset-2 hover:text-primary hover:underline break-anywhere"
       {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
     >
       {children}
@@ -129,7 +129,7 @@ export function ExternalLink({ href, children }) {
 
 export function InternalLink({ to, children }) {
   return (
-    <Link to={to} className="font-medium text-primary-light underline-offset-2 hover:text-primary hover:underline">
+    <Link to={to} className="break-anywhere font-medium text-primary-light underline-offset-2 hover:text-primary hover:underline">
       {children}
     </Link>
   );

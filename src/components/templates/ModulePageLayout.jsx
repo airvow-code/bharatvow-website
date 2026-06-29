@@ -11,7 +11,7 @@ import { cn } from '@/utils/cn';
 function ContentSection({ title, children, className }) {
   return (
     <section className={cn('py-10 md:py-12', className)}>
-      <h2 className="font-display text-2xl font-bold text-heading md:text-[1.75rem]">{title}</h2>
+      <h2 className="font-display text-xl font-bold text-heading sm:text-2xl md:text-[1.75rem]">{title}</h2>
       <div className="mt-4">{children}</div>
     </section>
   );
@@ -24,15 +24,15 @@ export default function ModulePageLayout({ module, page, openFaqId, onToggleFaq 
 
   return (
     <Container className="pb-section-y md:pb-section-y-lg">
-      <div className="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-14">
-        <div>
+      <div className="grid min-w-0 gap-10 lg:grid-cols-2 lg:items-start lg:gap-14">
+        <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-3">
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-soft text-primary">
               <Icon size={28} strokeWidth={1.75} aria-hidden />
             </div>
             {module.free && <Badge variant="free">Free</Badge>}
           </div>
-          <h1 className="mt-6 font-display text-3xl font-bold text-heading md:text-4xl">
+          <h1 className="mt-6 text-balance font-display text-2xl font-bold text-heading sm:text-3xl md:text-4xl">
             {page.headline}
           </h1>
           <p className="mt-4 text-lg leading-relaxed text-muted">{page.purpose}</p>

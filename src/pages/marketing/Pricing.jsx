@@ -124,7 +124,7 @@ export default function Pricing() {
                 className={cn(
                   'relative flex h-full flex-col p-6 md:p-8',
                   plan.highlighted &&
-                    'border-primary-mid shadow-md ring-2 ring-primary/15 md:scale-[1.02]',
+                    'border-primary-mid shadow-md ring-2 ring-primary/15 lg:scale-[1.02]',
                 )}
               >
                 {plan.badge && (
@@ -136,7 +136,7 @@ export default function Pricing() {
                   <Icon size={20} strokeWidth={2} aria-hidden />
                 </div>
                 <h2 className="mt-4 font-display text-xl font-bold text-heading">{plan.name}</h2>
-                <p className="mt-3 font-display text-3xl font-bold tracking-tight text-primary md:text-4xl">
+                <p className="mt-3 font-display text-2xl font-bold tracking-tight text-primary sm:text-3xl md:text-4xl">
                   {plan.price}
                   <span className="text-base font-normal text-muted">{plan.period}</span>
                 </p>
@@ -239,7 +239,7 @@ export default function Pricing() {
 
         {/* Final CTA */}
         <div className="mx-auto mt-14 max-w-2xl">
-          <div className="rounded-2xl border border-border bg-gradient-to-br from-primary-soft/40 to-canvas px-6 py-10 text-center md:px-10 md:py-12">
+          <div className="rounded-2xl border border-border bg-gradient-to-br from-primary-soft/40 to-canvas px-5 py-8 text-center sm:px-6 md:px-10 md:py-12">
             <p className="font-display text-xl font-bold text-heading md:text-2xl">
               {PRICING_PAGE.cta.title}
             </p>

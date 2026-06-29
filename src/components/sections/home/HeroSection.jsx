@@ -51,15 +51,15 @@ export default function HeroSection() {
     >
       {/* Subtle background shapes */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute -right-24 top-8 h-80 w-80 rounded-full bg-primary-soft/50 blur-3xl md:-right-16 md:top-12 md:h-96 md:w-96" />
-        <div className="absolute -left-20 bottom-0 h-64 w-64 rounded-full bg-secondary-soft/40 blur-3xl md:-left-12 md:h-72 md:w-72" />
+        <div className="absolute -right-12 top-8 h-56 w-56 rounded-full bg-primary-soft/50 blur-3xl sm:-right-16 sm:h-72 sm:w-72 md:top-12 md:h-96 md:w-96" />
+        <div className="absolute -left-12 bottom-0 h-48 w-48 rounded-full bg-secondary-soft/40 blur-3xl sm:-left-12 sm:h-64 sm:w-64 md:h-72 md:w-72" />
         <div className="absolute left-1/2 top-0 h-px w-[min(100%,48rem)] -translate-x-1/2 bg-gradient-to-r from-transparent via-border to-transparent" />
       </div>
 
       <Container className="relative">
-        <div className="grid items-center gap-10 pb-12 pt-8 md:gap-12 md:pb-16 md:pt-12 lg:grid-cols-[minmax(0,1fr)_minmax(280px,380px)] lg:gap-14 lg:pb-20 lg:pt-14 xl:grid-cols-[minmax(0,1.05fr)_minmax(300px,400px)]">
+        <div className="grid min-w-0 items-center gap-10 pb-12 pt-8 md:gap-12 md:pb-16 md:pt-12 lg:grid-cols-[minmax(0,1fr)_minmax(280px,380px)] lg:gap-14 lg:pb-20 lg:pt-14 xl:grid-cols-[minmax(0,1.05fr)_minmax(300px,400px)]">
           {/* Copy column — first on mobile */}
-          <div className="flex flex-col justify-center">
+          <div className="flex min-w-0 flex-col justify-center">
             <AnimateIn>
               <p className="font-display text-[11px] font-bold uppercase tracking-[0.1em] text-eyebrow">
                 {HERO.eyebrow}
@@ -76,7 +76,7 @@ export default function HeroSection() {
             </AnimateIn>
 
             <AnimateIn delay={120}>
-              <p className="mt-5 max-w-hero-copy text-lg leading-relaxed text-body md:text-xl">
+              <p className="mt-5 max-w-hero-copy text-base leading-relaxed text-body sm:text-lg md:text-xl">
                 {HERO.description}
               </p>
             </AnimateIn>

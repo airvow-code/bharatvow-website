@@ -53,7 +53,7 @@ export default function DigitalToolScreenshots({ toolName, screens }) {
       description="Real app screens — swipe or select a preview below."
       align="left"
     >
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(280px,340px)] lg:items-start lg:gap-14">
+      <div className="grid min-w-0 gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(280px,340px)] lg:items-start lg:gap-14">
         <AnimateIn className="order-2 lg:order-1">
           <ul className="grid gap-3 sm:grid-cols-2">
             {items.map((item, i) => (
@@ -62,7 +62,7 @@ export default function DigitalToolScreenshots({ toolName, screens }) {
                   type="button"
                   onClick={() => setActiveIndex(i)}
                   className={cn(
-                    'w-full rounded-2xl border px-4 py-4 text-left transition-all duration-300 motion-reduce:transition-none',
+                    'min-h-[44px] w-full rounded-2xl border px-4 py-4 text-left transition-all duration-300 motion-reduce:transition-none',
                     i === activeIndex
                       ? 'border-primary-mid bg-primary-soft/50 shadow-sm ring-1 ring-primary/10'
                       : 'border-border bg-white hover:border-primary-mid/60 hover:bg-canvas',

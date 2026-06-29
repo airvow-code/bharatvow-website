@@ -29,7 +29,7 @@ function TraditionalColumn() {
         </p>
         <p className="mt-2 text-sm leading-relaxed text-muted">{traditional.caption}</p>
 
-        <div className="mt-8 grid grid-cols-3 gap-3 sm:gap-4">
+        <div className="mt-8 grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:gap-4">
           {traditional.apps.map(({ icon: Icon, label }, i) => (
             <AnimateIn key={label} delay={80 + i * 50}>
               <div

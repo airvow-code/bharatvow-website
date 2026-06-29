@@ -19,8 +19,8 @@ export default function Testimonials() {
       <div className="grid gap-6 md:grid-cols-2">
         {TESTIMONIALS.map(({ quote, name, location, role }, i) => (
           <AnimateIn key={name} delay={i * 70}>
-            <SurfaceCard variant="quote" className="h-full p-8">
-              <p className="font-display text-4xl leading-none text-secondary" aria-hidden>
+            <SurfaceCard variant="quote" className="h-full p-6 md:p-8">
+              <p className="font-display text-3xl leading-none text-secondary md:text-4xl" aria-hidden>
                 &ldquo;
               </p>
               <blockquote className="mt-2">

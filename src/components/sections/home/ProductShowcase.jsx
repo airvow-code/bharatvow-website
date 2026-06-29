@@ -81,7 +81,7 @@ function ToolListItem({ tool, active, locked, onEnter, onLeave, onSelect }) {
     <button
       type="button"
       className={cn(
-        'group flex w-full items-start gap-4 rounded-2xl border px-4 py-4 text-left transition-all duration-300 motion-reduce:transition-none',
+        'group flex w-full min-h-[44px] items-start gap-4 rounded-2xl border px-4 py-4 text-left transition-all duration-300 motion-reduce:transition-none',
         active
           ? 'border-primary-mid bg-primary-soft/50 shadow-sm ring-1 ring-primary/10'
           : 'border-border bg-white hover:border-primary-mid/60 hover:bg-canvas hover:shadow-sm',
@@ -204,13 +204,13 @@ export default function ProductShowcase() {
               ))}
             </ul>
 
-            <ul className="mt-6 flex gap-2 overflow-x-auto pb-1 lg:hidden">
+            <ul className="mt-6 flex snap-x snap-mandatory gap-2 overflow-x-auto pb-1 lg:hidden">
               {tools.map((tool, i) => (
-                <li key={tool.id} className="list-none shrink-0">
+                <li key={tool.id} className="list-none shrink-0 snap-start">
                   <button
                     type="button"
                     className={cn(
-                      'rounded-full border px-3 py-1.5 text-xs font-medium transition-colors',
+                      'inline-flex min-h-[44px] items-center rounded-full border px-3.5 py-2 text-xs font-medium transition-colors',
                       i === mobileIndex
                         ? 'border-primary bg-primary text-white'
                         : 'border-border bg-white text-muted',

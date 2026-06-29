@@ -44,7 +44,7 @@ export default function DigitalToolDashboardNav({ slug }) {
                     <PrevIcon size={20} strokeWidth={1.75} aria-hidden />
                   </div>
                 )}
-                <p className="font-display text-lg font-bold text-heading">{previous.label}</p>
+                <p className="min-w-0 font-display text-base font-bold text-heading sm:text-lg">{previous.label}</p>
               </div>
             </SurfaceCard>
           </Link>
@@ -64,7 +64,7 @@ export default function DigitalToolDashboardNav({ slug }) {
                 <ArrowRight size={16} strokeWidth={2} aria-hidden />
               </span>
               <div className="mt-4 flex items-center justify-end gap-3 text-right">
-                <p className="font-display text-lg font-bold text-heading">{next.label}</p>
+                <p className="min-w-0 font-display text-base font-bold text-heading sm:text-lg">{next.label}</p>
                 {NextIcon && (
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary-soft text-primary">
                     <NextIcon size={20} strokeWidth={1.75} aria-hidden />
@@ -86,7 +86,7 @@ export default function DigitalToolDashboardNav({ slug }) {
                 <ArrowRight size={16} strokeWidth={2} aria-hidden />
               </span>
               <div className="mt-4 flex items-center justify-end gap-3 text-right">
-                <p className="font-display text-lg font-bold text-heading">All Digital Tools</p>
+                <p className="min-w-0 font-display text-base font-bold text-heading sm:text-lg">All Digital Tools</p>
               </div>
             </SurfaceCard>
           </Link>

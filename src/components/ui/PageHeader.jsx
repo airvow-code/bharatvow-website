@@ -8,13 +8,13 @@ export default function PageHeader({ eyebrow, title, lead, leadClassName, sublea
         className,
       )}
     >
-      <div className="mx-auto max-w-prose px-4 md:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-container px-4 md:px-6 lg:px-8">
         {eyebrow && (
           <p className="font-display text-[11px] font-bold uppercase tracking-[0.08em] text-eyebrow">
             {eyebrow}
           </p>
         )}
-        <h1 className="mt-2 font-display text-3xl font-bold tracking-tight text-heading md:text-4xl">
+        <h1 className="mt-2 text-balance font-display text-2xl font-bold tracking-tight text-heading sm:text-3xl md:text-4xl">
           {title}
         </h1>
         {lead && (

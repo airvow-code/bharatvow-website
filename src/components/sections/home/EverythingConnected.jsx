@@ -112,7 +112,7 @@ function WorkflowPanel({ flow, index, isActive, isExpanded, onToggle, onHover, o
         >
         <button
           type="button"
-          className="flex w-full items-start justify-between gap-4 p-5 text-left md:hidden"
+          className="flex w-full min-h-[44px] items-start justify-between gap-4 p-5 text-left md:hidden"
           aria-expanded={isExpanded}
           onClick={() => onToggle(flow.id)}
         >
@@ -140,7 +140,7 @@ function WorkflowPanel({ flow, index, isActive, isExpanded, onToggle, onHover, o
           )}
         >
           {/* Desktop: horizontal connected flow */}
-          <div className="hidden overflow-x-auto pb-1 md:flex md:items-stretch">
+          <div className="hidden min-w-0 overflow-x-auto pb-1 md:flex md:items-stretch">
             {flow.steps.map((step, i) => (
               <div key={step.title} className="flex min-w-[9.5rem] flex-1 items-center">
                 {i > 0 && <FlowConnector active={isActive} />}

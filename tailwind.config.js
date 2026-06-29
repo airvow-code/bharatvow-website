@@ -56,8 +56,14 @@ export default {
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'display-xl': ['3.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '800' }],
-        'display-lg': ['3rem', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '800' }],
+        'display-xl': [
+          'clamp(1.75rem, 5vw + 1rem, 3.5rem)',
+          { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '800' },
+        ],
+        'display-lg': [
+          'clamp(1.625rem, 4vw + 1rem, 3rem)',
+          { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '800' },
+        ],
       },
       boxShadow: {
         sm: '0 1px 2px rgba(5, 32, 78, 0.06), 0 1px 3px rgba(5, 32, 78, 0.08)',

@@ -18,7 +18,7 @@ function ModuleRow({ module, delay }) {
       <Link
         to={digitalLifePath(module.slug)}
         className={cn(
-          'flex h-full gap-3 rounded-xl border border-border bg-surface px-4 py-3 transition-colors hover:border-primary-mid hover:bg-primary-soft/30',
+          'flex min-h-[44px] gap-3 rounded-xl border border-border bg-surface px-4 py-3 transition-colors hover:border-primary-mid hover:bg-primary-soft/30',
           module.free && 'border-accent-green/25 bg-accent-green-soft/30',
         )}
       >

@@ -26,7 +26,7 @@ export default function Section({
       className={cn('scroll-mt-20 py-section-y md:py-section-y-lg', tones[tone], className)}
       {...(labelledBy ? { 'aria-labelledby': labelledBy } : {})}
     >
-      <div className={cn('mx-auto w-full max-w-container px-4 md:px-6 lg:px-8', containerClassName)}>
+      <div className={cn('mx-auto w-full min-w-0 max-w-container px-4 md:px-6 lg:px-8', containerClassName)}>
         {children}
       </div>
     </Tag>

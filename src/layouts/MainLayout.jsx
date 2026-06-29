@@ -12,14 +12,14 @@ export default function MainLayout() {
   const showStickyDownload = pathname === '/';
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen min-w-0 flex-col overflow-x-clip">
       <ScrollToTop />
       <HashScroll />
       <SkipLink />
       <Header />
       <main
         id="main-content"
-        className={cn('flex-1 scroll-mt-[72px]', showStickyDownload && 'pb-20 lg:pb-0')}
+        className={cn('min-w-0 flex-1 scroll-mt-[72px]', showStickyDownload && 'pb-20 lg:pb-0')}
         tabIndex={-1}
       >
         <Outlet />

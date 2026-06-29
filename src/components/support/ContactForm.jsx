@@ -8,7 +8,7 @@ import { cn } from '@/utils/cn';
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const inputClass = cn(
-  'w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-heading shadow-sm',
+  'min-h-[44px] w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-heading shadow-sm',
   'placeholder:text-subtle transition-colors duration-200',
   'focus:border-primary-mid focus:outline-none focus:ring-2 focus:ring-primary/15',
 );

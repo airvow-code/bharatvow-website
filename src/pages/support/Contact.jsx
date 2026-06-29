@@ -64,7 +64,7 @@ export default function Contact() {
             </p>
             <a
               href={`mailto:${SITE.email}`}
-              className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary-light hover:text-primary"
+              className="mt-4 inline-flex break-anywhere items-center gap-2 text-sm font-medium text-primary-light hover:text-primary"
             >
               <Mail size={16} strokeWidth={2} aria-hidden />
               {SITE.email}
@@ -81,7 +81,7 @@ export default function Contact() {
             </p>
             <a
               href={`tel:${SITE.phone.replace(/\s/g, '')}`}
-              className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary-light hover:text-primary"
+              className="mt-4 inline-flex break-anywhere items-center gap-2 text-sm font-medium text-primary-light hover:text-primary"
             >
               <Phone size={16} strokeWidth={2} aria-hidden />
               {SITE.phone}
@@ -185,7 +185,7 @@ export default function Contact() {
                 key={path}
                 to={path}
                 className={cn(
-                  'rounded-full border border-border bg-surface px-4 py-2 text-sm font-medium',
+                  'rounded-full border border-border bg-surface px-4 py-2.5 text-sm font-medium min-h-[44px] inline-flex items-center',
                   'transition-colors duration-200 hover:border-primary-mid hover:bg-primary-soft/40',
                 )}
               >
@@ -229,7 +229,7 @@ export default function Contact() {
 
         {/* Final CTA */}
         <div className="mx-auto mt-14 max-w-2xl">
-          <div className="rounded-2xl border border-border bg-gradient-to-br from-primary-soft/40 to-canvas px-6 py-10 text-center md:px-10 md:py-12">
+          <div className="rounded-2xl border border-border bg-gradient-to-br from-primary-soft/40 to-canvas px-5 py-8 text-center sm:px-6 md:px-10 md:py-12">
             <p className="font-display text-xl font-bold text-heading md:text-2xl">{CONTACT.cta.title}</p>
             <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-muted md:text-base">
               {CONTACT.cta.description}

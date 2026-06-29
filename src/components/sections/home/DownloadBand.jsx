@@ -35,7 +35,7 @@ export default function DownloadBand() {
     >
       <Container>
         <AnimateIn>
-          <div className="relative overflow-hidden rounded-[2rem] border border-border/80 bg-surface/95 px-6 py-12 shadow-card backdrop-blur-sm md:px-12 md:py-16 lg:px-16 lg:py-20">
+          <div className="relative overflow-hidden rounded-[2rem] border border-border/80 bg-surface/95 px-5 py-10 shadow-card backdrop-blur-sm sm:px-6 sm:py-12 md:px-12 md:py-16 lg:px-16 lg:py-20">
             <div
               aria-hidden
               className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-secondary-soft/50 blur-3xl"
@@ -56,7 +56,7 @@ export default function DownloadBand() {
 
               <h2
                 id="final-cta-heading"
-                className="mt-4 text-balance font-display text-3xl font-bold leading-tight text-heading md:text-4xl lg:text-[2.5rem]"
+                className="mt-4 text-balance font-display text-2xl font-bold leading-tight text-heading sm:text-3xl md:text-4xl lg:text-[2.5rem]"
               >
                 {title}
               </h2>

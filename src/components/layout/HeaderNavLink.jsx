@@ -19,7 +19,7 @@ function HeaderNavLink({ to, label, active, onClick, className, mobile = false }
         'group relative font-body font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2',
         mobile
           ? cn(
-              'rounded-xl px-4 py-3 text-base',
+              'min-h-[44px] rounded-xl px-4 py-3 text-base',
               active
                 ? 'bg-primary-soft text-primary'
                 : 'text-primary hover:bg-primary-soft/70',

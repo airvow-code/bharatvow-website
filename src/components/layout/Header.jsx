@@ -86,7 +86,7 @@ export default function Header() {
           : 'border-b border-transparent bg-cream/60 backdrop-blur-[2px]',
       )}
     >
-      <Container className="relative flex h-[72px] items-center justify-between gap-3 lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-6 xl:gap-8">
+      <Container className="relative flex h-[72px] min-w-0 items-center justify-between gap-3 lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-6 xl:gap-8">
         {/* Logo */}
         <Link
           to="/"
@@ -184,7 +184,7 @@ export default function Header() {
           <span className="font-display text-sm font-bold text-heading">Menu</span>
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-primary hover:bg-primary-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-primary hover:bg-primary-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
             aria-label="Close menu"
             onClick={closeMenu}
           >
@@ -192,7 +192,7 @@ export default function Header() {
           </button>
         </div>
 
-        <nav className="flex flex-1 flex-col gap-1 overflow-y-auto px-3 py-4" aria-label="Mobile navigation">
+        <nav className="flex flex-1 flex-col gap-1 overflow-y-auto overscroll-contain px-3 py-4" aria-label="Mobile navigation">
           {HEADER_NAV.map((item) => (
             <HeaderNavLink
               key={item.id}
