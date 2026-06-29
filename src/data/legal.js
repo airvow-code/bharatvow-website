@@ -1,15 +1,15 @@
 import { SITE } from '@/utils/constants';
 import { LEGAL_PATHS } from '@/config/paths';
 
-const LAST_UPDATED = '28 June 2026';
-const EFFECTIVE_DATE = '28 June 2026';
+const LAST_UPDATED = '30 June 2026';
+const EFFECTIVE_DATE = '30 June 2026';
 
 export const LEGAL_PAGES = {
   'privacy-policy': {
     id: 'privacy-policy',
     title: 'Privacy Policy',
     description:
-      'How BharatVow collects, uses, stores, and protects your information on Android and bharatvow.com.',
+      'How BharatVow collects, uses, stores, and protects your information — including Android permissions, optional Accessibility Service, contacts, cloud backup, and your rights.',
     path: LEGAL_PATHS.privacyPolicy,
     effectiveDate: EFFECTIVE_DATE,
     lastUpdated: LAST_UPDATED,
@@ -17,7 +17,7 @@ export const LEGAL_PAGES = {
     keywords: 'BharatVow privacy policy, data protection India, personal data BharatVow',
     seo: {
       ogTitle: 'Privacy Policy | BharatVow',
-      ogDescription: 'How BharatVow handles your personal information — collection, use, storage, and your rights.',
+      ogDescription: 'How BharatVow handles your personal information — permissions, optional Accessibility Service, data use, storage, and your rights.',
     },
     sections: [
       {
@@ -34,13 +34,14 @@ export const LEGAL_PAGES = {
         ],
         list: [
           'Banking services',
-          'Wallet or e-wallet services',
+          'Regulated wallet, payment bank, or licensed e-wallet services',
           'Payment, money transfer, or settlement services',
           'Lending, borrowing facilitation, or credit services',
           'Investment, trading, or insurance services',
           'Financial institution, payment aggregator, or payment bank services',
         ],
         afterList: [
+          'BharatVow is not a regulated bank, payment bank, payment aggregator, or licensed e-wallet. Where the app shows in-app balance, purchase wallet, or SP wallet features, those credits are for BharatVow app subscriptions and eligible in-app services only — not a general-purpose stored-value account or bank deposit.',
           'Digital Tools record information you enter. They do not move funds on your behalf. App subscription billing is handled through Google Play only.',
         ],
       },
@@ -54,6 +55,9 @@ export const LEGAL_PAGES = {
               'Name and profile details you choose to add',
               'PIN (stored securely for app access on your device)',
               'Records you enter in Digital Tools — such as khata entries, expenses, home records, vehicle details, events, grocery lists, trips, links, and saved places',
+              'Contact details you choose to import, select, or save in supported tools — for example when picking recipients for user-initiated messages or saving contacts linked to your records',
+              'Message content you compose when you manually start a supported sending action in Smart Khata, Event Book, or Days Reminder',
+              'Photos, documents, audio, or other media you choose to capture or attach to your records',
               'Support and grievance correspondence when you contact us',
             ],
           },
@@ -71,34 +75,162 @@ export const LEGAL_PAGES = {
             heading: '2.3 Automatically collected information',
             list: [
               'Device type, operating system version, and app version',
-              'Diagnostic and security log data (such as crash logs if enabled)',
+              'Server-side diagnostic and security log data when you use online features (such as login, backup, or subscription services), where applicable',
               'IP address when connecting to our servers for login, backup, or subscription services',
             ],
           },
           {
             heading: '2.4 Cloud backup data',
             paragraphs: [
-              'If you enable optional cloud backup for applicable modules, encrypted backup data is stored on our cloud infrastructure so you can restore records when changing phones. Link Vault and Status Viewer are not included in master cloud backup scope.',
+              'Cloud backup is optional. You must explicitly enable it for supported premium modules in the app — it is never turned on without your action.',
+              'When enabled, module records you choose to back up are transmitted to our servers using encrypted connections (HTTPS/TLS) where implemented, and stored so you can restore records when changing phones.',
+              'Master cloud backup stores encrypted module payloads on Google Firebase / Cloud Firestore when you run backup for supported premium modules. Photos attached to backed-up records may be uploaded to Cloudinary so they can be restored from cloud URLs.',
+              'Optional Google Drive backup (where available in the app): If you choose to back up to Google Drive, you sign in with your Google account and upload a copy of your local app database to your Google Drive. This is separate from master cloud backup on BharatVow servers and is governed by Google\'s terms.',
+              'You can disable cloud backup in app settings where that option is available. Disabling backup stops new backup uploads; existing backup copies remain until you delete them, delete your account, or we remove them under our Delete Account policy.',
+              'Master cloud backup applies only to supported premium modules. Link Vault and Status Viewer are not included in master cloud backup scope.',
+              'Backup copies may include contact names, numbers, or message text you saved inside BharatVow records (for example guest lists or reminder entries) — not your entire device contact list.',
             ],
           },
           {
-            heading: '2.5 Device permissions and sensitive data',
+            heading: '2.4A Firebase / Cloud Firestore',
             paragraphs: [
-              'BharatVow requests Android permissions only when a feature you choose to use requires them. You may decline a permission; the related feature may not work until permission is granted.',
+              'BharatVow uses Google Firebase / Cloud Firestore for specific online features you choose to use, including:',
             ],
             list: [
-              'Phone — mobile number and OTP verification for login, account security, and account deletion confirmation (BharatVow does not use Google Sign-In for account login)',
-              'SMS — used only as needed to receive or verify OTP messages for authentication where supported on your device',
-              'Storage and media / photos — Status Viewer: read status media from a folder you explicitly select; Vehicle Vault and other tools: save photos or documents you choose to attach to your personal records',
-              'Camera — when you choose to capture a photo for vehicle documents or similar attachments in-app',
-              'Location — Place Store: set and preview map pins for places you save; BharatVow does not provide turn-by-turn navigation',
-              'Notifications — BharatVow does not currently send push notifications. Days Reminder and similar tools show reminders inside the app when you open it',
-              'Internet / network — login, optional cloud backup, subscription verification, and support requests',
+              'Optional master module cloud backup — encrypted record payloads linked to your registered mobile number',
+              'Trip Ledger collaboration — trip codes, participant names, and shared expense sync when you join or create a shared trip',
+              'Optional user-initiated record sharing in supported tools — for example when you explicitly choose to upload selected module records to the cloud',
             ],
             afterList: [
-              'BharatVow does not access your device contact list. Names in Smart Khata and other tools are personal entries you type yourself.',
-              'BharatVow does not use the device microphone.',
-              'BharatVow does not use Google Sign-In. Account access uses OTP verification to your registered mobile number and an app PIN.',
+              'Firestore data is transmitted over HTTPS/TLS. Master module backup encrypts record payloads on the device before upload where implemented. Other Firestore writes follow the feature you use and may not use the same encryption method.',
+            ],
+          },
+          {
+            heading: '2.5 Android permissions — overview',
+            paragraphs: [
+              'BharatVow requests Android permissions only when a feature you choose to use requires them. Most permissions are optional: if you decline, the related feature may not work until permission is granted in Android settings.',
+              'Below we explain why each permission is requested, when it is requested, whether it is optional, and how you can disable it (Android Settings → Apps → BharatVow → Permissions). BharatVow does not use Google Sign-In. Account access uses OTP verification to your registered mobile number and an app PIN.',
+            ],
+          },
+          {
+            heading: '2.5A Internet (INTERNET)',
+            paragraphs: [
+              'Why: To sign in with OTP, verify subscriptions, use optional cloud backup, and contact support when you choose online features.',
+              'When: When you use features that need a network connection.',
+              'Optional: Core local record-keeping on your device does not require constant internet access, but login, backup, and subscription services do when you use them.',
+              'Disable: You can restrict background data in Android settings; online features will not work without network access.',
+            ],
+          },
+          {
+            heading: '2.5B Account verification (OTP)',
+            paragraphs: [
+              'Why: To verify your registered mobile number during registration, login, account security steps, and account deletion confirmation using one-time passwords (OTP).',
+              'When: Only when you start sign-in, verification, or account deletion flows that require OTP.',
+              'How: An OTP is sent to your mobile number through our authentication services over the internet (see §2.5A). You enter the OTP in the app to complete verification. BharatVow does not use Google Sign-In.',
+              'Optional: You cannot use BharatVow without completing OTP verification for your registered mobile number.',
+              'Disable: Not applicable for core account access — OTP verification is required to create and use an account.',
+            ],
+          },
+          {
+            heading: '2.5C Contacts (READ_CONTACTS)',
+            paragraphs: [
+              'Why: To let you import contacts or select recipients when you use features that involve people in your records or user-initiated messages.',
+              'When: Only when you tap an action that opens contact selection or import — for example choosing guests in Event Book, recipients in Days Reminder, or contacts in Smart Khata before you manually start a supported sending action.',
+              'READ_CONTACTS: Used only to show contacts you choose to pick for import or recipient selection. BharatVow does not read, sync, or automatically upload your complete device contact list to our servers.',
+              'BharatVow does not declare WRITE_CONTACTS. The app does not save or modify contacts on your device phonebook.',
+              'Optional: Yes. You can enter names and numbers manually instead of importing or selecting device contacts.',
+              'Disable: Deny Contacts permission in Android settings, or do not use contact import or selection actions.',
+            ],
+          },
+          {
+            heading: '2.5D Camera (CAMERA)',
+            paragraphs: [
+              'Why: So you can capture bills, receipts, documents, profile images, vehicle papers, or other photos you choose to attach to your personal records.',
+              'When: Only when you tap to take a photo inside a supported Digital Tool.',
+              'Optional: Yes. You can use existing files from storage instead of the camera where the app allows.',
+              'Disable: Deny Camera permission in Android settings, or avoid in-app capture actions.',
+            ],
+          },
+          {
+            heading: '2.5E Photos, videos, and files (storage and media permissions)',
+            paragraphs: [
+              'Permissions may include READ_EXTERNAL_STORAGE (maxSdkVersion 32 on older Android versions), WRITE_EXTERNAL_STORAGE (maxSdkVersion 29 on older Android versions), READ_MEDIA_IMAGES, READ_MEDIA_VIDEO, READ_MEDIA_VISUAL_USER_SELECTED, and related media access on your Android version.',
+              'Why: So you can attach, save, or browse photos and videos you choose — for example status media in Status Viewer (from a folder you explicitly allow via Android\'s folder picker), photos in Vehicle Vault or Home Vault, or files you add to your records.',
+              'When: Only when you choose to pick, save, or attach media or files in the app.',
+              'Optional: Yes for each attachment action. Status Viewer works only for folders or selections you approve.',
+              'Exports (PDF/Excel): Generated in the app\'s private storage and shared through your device\'s share sheet — not by writing directly to public Downloads with legacy storage permission.',
+              'Disable: Deny storage/media permissions in Android settings, or do not use attach/save/browse actions that require them.',
+            ],
+          },
+          {
+            heading: '2.5G Location (ACCESS_COARSE_LOCATION, ACCESS_FINE_LOCATION)',
+            paragraphs: [
+              'Why: For location-enabled features such as saving places in Place Store, setting or previewing map pins, and sharing event location details you choose to send in Event Book.',
+              'When: Only when you use a feature that needs location — for example adding a place, previewing a saved pin, or attaching location details to an event you are organizing.',
+              'Optional: Yes. You can enter or adjust location details manually where the app allows.',
+              'Disable: Deny Location permission in Android settings. BharatVow does not provide turn-by-turn navigation and does not continuously track your location in the background for advertising or profiling.',
+            ],
+          },
+          {
+            heading: '2.5H Accessibility Service (optional, user-initiated messaging only)',
+            paragraphs: [
+              'Accessibility Service is optional. It is used only for optional, user-initiated productivity features in BharatVow — a Personal Digital Life Platform — where you explicitly start each messaging session. You remain in control at all times.',
+              'Supported features when you choose to enable Accessibility Service and start a session:',
+            ],
+            list: [
+              'Smart Khata — you manually start sending payment reminder messages to contacts you select',
+              'Event Book — you manually start sending invitations and location details to guests you select',
+              'Days Reminder — you manually start sending birthday and anniversary greeting messages to contacts you select',
+            ],
+            afterList: [
+              'Manual control: Every messaging session is initiated by you inside the app. You select recipients before sending. You can stop or cancel the process at any time before it completes.',
+              'Individual messages: Messages are processed one recipient at a time through the flow you start. BharatVow does not provide an unrestricted bulk-send, “message everyone,” mass-messaging, or spam feature.',
+              'No automatic or background sending: Messages are not sent automatically, on a schedule, or in the background without your explicit session start.',
+              'When it is requested: Only if you enable Accessibility Service for BharatVow in Android settings and then start a supported sending action inside Smart Khata, Event Book, or Days Reminder.',
+              'Optional: Accessibility Service is not required for general use of BharatVow. You can disable it at any time in Android Settings → Accessibility → BharatVow.',
+              'How sending works: You compose or confirm message content in BharatVow. Accessibility Service helps complete delivery through your chosen messaging app after you start the session. BharatVow does not operate as a messaging platform or send messages from its own servers.',
+              'Server transmission: Accessibility-related screen interaction stays on your device to complete the session you started. BharatVow does not transmit Accessibility session content to our servers except where optional cloud backup includes module records you saved (such as guest, khata, or reminder entries).',
+              'Accessibility Service is NOT used to: monitor your activity outside these sessions or monitor other apps on your device; capture or collect passwords or payment credentials; collect sensitive information unrelated to the session; read unrelated screen content; build user profiles; display advertisements; perform user tracking or behavioural analytics; perform background messaging; send promotional or unsolicited messages; or send mass or spam messages.',
+              'Disable: Turn off Accessibility Service for BharatVow in Android settings, or do not enable it. You can also use manual entry and other workflows where available without Accessibility Service.',
+            ],
+          },
+          {
+            heading: '2.5L Sharing through your device (non-Accessibility)',
+            paragraphs: [
+              'Some tools let you share summaries, lists, or media through your device’s standard share sheet (for example sharing a grocery list or a saved status clip).',
+              'Why: So you can send content you choose to another app or contact using Android’s normal share options.',
+              'When: Only when you tap Share and confirm the destination app or contact.',
+              'Optional: Yes. This does not require Accessibility Service.',
+              'Disable: Do not use Share actions, or deny permissions required for the content being shared (such as storage/media).',
+            ],
+          },
+          {
+            heading: '2.5I Vibrate (VIBRATE)',
+            paragraphs: [
+              'Why: Short vibration feedback for certain in-app interactions where supported on your device.',
+              'When: Only during active use of the app when a supported action triggers haptic feedback.',
+              'Optional: Yes. Behaviour may vary by device settings.',
+              'Disable: Through your device sound and vibration settings.',
+            ],
+          },
+          {
+            heading: '2.5J Reminders and notifications',
+            paragraphs: [
+              'Days Reminder and similar tools show reminders inside the BharatVow app when you open it. BharatVow does not send promotional push notifications through Firebase Cloud Messaging or similar services.',
+              'User-initiated messages sent through Accessibility Service (section 2.5H) are separate from push notifications — they occur only when you start a session and choose recipients.',
+            ],
+          },
+          {
+            heading: '2.5K Permissions and services not used',
+            paragraphs: [
+              'BharatVow does not use Google Sign-In for account login.',
+              'BharatVow does not use Firebase Authentication for OTP or account sign-in — OTP is handled through BharatVow\'s secure backend services.',
+              'BharatVow does not use Firebase Cloud Messaging or similar services for promotional push notifications.',
+              'BharatVow does not use Firebase Crashlytics or a separate mobile crash-reporting SDK in the current app version.',
+              'BharatVow does not continuously track your location in the background for advertising or profiling.',
+              'BharatVow does not declare RECORD_AUDIO or access the microphone in the current app version.',
+              'BharatVow does not declare READ_MEDIA_AUDIO or browse audio files from device storage.',
+              'BharatVow does not declare WRITE_CONTACTS; contact access is read-only for import and selection.',
             ],
           },
           {
@@ -106,11 +238,16 @@ export const LEGAL_PAGES = {
             paragraphs: ['We use trusted third-party services to operate BharatVow, including:'],
             list: [
               'Google Play Billing — subscription purchase, renewal, and refund processing through Google Play',
-              'Google Firebase and related Google SDKs — OTP/authentication support, crash reporting, and app stability analytics where enabled in the app',
-              'Cloud infrastructure providers — optional encrypted backup, account services, and server hosting under contract',
+              'BharatVow authentication services — OTP delivery, account sign-in, and session management through our secure backend API (HTTPS/TLS)',
+              'Google Firebase / Cloud Firestore — optional module cloud backup, trip collaboration sync, and user-initiated cloud record sharing where enabled',
+              'Cloudinary — image hosting when optional cloud backup or export uploads photos from your device',
+              'Google Maps Platform — map display, place search, and route or distance features in Place Store and related location tools, subject to Google\'s terms',
+              'Google Drive (optional, user-initiated) — if you choose Google Drive backup in the app, your local database copy is uploaded to your Google account under Google\'s terms',
+              'Cloud infrastructure providers — account services and server hosting under contract',
             ],
             afterList: [
-              'These processors handle data only to provide the Service and under contractual confidentiality and security obligations. SDK data collection is limited to what is needed for the stated purpose.',
+              'These processors handle data only to provide the Service and under contractual confidentiality and security obligations. SDK and processor data collection is limited to what is needed for the stated purpose.',
+              'BharatVow does not use Firebase Authentication for OTP or sign-in. BharatVow does not use Firebase Crashlytics in the current app version. BharatVow does not use Firebase Cloud Messaging for promotional push notifications. BharatVow does not use a separate mobile advertising analytics SDK.',
             ],
           },
           {
@@ -135,12 +272,13 @@ export const LEGAL_PAGES = {
         list: [
           'Authenticate your account (OTP verification and session management)',
           'Provide Digital Tools and features you request',
+          'Let you import or select contacts and send user-initiated messages only when you explicitly start a supported session',
           'Process BharatVow app subscriptions billed through Google Play',
           'Operate the optional distributor referral program',
           'Enable optional cloud backup and restore where available',
           'Respond to support and grievance requests',
           'Comply with applicable Indian law',
-          'Improve app stability and security',
+          'Improve app stability and security using limited diagnostic data',
         ],
         afterList: ['We do not sell your personal data to third parties for advertising.'],
       },
@@ -150,7 +288,7 @@ export const LEGAL_PAGES = {
           'Where the Digital Personal Data Protection Act, 2023 applies, we process personal data on one or more of the following bases:',
         ],
         list: [
-          'Consent — for example, when you register, enable optional cloud backup, or enrol in optional programs',
+          'Consent — for example, when you register, grant optional permissions, enable optional cloud backup, enable Accessibility Service, or enrol in optional programs',
           'Performance of a contract — to provide the Service, subscriptions, and support you request',
           'Legal obligation — for billing, tax, fraud prevention, and regulatory compliance',
           'Legitimate uses permitted by law — such as improving app security and stability using limited diagnostic data',
@@ -168,20 +306,25 @@ export const LEGAL_PAGES = {
           {
             heading: '4.2 Cloud storage',
             paragraphs: [
-              'Optional encrypted cloud backup is available for applicable modules when you choose to enable it. Link Vault and Status Viewer are not included in master cloud backup scope.',
+              'Optional cloud backup is available for supported premium modules when you explicitly enable it in the app. You can disable cloud backup where the app provides that setting.',
+              'Master module cloud backup stores encrypted record payloads on Google Firebase / Cloud Firestore. Photos linked to backed-up records may be stored on Cloudinary. Data is transmitted using HTTPS/TLS.',
+              'Trip collaboration and optional user-initiated cloud sharing use Firestore separately from master backup and follow the feature you choose to use.',
+              'Optional Google Drive backup (where available) uploads a copy of your local app database to your Google Drive when you sign in and confirm — separate from master cloud backup on BharatVow servers.',
+              'Master cloud backup applies only to supported premium modules. Link Vault and Status Viewer are not included in master cloud backup scope.',
+              'If you delete your account, optional cloud backup copies linked to your account are removed as described in section 4.4 and on our Delete Account page.',
             ],
           },
           {
             heading: '4.3 Retention',
             paragraphs: [
-              'We retain personal data only as long as needed for the purposes described in this Privacy Policy, including:',
+              'We retain personal data only as long as needed for the purposes below. Retention periods may vary depending on legal requirements and the nature of the data:',
             ],
             list: [
-              'Account and profile data — while your account is active and for a limited period after deletion where required for billing, tax, fraud prevention, or legal compliance',
-              'Subscription and billing records — as required by applicable law and Google Play billing records',
-              'Support and grievance correspondence — as needed to resolve your request and meet legal obligations',
-              'Optional cloud backup — until you delete backup data, delete your account, or we remove it under our Delete Account policy',
-              'Aggregated or anonymised analytics — only where it no longer reasonably identifies you, and only as permitted by law',
+              'Account and profile data — purpose: provide the Service and manage your account; retained while your account is active and for a limited period after deletion where required for billing, tax, fraud prevention, or legal compliance',
+              'Subscription and billing records — purpose: payment reconciliation and legal compliance; retained as required by applicable law and Google Play billing records',
+              'Support and grievance correspondence — purpose: resolve your request and meet legal obligations; retained as needed, then archived or deleted per our records policy',
+              'Optional cloud backup — purpose: restore your module records when you request backup services; retained until you delete backup data, delete your account, or we remove it under our Delete Account policy',
+              'Server diagnostic and security logs — purpose: investigate stability, authentication, and security issues for online features; retained for a limited period, then deleted or anonymised where practicable',
             ],
             afterList: [
               `You may request account deletion at ${SITE.url}${LEGAL_PATHS.deleteAccount}. Some records may be retained where the law requires.`,
@@ -190,8 +333,10 @@ export const LEGAL_PAGES = {
           {
             heading: '4.4 Data deletion',
             paragraphs: [
-              'You can delete your BharatVow account through the in-app deletion flow or by following the verified process on our Delete Account page.',
+              'You can delete your BharatVow account through the in-app deletion flow (Settings or Help & Support → Delete Account) or by following the verified email process on our Delete Account page.',
+              'The in-app flow includes a warning, a summary of what will and will not be deleted, OTP verification to your registered mobile number, and a final confirmation step (type DELETE and the last four digits of your mobile number). Your account is removed only after the server confirms successful deletion.',
               'When deletion is completed, we remove your account profile and delete optional cloud backup copies linked to your account where applicable. Locally stored data on your device is removed when you uninstall or reset the app after deletion.',
+              'Contact details or messages stored only on your device remain until you remove them locally or uninstall the app.',
               'Some billing, tax, fraud-prevention, grievance, or legally required records may be retained in limited form after deletion, as described on our Delete Account page.',
             ],
           },
@@ -202,23 +347,51 @@ export const LEGAL_PAGES = {
         paragraphs: ['We may share information with:'],
         list: [
           'Google Play billing — to process BharatVow app subscriptions you choose in the Play Store',
-          'Cloud infrastructure providers — to host backup and authentication services under contract',
+          'Google Firebase / Cloud Firestore — optional module cloud backup, trip collaboration sync, and user-initiated cloud record sharing where enabled',
+          'Cloudinary — image hosting for photos uploaded during optional cloud backup or export',
+          'Google Maps Platform — map, place search, and route or distance features',
+          'Google Drive — optional user-initiated local database backup to your Google account, where available in the app',
+          'Cloud infrastructure providers — to host authentication and account services under contract',
           'Legal authorities — when required by law, court order, or valid government request',
           'Professional advisers — under confidentiality obligations',
         ],
-        afterList: ['We do not share your module content for advertising resale.'],
+        afterList: [
+          'We do not share your module content for advertising resale.',
+          'User-initiated messages you send through Smart Khata, Event Book, or Days Reminder are delivered through your device messaging apps (such as WhatsApp) after you start the session. BharatVow does not receive those message contents on our servers unless you included related records in optional cloud backup.',
+        ],
+      },
+      {
+        heading: '5A. Messaging and third-party apps',
+        paragraphs: [
+          'BharatVow messaging features are limited to user-requested actions you manually start in Smart Khata (payment reminders), Event Book (invitations and location details), and Days Reminder (birthday and anniversary greetings). These are not automated broadcasts.',
+          'When you use optional Accessibility Service messaging features, delivery happens through messaging apps already on your device. Those apps are governed by their own terms and privacy policies.',
+          'BharatVow does not control, store, or monitor messages in those third-party apps except where you saved related information in your BharatVow module records or optional cloud backup.',
+        ],
       },
       {
         heading: '6. Security Practices',
-        paragraphs: ['We implement reasonable technical and organisational measures including:'],
+        paragraphs: [
+          'We implement reasonable technical and organisational measures appropriate to the Service. These include, where applicable:',
+        ],
         list: [
-          'OTP-based authentication',
-          'PIN protection for app access',
-          'Encrypted cloud backup when you enable it',
-          'Access controls on server systems',
+          'HTTPS/TLS encryption for data transmitted between the app and our servers',
+          'OTP-based authentication through BharatVow backend services and PIN protection for app access',
+          'Encrypted master module cloud backup payloads before upload to Firestore, where implemented',
+          'Access controls on server systems that store account and backup data',
         ],
         afterList: [
-          'No method of transmission or storage is completely secure. You are responsible for keeping your PIN confidential and maintaining backups where needed.',
+          'No method of transmission or storage is completely secure. You are responsible for keeping your PIN confidential, reviewing permissions you grant, and maintaining backups where needed.',
+        ],
+      },
+      {
+        heading: '6A. Accessibility Service transparency',
+        paragraphs: [
+          'Because Accessibility Service is sensitive, we provide this summary in addition to section 2.5H:',
+          'BharatVow uses Accessibility Service only when you enable it and only to help complete messaging actions you manually start in Smart Khata, Event Book, or Days Reminder.',
+          'You select each recipient. Each message is sent individually at your direction. You can stop the process at any time. There is no unrestricted bulk messaging.',
+          'Accessibility session content is not transmitted to BharatVow servers except where optional cloud backup includes module records you saved.',
+          'We do not use Accessibility Service for surveillance, credential harvesting, unrelated screen reading, monitoring other apps, user tracking, behavioural analytics, advertising, profiling, background messaging, promotional messages, or spam.',
+          'You can disable Accessibility Service for BharatVow at any time in Android settings.',
         ],
       },
       {
@@ -229,12 +402,15 @@ export const LEGAL_PAGES = {
         list: [
           'Access and correct profile information in the app where available',
           'Request account deletion per our Delete Account policy',
-          'Withdraw consent where processing is consent-based',
+          'Withdraw consent where processing is consent-based (including optional permissions and Accessibility Service)',
+          'Revoke Android permissions or disable Accessibility Service in device settings',
           'Lodge a grievance with our Grievance Officer',
         ],
         afterList: [
           `Grievance Officer: Shailendra Gahlot · ${SITE.grievanceEmail} · ${SITE.phone}`,
+          `Privacy enquiries: ${SITE.privacyEmail}`,
           `Account deletion: ${SITE.url}${LEGAL_PATHS.deleteAccount}`,
+          `Support: ${SITE.email}`,
         ],
       },
       {
@@ -351,9 +527,10 @@ export const LEGAL_PAGES = {
           'Attempt to reverse engineer, hack, or disrupt the Service',
           'Share account credentials or OTP/PIN with others',
           'Misuse subscription, billing, or referral program features',
+          'Use Accessibility Service or messaging features for spam, bulk unsolicited messaging, or unlawful communication',
         ],
         afterList: [
-          'You are solely responsible for records and information you enter in the app.',
+          'You are solely responsible for records, messages, and information you enter or send through the app, including recipient selection and message content.',
         ],
       },
       {
@@ -434,7 +611,7 @@ export const LEGAL_PAGES = {
       {
         heading: 'Not Regulated Financial Services',
         paragraphs: [
-          'BharatVow does not provide banking, wallet, payment, money transfer, lending, investment, insurance, or financial institution services. Users only organize and manage their own personal records.',
+          'BharatVow does not provide banking, regulated wallet, payment bank, licensed e-wallet, payment, money transfer, lending, investment, insurance, or financial institution services. Where the app shows in-app balance or wallet features, those are for BharatVow app subscriptions and eligible in-app services only — not a bank account or general-purpose stored-value service. Users organize and manage their own personal records.',
         ],
       },
       {
@@ -453,6 +630,14 @@ export const LEGAL_PAGES = {
         paragraphs: [
           'Status Viewer helps you browse and save photos or videos already available in storage locations you explicitly allow on your Android device. BharatVow does not bypass encryption, access private messaging accounts, or collect status media without your action in the app.',
           'You are responsible for saving and sharing media lawfully and for respecting the rights of others.',
+        ],
+      },
+      {
+        heading: 'Optional Accessibility Service and user-initiated messages',
+        paragraphs: [
+          'Some Digital Tools offer optional messaging actions that you must manually start. If you enable Accessibility Service for BharatVow, it is used only to help complete those actions after you choose recipients and message content — one recipient at a time, with no unrestricted bulk messaging.',
+          'You are responsible for the messages you send, the recipients you select, and compliance with applicable laws and messaging platform rules. BharatVow does not send messages automatically, on a schedule, in the background, or without your explicit session start.',
+          'You can disable Accessibility Service for BharatVow at any time in Android settings. See our Privacy Policy section 2.5H for full details.',
         ],
       },
       {

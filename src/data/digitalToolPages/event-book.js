@@ -74,7 +74,7 @@ const eventBookPage = {
       icon: Send,
       title: 'Invitation Tracking',
       description:
-        'Send invitations and track attendance — know who is invited and who has confirmed without separate spreadsheets.',
+        'When you choose to send invitations, you manually start a session and select guests — track who is invited and who has confirmed without separate spreadsheets. Optional Accessibility Service helps complete delivery through your messaging app; see our Privacy Policy.',
     },
     {
       icon: PieChart,
@@ -127,7 +127,7 @@ const eventBookPage = {
     },
     {
       title: 'Add Guests',
-      description: 'Build your guest list with families and members. Track invitations and attendance as responses come in.',
+      description: 'Build your guest list with families and members. When you choose to send invitations, you start each session and select recipients — track responses as they come in.',
     },
     {
       title: 'Plan Budget',
@@ -236,6 +236,10 @@ const eventBookPage = {
     {
       q: 'Can I back up my events?',
       a: 'Yes. Optional cloud backup is available for this module when you enable it — useful when you change phones. Link Vault and Status Viewer are not included in master cloud backup scope. Excel export is also available where noted in the app.',
+    },
+    {
+      q: 'How do invitations work in Event Book?',
+      a: 'You build your guest list in Event Book. If you choose to send invitations through a supported messaging flow, you manually start each session and select guests — messages are sent one recipient at a time at your direction. Optional Accessibility Service may help complete delivery through your messaging app. BharatVow does not send invitations automatically or in the background. See our Privacy Policy section on Accessibility Service.',
     },
     {
       q: 'Does Event Book process transactions or sell tickets?',

@@ -274,6 +274,30 @@ export const FAQ_ITEMS = [
 
   // ── Privacy & Security ──
   {
+    id: 'app-permissions',
+    category: 'privacy-security',
+    icon: Shield,
+    question: 'Why does BharatVow request Android permissions?',
+    shortAnswer:
+      'Only when a feature you choose to use needs them — most are optional.',
+    answer:
+      'BharatVow requests Android permissions only when a feature you choose to use requires them. For example: Contacts when you import or select recipients; Camera when you capture a bill or profile photo; Location when you save a place or share event location details; Storage or media when you attach files; Microphone when you tap to record audio in a supported tool (where available). Most permissions are optional — if you decline, that feature may not work until you grant permission in Android settings. Our Privacy Policy section 2.5 explains each permission, when it is requested, and how to revoke it.',
+    links: [{ label: 'Privacy Policy', path: '/privacy-policy' }],
+    keywords: ['permissions', 'android', 'contacts', 'camera', 'location', 'privacy'],
+  },
+  {
+    id: 'accessibility-service',
+    category: 'privacy-security',
+    icon: Shield,
+    question: 'Why does BharatVow use Accessibility Service?',
+    shortAnswer:
+      'Optional — only for user-initiated messaging you manually start in Smart Khata, Event Book, or Days Reminder.',
+    answer:
+      'Accessibility Service is optional. BharatVow uses it only when you enable it in Android settings and manually start a supported messaging session — for example payment reminders in Smart Khata, invitations in Event Book, or birthday greetings in Days Reminder. You select each recipient. Messages are sent one at a time at your direction. You can stop the process at any time. BharatVow does not use Accessibility Service for monitoring, passwords, advertising, background messaging, or bulk or spam messages. You can disable it at any time in Android Settings → Accessibility → BharatVow.',
+    links: [{ label: 'Privacy Policy — Accessibility Service', path: '/privacy-policy' }],
+    keywords: ['accessibility', 'messaging', 'whatsapp', 'permissions', 'privacy'],
+  },
+  {
     id: 'data-secure',
     category: 'privacy-security',
     icon: Shield,
@@ -531,7 +555,7 @@ export const FAQ_ITEMS = [
     shortAnswer:
       'Use the in-app delete flow or follow steps on our Delete Account page.',
     answer:
-      'Use the in-app account deletion flow in Profile or Settings, or follow the email instructions on our Delete Account page. Deletion is permanent. Run a backup or export first if you need to keep your records.',
+      'Use the in-app account deletion flow in Settings or Help & Support (Delete Account), or follow the email instructions on our Delete Account page. Deletion is permanent and requires OTP verification plus final confirmation. Run a backup or export first if you need to keep your records.',
     links: [{ label: 'Delete Account page', path: PATHS.deleteAccount }],
     keywords: ['delete', 'account', 'remove'],
   },

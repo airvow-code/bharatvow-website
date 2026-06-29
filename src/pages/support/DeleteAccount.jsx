@@ -43,6 +43,9 @@ export default function DeleteAccount() {
             <li key={step}>{step}</li>
           ))}
         </ol>
+        {DELETE_ACCOUNT.inAppNote ? (
+          <p className="text-sm text-muted">{DELETE_ACCOUNT.inAppNote}</p>
+        ) : null}
         <p className="text-sm text-muted">Menu labels match the current BharatVow app build.</p>
       </ProseSection>
 

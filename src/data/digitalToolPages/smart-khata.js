@@ -97,7 +97,7 @@ const smartKhataPage = {
     },
     {
       title: 'Share When Needed',
-      description: 'Send a summary or export a copy when the other person should see the same record.',
+      description: 'Send a summary or export a copy when the other person should see the same record. If you choose payment reminders through a supported messaging flow, you manually start each session and select contacts — see our Privacy Policy on Accessibility Service.',
     },
   ],
 
@@ -152,6 +152,10 @@ const smartKhataPage = {
   ],
 
   faq: [
+    {
+      q: 'Can I send payment reminders from Smart Khata?',
+      a: 'If your app version supports it, you can manually start a payment reminder session and select contacts. Each message is sent individually at your direction — there is no automatic or bulk messaging. Optional Accessibility Service may help complete delivery through your messaging app. See our Privacy Policy section on Accessibility Service.',
+    },
     {
       q: 'Does Smart Khata process transactions or move funds?',
       a: 'No. Smart Khata is for personal lend-and-borrow record keeping only. BharatVow does not process transactions or move funds.',

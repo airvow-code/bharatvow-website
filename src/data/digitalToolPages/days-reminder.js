@@ -155,7 +155,7 @@ const daysReminderPage = {
     },
     {
       title: 'Keep Important Days Visible',
-      description: 'Check Today and Upcoming on the dashboard — send wishes, make calls, or act on renewals on time.',
+      description: 'Check Today and Upcoming on the dashboard — when you choose to send greetings, you manually start a session and select contacts; otherwise make calls or act on renewals on time.',
     },
   ],
 
@@ -163,7 +163,7 @@ const daysReminderPage = {
     {
       title: 'Birthday',
       story:
-        'Priya registers forty family birthdays with photos and WhatsApp numbers. Each morning she opens Today — three wishes sent before breakfast, no awkward belated messages.',
+        'Priya registers forty family birthdays with photos and WhatsApp numbers. Each morning she opens Today — when she chooses to send greetings, she starts a session and picks contacts one at a time. No awkward belated messages, and nothing sends without her action.',
     },
     {
       title: 'Anniversary',
@@ -231,6 +231,10 @@ const daysReminderPage = {
 
   faq: [
     {
+      q: 'Can I send birthday or anniversary greetings from Days Reminder?',
+      a: 'If your app version supports it, you can manually start a greeting session and select contacts. Each message is sent individually at your direction — there is no automatic or bulk messaging. Optional Accessibility Service may help complete delivery through your messaging app. See our Privacy Policy section on Accessibility Service.',
+    },
+    {
       q: 'Is Days Reminder only for birthdays?',
       a: 'No. Days Reminder covers birthdays, anniversaries, and custom reminders — insurance renewals, bill dates, appointments, and any important day you choose to save.',
     },
@@ -240,7 +244,7 @@ const daysReminderPage = {
     },
     {
       q: 'Does Days Reminder send push notifications?',
-      a: 'Days Reminder highlights today and upcoming dates on your dashboard and calendar. Open the app to check what is due — reminder timing preferences are saved per entry.',
+      a: 'No promotional push notifications. Days Reminder highlights today and upcoming dates inside the app when you open it. If you choose to send greetings through a supported user-initiated messaging flow, you start each session yourself and select recipients — see our Privacy Policy section on Accessibility Service.',
     },
     {
       q: 'Can I organise reminders by family, friends, or colleagues?',

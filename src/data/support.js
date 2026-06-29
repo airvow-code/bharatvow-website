@@ -25,11 +25,15 @@ export const DELETE_ACCOUNT = {
   ],
   inAppSteps: [
     'Open BharatVow',
-    'Go to Profile / Settings',
-    'Select Delete Account (or Help → Delete Account)',
-    'Confirm with OTP verification',
-    'Follow on-screen confirmation steps',
+    'Go to Settings or Help & Support',
+    'Tap Delete Account',
+    'Read the warning and review the deletion summary (what will and will not be deleted)',
+    'Verify with the OTP sent to your registered mobile number',
+    'On the final confirmation screen, type DELETE and the last four digits of your registered mobile number',
+    'Your account is removed after the server confirms deletion; you are signed out to the login screen',
   ],
+  inAppNote:
+    'If the server deletion service is temporarily unavailable, the app will not remove your account locally. You may use the email request process below instead.',
   emailRequest: {
     subject: 'Delete Account Request',
     include: [
@@ -50,7 +54,7 @@ export const DELETE_ACCOUNT = {
   ],
   retained: [
     'Billing and subscription records required by law (Google Play references, in-app balance, tax)',
-    'Anonymised analytics that no longer reasonably identifies you',
+    'Server diagnostic and security logs retained for a limited period as described in our Privacy Policy',
     'Grievance and support correspondence records required for legal compliance',
   ],
   afterDeletion: [
