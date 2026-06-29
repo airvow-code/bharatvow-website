@@ -9,7 +9,7 @@ export const MODULE_PAGES = {
     problems: [
       'Paper khata tears and amounts get disputed',
       'Recovery turns awkward without clear records',
-      'Shop credit and personal lending mixed in memory',
+      'Shop credit and personal lend-and-borrow records mixed in memory',
     ],
     features: [
       'Running balance per person or customer',
@@ -24,7 +24,7 @@ export const MODULE_PAGES = {
     faq: [
       {
         q: 'Is Smart Khata the same as Expenses Diary?',
-        a: 'No. Khata tracks lending and borrowing with others. Expenses Diary tracks your own daily spending.',
+        a: 'No. Khata tracks lend-and-borrow entries with others. Expenses Diary tracks your own daily spending.',
       },
       {
         q: 'Does Khata work offline?',
@@ -131,7 +131,7 @@ export const MODULE_PAGES = {
     ],
     example: {
       title: 'Rajasthan road trip',
-      story: 'Four cousins return from Goa — settlement in five minutes, friendship intact.',
+      story: 'Four cousins return from Goa — balance summary in five minutes, friendship intact.',
     },
     faq: [
       {
@@ -330,7 +330,7 @@ export const MODULE_PAGES = {
         a: 'No — Status Viewer is free on Android only.',
       },
       {
-        q: 'Does Status Viewer send messages or handle payments?',
+        q: 'Does Status Viewer send messages or process transactions?',
         a: 'No. It only helps you view, save, and share status media already stored on your device.',
       },
     ],

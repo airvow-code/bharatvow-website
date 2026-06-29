@@ -22,7 +22,7 @@ const linkVaultPage = {
     headline: 'Why Link Vault?',
     eyebrow: 'Why Link Vault?',
     everydayProblem:
-      'That government portal link was in a WhatsApp message three months ago. The bank form URL got buried in chat scroll. A useful YouTube tutorial, office portal, and shopping deal — all saved somewhere, none easy to find. Browser bookmarks mix work, personal, and one-time links with no notes and no order.',
+      'That government portal link was in a WhatsApp message three months ago. The utility form URL got buried in chat scroll. A useful YouTube tutorial, office portal, and shopping deal — all saved somewhere, none easy to find. Browser bookmarks mix work, personal, and one-time links with no notes and no order.',
     whyFamiliesNeedIt:
       'Link Vault keeps important URLs in BharatVow — saved with categories, collections, tags, and notes — so government portals, educational resources, and everyday links are organised and searchable when you need them, not lost in old messages.',
   },
@@ -162,9 +162,9 @@ const linkVaultPage = {
         'Aadhaar update, passport appointment, and tax filing links sit in one collection. Before each deadline, search finds the right portal without hunting WhatsApp forwards.',
     },
     {
-      title: 'Banking & utility websites',
+      title: 'Utility & service websites',
       story:
-        'Electricity bill payment, bank login, and FASTag recharge URLs saved with notes on account numbers — open the right site in two taps.',
+        'Electricity bill record portal, service provider login, and FASTag renewal URLs saved with notes on account numbers — open the right site in two taps.',
     },
     {
       title: 'Shopping links',
@@ -227,7 +227,7 @@ const linkVaultPage = {
     },
     {
       q: 'Is Link Vault free?',
-      a: 'Yes. Link Vault is free without a subscription in BharatVow — no payment required to save and organise links.',
+      a: 'Yes. Link Vault is free without a subscription in BharatVow — no subscription billing required to save and organise links.',
     },
     {
       q: 'Can I save links from WhatsApp or YouTube?',
@@ -242,8 +242,8 @@ const linkVaultPage = {
       a: 'Link Vault uses CSV and Excel export/import for backup. It is not included in the encrypted master backup scope used by premium modules.',
     },
     {
-      q: 'Does Link Vault open links or process payments?',
-      a: 'Link Vault saves and organises URLs. Opening a link takes you to the third-party website — Link Vault does not log in, pay, or handle transactions for you.',
+      q: 'Does Link Vault open links or move funds?',
+      a: 'Link Vault saves and organises URLs. Opening a link takes you to the third-party website — Link Vault does not log in, move funds, or handle entries for you.',
     },
   ],
 
@@ -268,7 +268,7 @@ const linkVaultPage = {
   seo: {
     title: 'Link Vault | BharatVow Digital Life',
     metaDescription:
-      'Link Vault in BharatVow — save, categorize, and search important links with notes and favourites. Free digital link organizer — not a browser or payment app.',
+      'Link Vault in BharatVow — save, categorize, and search important links with notes and favourites. Free digital link organizer — BharatVow does not process transactions or move funds.',
     keywords:
       'Link Vault, BharatVow, save links app India, digital bookmark organizer, URL manager, link collection app, digital life organizer',
     ogTitle: 'Link Vault — Your Digital Link Organizer | BharatVow',

@@ -1,5 +1,4 @@
 import {
-  Wallet,
   LayoutGrid,
   PieChart,
   Gauge,
@@ -24,7 +23,7 @@ const budgetPocketPage = {
     everydayProblem:
       'Salary arrives and you mean to plan — grocery, fuel, school fees, a little for outings. By mid-month, small spends add up and you are not sure what is left. Without a simple plan, overspending feels sudden even when it was building all along.',
     whyFamiliesNeedIt:
-      'Budget Pocket helps you set category limits, record spending against them, and see remaining budget at a glance. It is planning and tracking — not payments, not a wallet, and not banking. You stay in control of where you intended to spend.',
+      'Budget Pocket helps you set category limits, record spending against them, and see remaining budget at a glance. It is planning and tracking — BharatVow does not process transactions or move funds. You stay in control of where you intended to spend.',
   },
 
   whoShouldUse: {
@@ -35,7 +34,7 @@ const budgetPocketPage = {
 
   features: [
     {
-      icon: Wallet,
+      icon: PieChart,
       title: 'Budget Creation',
       description:
         'Set up budget envelopes for the month — name each one, choose a period, and decide how much you plan to allocate.',
@@ -81,7 +80,7 @@ const budgetPocketPage = {
   howItWorks: [
     {
       title: 'Create Budget',
-      description: 'Start a monthly budget and set the overall plan for how you want to allocate household money.',
+      description: 'Start a monthly budget and set the overall plan for how you want to allocate your household budget.',
     },
     {
       title: 'Assign Categories',
@@ -147,7 +146,7 @@ const budgetPocketPage = {
     {
       slug: 'smart-khata',
       integration:
-        'Smart Khata tracks lend-and-borrow with people. Budget Pocket tracks your planned household categories — together they cover different parts of everyday money records.',
+        'Smart Khata tracks lend-and-borrow with people. Budget Pocket tracks your planned household categories — together they cover different parts of everyday spending records.',
     },
     {
       slug: 'trip-ledger',
@@ -158,8 +157,8 @@ const budgetPocketPage = {
 
   faq: [
     {
-      q: 'Is Budget Pocket a payment app or wallet?',
-      a: 'No. Budget Pocket is for planning and tracking budgets only. It does not move money, link to banks, or process payments.',
+      q: 'Does Budget Pocket process transactions or move funds?',
+      a: 'No. Budget Pocket is for planning and tracking budgets only. BharatVow does not process transactions or move funds.',
     },
     {
       q: 'How is Budget Pocket different from Expenses Diary?',
@@ -186,12 +185,12 @@ const budgetPocketPage = {
   seo: {
     title: 'Budget Pocket | BharatVow Digital Life',
     metaDescription:
-      'Budget Pocket in BharatVow — plan household budgets by category, track spending, and see remaining budget. Simple budgeting, not payments or banking.',
+      'Budget Pocket in BharatVow — plan household budgets by category, track spending, and see remaining budget. Simple budgeting — BharatVow does not process transactions or move funds.',
     keywords:
       'Budget Pocket, BharatVow, household budget app India, monthly budget planner, personal budget tracking, digital life organizer',
     ogTitle: 'Budget Pocket — Plan & Track Your Budget | BharatVow',
     ogDescription:
-      'Set category budgets, record expenses, and see what remains each month in BharatVow. Practical planning — not a wallet or payment app.',
+      'Set category budgets, record expenses, and see what remains each month in BharatVow. Practical planning — BharatVow does not process transactions or move funds.',
   },
 
   finalCta: {

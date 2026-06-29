@@ -22,7 +22,7 @@ const tripLedgerPage = {
     headline: 'Why Trip Ledger?',
     eyebrow: 'Why Trip Ledger?',
     everydayProblem:
-      'Hotel booking sits in email. Petrol slips go in a pocket. Three friends each paid for dinner but no one wrote it down. After a family vacation or office tour, expenses are forgotten, booking details are lost, and splitting costs turns into awkward group chats with no clear record.',
+      'Hotel booking sits in email. Petrol slips go in a pocket. Three friends each covered dinner costs but no one wrote it down. After a family vacation or office tour, expenses are forgotten, booking details are lost, and splitting costs turns into awkward group chats with no clear record.',
     whyFamiliesNeedIt:
       'Trip Ledger keeps the full travel story together — trip information, notes, photos and places on a timeline, shared expenses with fair splits, and summaries you can review later. It is for organising travel, not just logging one expense at a time.',
   },
@@ -44,7 +44,7 @@ const tripLedgerPage = {
       },
       {
         title: 'Friends',
-        description: 'Split group trip costs fairly — know who paid and who owes without messy calculations in chat.',
+        description: 'Split group trip costs fairly — know who covered costs and who owes without messy calculations in chat.',
       },
       {
         title: 'Couples',
@@ -93,7 +93,7 @@ const tripLedgerPage = {
       icon: Receipt,
       title: 'Expense Recording',
       description:
-        'Add trip expenses with amount, date, and notes — assign payments and splits among trip participants.',
+        'Add trip expenses with amount, date, and notes — assign paid-by records and splits among trip participants.',
     },
     {
       icon: ListOrdered,
@@ -117,7 +117,7 @@ const tripLedgerPage = {
       icon: FileSpreadsheet,
       title: 'Reports',
       description:
-        'Export trip data to Excel and review settlement balances — useful records for group trips and personal review.',
+        'Export trip data to Excel and review balance summaries — useful records for group trips and personal review.',
     },
     {
       icon: CloudUpload,
@@ -138,7 +138,7 @@ const tripLedgerPage = {
     },
     {
       title: 'Record Expenses',
-      description: 'Log shared costs as they happen — assign who paid and how the amount splits among the group.',
+      description: 'Log shared costs as they happen — record who covered costs and how the amount splits among the group.',
     },
     {
       title: 'Track Daily Activities',
@@ -146,7 +146,7 @@ const tripLedgerPage = {
     },
     {
       title: 'Review Trip Summary',
-      description: 'Open the dashboard for total spend, balances, and settlement — settle who owes whom before you forget.',
+      description: 'Open the dashboard for total spend, balances, and balance summary — see who owes whom before you forget.',
     },
     {
       title: 'Keep Complete Travel History',
@@ -158,7 +158,7 @@ const tripLedgerPage = {
     {
       title: 'Family holiday',
       story:
-        'The Patels take a week in Kerala. Hotel, cab, and meal costs go into Trip Ledger as the family travels. Back home, the summary shows what the trip cost — no hunting through wallets and messages.',
+        'The Patels take a week in Kerala. Hotel, cab, and meal costs go into Trip Ledger as the family travels. Back home, the summary shows what the trip cost — no hunting through pockets and messages.',
     },
     {
       title: 'Business tour',
@@ -173,7 +173,7 @@ const tripLedgerPage = {
     {
       title: 'Road trip',
       story:
-        'Four friends drive to Rajasthan. Petrol, dhaba meals, and hotel rooms are split fairly. Settlement shows exactly who owes whom — argument over in minutes.',
+        'Four friends drive to Rajasthan. Petrol, dhaba meals, and hotel rooms are split fairly. Balance summary shows exactly who owes whom — argument over in minutes.',
     },
     {
       title: 'Weekend getaway',
@@ -205,7 +205,7 @@ const tripLedgerPage = {
     {
       slug: 'budget-pocket',
       integration:
-        'Plan a travel envelope in Budget Pocket before you leave. Trip settlement can sync summary spending back — plan first, record trip details in Trip Ledger.',
+        'Plan a travel envelope in Budget Pocket before you leave. Trip balance summary can sync summary spending back — plan first, record trip details in Trip Ledger.',
     },
     {
       slug: 'vehicle-vault',
@@ -230,7 +230,7 @@ const tripLedgerPage = {
     },
     {
       q: 'Can Trip Ledger split costs among friends?',
-      a: 'Yes. Add participants, record who paid, and assign splits. Settlement and balance views show who owes whom after the trip.',
+      a: 'Yes. Add participants, record who covered costs, and assign splits. Balance summary and balance views show who owes whom after the trip.',
     },
     {
       q: 'Can I join a trip someone else started?',
@@ -238,18 +238,18 @@ const tripLedgerPage = {
     },
     {
       q: 'Does Trip Ledger connect to Budget Pocket?',
-      a: 'When you complete trip settlement, summary amounts can sync to Budget Pocket so travel spending reflects in your household budget records.',
+      a: 'When you complete the trip balance summary, summary amounts can sync to Budget Pocket so travel spending reflects in your household budget records.',
     },
     {
-      q: 'Is Trip Ledger a booking or payment app?',
-      a: 'No. Trip Ledger is for planning records and expense organisation. It does not book tickets, process payments, or connect to banks.',
+      q: 'Is Trip Ledger a booking app that moves funds?',
+      a: 'No. Trip Ledger is for planning records and expense organisation. It does not book tickets, and BharatVow does not process transactions or move funds.',
     },
   ],
 
   seo: {
     title: 'Trip Ledger | BharatVow Digital Life',
     metaDescription:
-      'Trip Ledger in BharatVow — organise trips with expenses, timeline, notes, and travel history. Group splits and summaries — not payments or booking.',
+      'Trip Ledger in BharatVow — organise trips with expenses, timeline, notes, and travel history. Group splits and summaries — BharatVow does not process transactions or move funds, and it does not book travel.',
     keywords:
       'Trip Ledger, BharatVow, group trip expense splitter India, travel organizer app, trip planning, shared travel costs, digital life organizer',
     ogTitle: 'Trip Ledger — Organise Every Trip in One Place | BharatVow',

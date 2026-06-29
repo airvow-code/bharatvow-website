@@ -13,7 +13,7 @@ export const SEO_DEFAULTS = {
   author: SITE.company,
   themeColor: '#05204E',
   defaultDescription:
-    'Your complete digital life organizer — budgets, home, vehicles, events, and everyday records in one secure app. Free tools on Google Play.',
+    'An Indian family digital life management platform — organize household activities, expenses, reminders, documents, vehicles, trips, events, and personal records in one secure app. Free tools on Google Play.',
   defaultKeywords: [
     'BharatVow',
     'BharatVow app',

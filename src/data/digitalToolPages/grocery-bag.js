@@ -16,7 +16,7 @@ const groceryBagPage = {
   slug: 'grocery-bag',
 
   valueProposition:
-    'Plan grocery shopping from list to checkout — quantities, prices, shared lists, and shopping history in one grocery planning organizer.',
+    'Plan grocery shopping from list to shopping completion — quantities, prices, shared lists, and shopping history in one grocery planning organizer.',
 
   whyExists: {
     headline: 'Why Grocery Bag?',
@@ -116,7 +116,7 @@ const groceryBagPage = {
       icon: IndianRupee,
       title: 'Price Recording',
       description:
-        'Enter price per item on the list — line totals and list summary update as you record what you paid.',
+        'Enter price per item on the list — line totals and list summary update as you record what you spent.',
     },
     {
       icon: History,
@@ -234,15 +234,15 @@ const groceryBagPage = {
     },
     {
       q: 'Can I compare prices from past shopping trips?',
-      a: 'Yes. Past lists keep item names and recorded prices — open previous lists to see what you paid on earlier trips.',
+      a: 'Yes. Past lists keep item names and recorded prices — open previous lists to see what you recorded on earlier trips.',
     },
     {
       q: 'Can I back up my grocery lists?',
       a: 'Yes. Cloud backup and Excel export help you keep lists safe when you change phones.',
     },
     {
-      q: 'Is Grocery Bag a payment or delivery app?',
-      a: 'No. Grocery Bag is for planning and recording shopping. It does not pay for orders, book delivery, or connect to banks.',
+      q: 'Is Grocery Bag a delivery app that moves funds?',
+      a: 'No. Grocery Bag is for planning and recording shopping. BharatVow does not process transactions or move funds, and it does not book delivery.',
     },
   ],
 
@@ -267,7 +267,7 @@ const groceryBagPage = {
   seo: {
     title: 'Grocery Bag | BharatVow Digital Life',
     metaDescription:
-      'Grocery Bag in BharatVow — plan grocery lists, track quantities and prices, share with family, and review shopping history. Grocery planning — not delivery or payments.',
+      'Grocery Bag in BharatVow — plan grocery lists, track quantities and prices, share with family, and review shopping history. Grocery planning — not delivery; BharatVow does not process transactions or move funds.',
     keywords:
       'Grocery Bag, BharatVow, grocery list app India, shopping planner, household grocery organizer, kirana list app, digital life organizer',
     ogTitle: 'Grocery Bag — Complete Grocery Planning Organizer | BharatVow',

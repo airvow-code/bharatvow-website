@@ -294,8 +294,8 @@ const vehicleVaultPage = {
       a: 'Yes. Cloud backup and Excel export help you keep vehicle data safe when you change phones.',
     },
     {
-      q: 'Is Vehicle Vault a payment or insurance purchase app?',
-      a: 'No. Vehicle Vault is for record keeping and organisation. It does not process payments, sell insurance, or connect to banks.',
+      q: 'Does Vehicle Vault process transactions or sell insurance?',
+      a: 'No. Vehicle Vault is for record keeping and organisation. BharatVow does not process transactions or move funds, and it does not sell insurance.',
     },
   ],
 
@@ -320,7 +320,7 @@ const vehicleVaultPage = {
   seo: {
     title: 'Vehicle Vault | BharatVow Digital Life',
     metaDescription:
-      'Vehicle Vault in BharatVow — RC, insurance, PUC, fuel logs, service history, and vehicle expenses in one digital garage. Not payments or insurance sales.',
+      'Vehicle Vault in BharatVow — RC, insurance, PUC, fuel logs, service history, and vehicle expenses in one digital garage. BharatVow does not process transactions or move funds, and it does not sell insurance.',
     keywords:
       'Vehicle Vault, BharatVow, vehicle document app India, RC insurance tracker, fuel log app, car maintenance records, digital life organizer',
     ogTitle: 'Vehicle Vault — Your Complete Digital Garage | BharatVow',

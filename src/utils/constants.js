@@ -38,7 +38,7 @@ export const FOOTER_COLUMNS = [
 
 export const SITE_CONFIG = {
   name: 'BharatVow',
-  tagline: 'Your Complete Digital Life Organizer',
+  tagline: 'Indian Family Digital Life Management Platform',
   url: 'https://bharatvow.com',
   email: 'support@bharatvow.com',
   phone: '+91 9509945745',
@@ -49,15 +49,15 @@ export const SITE_CONFIG = {
   playStoreUrl: '#', // Replace with live Play Store URL before launch
 };
 
-/** Footer legal & compliance block — factual copy for Play Store / payment transparency */
+/** Footer legal & compliance block — Play Store safe positioning */
 export const FOOTER_COMPLIANCE = {
   copyrightSuffix: 'All rights reserved.',
   countryOfOrigin: 'Made in India 🇮🇳',
   productOf: `${SITE_CONFIG.name} is a product of ${SITE_CONFIG.company}`,
   paymentNotice:
-    'Payments are processed securely via authorized third-party payment service providers.',
+    'BharatVow is a family digital life management platform for personal record keeping. App subscriptions are billed through Google Play. BharatVow does not provide banking, wallet, payment, money transfer, lending, investment, or insurance services.',
   serviceDisclaimer:
-    'BharatVow provides digital subscription services only. No physical goods are sold or delivered.',
+    'BharatVow helps you organize household activities, expenses, reminders, documents, and daily records. No physical goods are sold or delivered.',
 };
 
 /** @deprecated use SITE_CONFIG — kept for existing imports */

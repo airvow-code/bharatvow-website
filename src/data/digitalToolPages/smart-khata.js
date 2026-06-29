@@ -24,7 +24,7 @@ const smartKhataPage = {
     everydayProblem:
       'You borrow from a friend before a trip. You lend to a relative until salary day. Your regular kirana tab builds up quietly. Then someone asks — kitna baaki hai? — and the answer lives in a torn notebook, a old WhatsApp chat, or nowhere at all.',
     whyFamiliesNeedIt:
-      'Smart Khata is for personal account records — not payments, not a wallet, not banking. Add dated lend and borrow entries, see the balance per person, and look back at history whenever you need clarity.',
+      'Smart Khata is for personal account records — BharatVow does not process transactions or move funds. Add dated lend and borrow entries, see the balance per person, and look back at history whenever you need clarity.',
   },
 
   whoShouldUse: {
@@ -108,19 +108,19 @@ const smartKhataPage = {
         'Ravi borrowed ₹2,000 before a wedding trip. Each partial return goes in as an entry — when his friend asks how much is left, Ravi opens the account and reads the balance. No awkward guessing.',
     },
     {
-      title: 'Family lending',
+      title: 'Family lend-and-borrow',
       story:
-        'Priya lent her brother money for exam fees. Smart Khata keeps one clear account between them — dated entries, no mix-up with grocery or rent notes on paper.',
+        'Priya lent her brother an amount for exam fees. Smart Khata keeps one clear account between them — dated entries, no mix-up with grocery or rent notes on paper.',
     },
     {
       title: 'Local shop account',
       story:
-        'Geeta runs a small kirana. Regular customers have their own accounts. Month-end balance is on one screen — she exports to Excel for her own filing, not for any payment processing.',
+        'Geeta runs a small kirana. Regular customers have their own accounts. Month-end balance is on one screen — she exports to Excel for her own filing, not for any fund transfer or billing.',
     },
     {
-      title: 'Small daily settlements',
+      title: 'Small daily balance summaries',
       story:
-        'Flatmates split chai and snacks through the week. One person logs small lends and borrows. Before anyone moves out, the running total settles the last rupees fairly.',
+        'Flatmates split chai and snacks through the week. One person logs small lends and borrows. Before anyone moves out, the running total closes out the last rupees fairly.',
     },
   ],
 
@@ -137,7 +137,7 @@ const smartKhataPage = {
     {
       slug: 'expenses-diary',
       integration:
-        'Khata tracks what others owe you or you owe them. Expenses Diary tracks your own daily spending — use both when household money flows in different directions.',
+        'Khata tracks what others owe you or you owe them. Expenses Diary tracks your own daily spending — use both when household spending flows in different directions.',
     },
     {
       slug: 'budget-pocket',
@@ -147,14 +147,14 @@ const smartKhataPage = {
     {
       slug: 'days-reminder',
       integration:
-        'Settle or follow up on accounts around important dates — Days Reminder helps you remember birthdays and anniversaries when a gentle nudge matters.',
+        'Follow up on accounts around important dates — Days Reminder helps you remember birthdays and anniversaries when a gentle nudge matters.',
     },
   ],
 
   faq: [
     {
-      q: 'Is Smart Khata a payment app or wallet?',
-      a: 'No. Smart Khata is for personal lend-and-borrow record keeping only. It does not move money, process payments, or connect to banks.',
+      q: 'Does Smart Khata process transactions or move funds?',
+      a: 'No. Smart Khata is for personal lend-and-borrow record keeping only. BharatVow does not process transactions or move funds.',
     },
     {
       q: 'How is Smart Khata different from Expenses Diary?',
@@ -174,19 +174,19 @@ const smartKhataPage = {
     },
     {
       q: 'Does Smart Khata work for shop or customer accounts?',
-      a: 'Yes. Many people use one account per customer or contact — useful for kirana tabs and regular personal lending, not formal business accounting.',
+      a: 'Yes. Many people use one account per customer or contact — useful for kirana tabs and regular personal lend-and-borrow, not formal business accounting.',
     },
   ],
 
   seo: {
     title: 'Smart Khata | BharatVow Digital Life',
     metaDescription:
-      'Smart Khata keeps personal lend-and-borrow records in BharatVow — dated entries, running balance per person, search, share, export, and backup. Not a payment app.',
+      'Smart Khata keeps personal lend-and-borrow records in BharatVow — dated entries, running balance per person, search, share, export, and backup. BharatVow does not process transactions or move funds.',
     keywords:
       'Smart Khata, BharatVow, personal khata app, lend borrow records, udhaar record keeping, digital life organizer India',
     ogTitle: 'Smart Khata — Personal Lend & Borrow Records | BharatVow',
     ogDescription:
-      'Record personal accounts, track balances, and keep lend-and-borrow history clear in BharatVow. Simple record keeping — not payments or banking.',
+      'Record personal accounts, track balances, and keep lend-and-borrow history clear in BharatVow. Simple record keeping — BharatVow does not process transactions or move funds.',
   },
 
   finalCta: {

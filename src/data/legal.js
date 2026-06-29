@@ -23,8 +23,25 @@ export const LEGAL_PAGES = {
       {
         heading: '1. Introduction',
         paragraphs: [
-          `${SITE.company} ("Company", "we", "us") operates BharatVow ("App", "Service") — a digital life organizer for Android. This Privacy Policy explains how we collect, use, store, and protect your information when you use BharatVow and related pages at ${SITE.url}.`,
+          `${SITE.company} ("Company", "we", "us") operates BharatVow ("App", "Service") — an Indian family digital life management platform for Android. This Privacy Policy explains how we collect, use, store, and protect your information when you use BharatVow and related pages at ${SITE.url}.`,
           'By using BharatVow, you agree to this Privacy Policy. If you do not agree, please do not use the Service.',
+        ],
+      },
+      {
+        heading: '1A. What BharatVow Does Not Provide',
+        paragraphs: [
+          'BharatVow helps users organize and manage their own personal records. BharatVow does NOT provide:',
+        ],
+        list: [
+          'Banking services',
+          'Wallet or e-wallet services',
+          'Payment, money transfer, or settlement services',
+          'Lending, borrowing facilitation, or credit services',
+          'Investment, trading, or insurance services',
+          'Financial institution, payment aggregator, or payment bank services',
+        ],
+        afterList: [
+          'Digital Tools record information you enter. They do not move funds on your behalf. App subscription billing is handled through Google Play only.',
         ],
       },
       {
@@ -44,8 +61,8 @@ export const LEGAL_PAGES = {
             heading: '2.2 Subscription and billing information',
             list: [
               'Subscription purchase and renewal records',
-              'In-app balance top-up records where applicable',
-              'Billing transaction references processed through Google Play or in-app payment flows',
+              'In-app balance credit records where applicable',
+              'Google Play subscription billing references',
               'Distributor commission records if you enrol in the referral program',
             ],
           },
@@ -71,7 +88,7 @@ export const LEGAL_PAGES = {
         list: [
           'Authenticate your account (OTP verification and session management)',
           'Provide Digital Tools and features you request',
-          'Process subscriptions and applicable in-app purchases',
+          'Process BharatVow app subscriptions billed through Google Play',
           'Operate the optional distributor referral program',
           'Enable optional cloud backup and restore where available',
           'Respond to support and grievance requests',
@@ -107,7 +124,7 @@ export const LEGAL_PAGES = {
         heading: '5. Sharing of Information',
         paragraphs: ['We may share information with:'],
         list: [
-          'Payment and billing partners — to complete transactions you initiate',
+          'Google Play billing — to process BharatVow app subscriptions you choose in the Play Store',
           'Cloud infrastructure providers — to host backup and authentication services under contract',
           'Legal authorities — when required by law, court order, or valid government request',
           'Professional advisers — under confidentiality obligations',
@@ -214,10 +231,10 @@ export const LEGAL_PAGES = {
       {
         heading: '4. Services Description',
         paragraphs: [
-          'BharatVow is a digital life organizer providing Digital Tools for everyday records — including budgets, expenses, home information, vehicles, events, grocery lists, travel, links, saved places, and related utilities.',
+          'BharatVow is an Indian family digital life management platform providing Digital Tools for everyday records — including budgets, expenses, home information, vehicles, events, grocery lists, travel, links, saved places, and related utilities.',
           'Link Vault and Status Viewer (Android) are available without a subscription. Other Digital Tools require an active subscription after the 7-day free trial unless stated otherwise in-app.',
           'Features are described on our website and in the app. We may modify features with reasonable notice where practicable.',
-          'BharatVow is for personal organization. It is not a bank, payment service, or professional advisory service.',
+          'BharatVow is for personal organization and record keeping. It is not a bank, wallet, payment service, money transfer service, lending platform, investment platform, or professional advisory service.',
         ],
       },
       {
@@ -225,7 +242,7 @@ export const LEGAL_PAGES = {
         list: [
           'BharatVow offers a 7-day free trial to explore Digital Tools before subscribing',
           'Paid plans include Monthly (₹300/month) and Yearly (₹2,000/year) options as displayed in-app before purchase',
-          'Prices shown are before GST and applicable taxes, which are added at checkout',
+          'Prices shown are before GST and applicable taxes, which are added on the subscription confirmation screen in the app before you confirm purchase',
           'Subscriptions renew per the selected period unless cancelled through Google Play and/or in-app subscription settings',
           'Refunds are governed by our Cancellation & Refund Policy',
         ],
@@ -233,8 +250,8 @@ export const LEGAL_PAGES = {
       {
         heading: '6. In-App Balance (Where Applicable)',
         list: [
-          'In-app balance features, where available, are for subscriptions and eligible in-app services — not a bank account or general payment wallet',
-          'Commission Wallet for distributors is separate from Purchase Wallet balance',
+          'In-app balance features, where available, are for BharatVow app subscriptions and eligible in-app services — not a bank account or general-purpose stored-value account',
+          'Commission balance for distributors is separate from Purchase balance used for subscriptions',
           'In-app balances are not bank deposits; applicable terms displayed in-app apply',
         ],
       },
@@ -252,7 +269,7 @@ export const LEGAL_PAGES = {
           'Upload false, misleading, or harmful content',
           'Attempt to reverse engineer, hack, or disrupt the Service',
           'Share account credentials or OTP/PIN with others',
-          'Misuse subscription, billing, or referral features',
+          'Misuse subscription, billing, or referral program features',
         ],
         afterList: [
           'You are solely responsible for records and information you enter in the app.',
@@ -315,24 +332,31 @@ export const LEGAL_PAGES = {
     path: LEGAL_PATHS.disclaimer,
     lastUpdated: LAST_UPDATED,
     lead: 'BharatVow helps you organize everyday information. You remain responsible for your own records.',
-    keywords: 'BharatVow disclaimer, personal organization app, not financial advice',
+    keywords: 'BharatVow disclaimer, personal organization app, not regulated financial services',
     seo: {
       ogTitle: 'Disclaimer | BharatVow',
-      ogDescription: 'BharatVow is for personal organization — not professional financial, legal, or medical advice.',
+      ogDescription:
+        'BharatVow is an Indian family digital life management platform — not banking, wallet, payment, lending, investment, or professional advisory services.',
     },
     sections: [
       {
         heading: 'Digital Life Organizer',
         paragraphs: [
-          `BharatVow is a digital life organizer. The app helps you save, organize, and access everyday information — such as personal records, budgets, home details, vehicle documents, events, and daily lists — in one place on your phone.`,
+          `BharatVow is an Indian family digital life management platform. The app helps you save, organize, and access everyday household information — such as personal records, budgets, home details, vehicle documents, events, and daily lists — in one place on your phone.`,
           `${SITE.company} provides BharatVow on an "as is" and "as available" basis for personal organization purposes.`,
         ],
       },
       {
+        heading: 'Not Regulated Financial Services',
+        paragraphs: [
+          'BharatVow does not provide banking, wallet, payment, money transfer, lending, investment, insurance, or financial institution services. Users only organize and manage their own personal records.',
+        ],
+      },
+      {
         heading: 'Not Professional Advice',
-        paragraphs: ['BharatVow does not provide professional financial, legal, tax, medical, or investment advice. In particular:'],
+        paragraphs: ['BharatVow does not provide professional legal, tax, medical, or regulated advisory services. In particular:'],
         list: [
-          'Smart Khata, Budget Pocket, and Expenses Diary are personal record tools — not substitutes for statutory accounting, tax filing, or licensed financial services',
+          'Smart Khata, Budget Pocket, and Expenses Diary are personal record tools — not substitutes for statutory accounting, tax filing, or licensed professional services',
           'Home Vault and Vehicle Vault help organize household and vehicle information — they do not replace original documents or prove legal ownership on their own',
           'Event Book, Days Reminder, and similar tools rely on information you enter',
           'Place Store is a location organizer — not a navigation or maps replacement',
@@ -348,7 +372,7 @@ export const LEGAL_PAGES = {
       {
         heading: 'Third-Party Services',
         paragraphs: [
-          'Billing through Google Play, optional recharge features, and external links you open are subject to third-party terms and availability. We are not responsible for their acts, omissions, or policy changes.',
+          'Google Play subscription billing, optional in-app balance features, and external links you open are subject to third-party terms and availability. We are not responsible for their acts, omissions, or policy changes.',
         ],
       },
       {
@@ -472,7 +496,7 @@ export const LEGAL_PAGES = {
       {
         heading: '5. GST and Taxes',
         paragraphs: [
-          'Prices displayed for subscription plans are before GST. GST and other applicable taxes are added at checkout as shown in the app before you confirm purchase.',
+          'Prices displayed for subscription plans are before GST. GST and other applicable taxes are added on the subscription confirmation screen in the app before you confirm purchase.',
         ],
       },
       {
@@ -496,17 +520,17 @@ export const LEGAL_PAGES = {
         heading: '7. In-App Balance (Where Applicable)',
         list: [
           'In-app balance, where available, is for subscriptions and eligible in-app services',
-          'Refund requests for unused topped-up balance may be reviewed if submitted to support within 7 days of top-up and no services were consumed',
+          'Refund requests for unused credited in-app balance may be reviewed if submitted to support within 7 days of the credit and no services were consumed',
           'Balance already used for subscription or completed services is generally non-refundable',
         ],
       },
       {
         heading: '8. Refund Process',
         list: [
-          `Email ${SITE.email} with subject: Refund Request — [Transaction ID or date]`,
+          `Email ${SITE.email} with subject: Refund Request — [Google Play order ID or date]`,
           'Include: registered mobile number, billing date, amount, reason, and relevant screenshots',
-          'We review requests during business hours; processing time varies by case and payment method',
-          'Approved refunds are credited to the original payment method or in-app balance where operationally feasible',
+          'We review requests during business hours; processing time varies by case and Google Play billing method',
+          'Approved refunds are credited through Google Play or to in-app balance where operationally feasible',
         ],
       },
       {
@@ -560,7 +584,7 @@ export const LEGAL_PAGES = {
         list: [
           'Privacy and personal data handling concerns',
           'Account access issues not resolved through regular support',
-          'Subscription, billing, or in-app purchase disputes',
+          'Subscription, Google Play billing, or in-app purchase disputes',
           'Concerns about conduct on the platform',
           'Distributor program disputes',
           'Alleged violation of published BharatVow policies',
@@ -571,7 +595,7 @@ export const LEGAL_PAGES = {
         list: [
           `Email ${SITE.email} with subject line: Grievance — [Brief topic]`,
           'Include: your full name, registered mobile number, app version, device details, description of the issue, date of incident, and desired resolution',
-          'Attach screenshots or transaction references where relevant',
+          'Attach screenshots or Google Play billing references where relevant',
         ],
         afterList: [
           'You may also send a written complaint to the registered office address above, marked Attention: Grievance Officer.',
@@ -633,7 +657,7 @@ export const LEGAL_PAGES = {
         list: [
           'Valid BharatVow account in good standing',
           'Indian resident aged 18 or older, or a valid legal business entity',
-          'Accurate KYC and bank details when required for withdrawal',
+          'Accurate KYC and payout details when required for commission redemption',
           'The Company may reject or terminate enrollment at its discretion',
         ],
       },
@@ -647,11 +671,11 @@ export const LEGAL_PAGES = {
         ],
       },
       {
-        heading: '4. Commission and Payments',
+        heading: '4. Commission and Payouts',
         paragraphs: [
           'Commission rates and qualifying events are defined in-app at enrollment and may be updated with notice where required.',
-          'Commission is credited after validation. The Company may withhold or reverse commission on fraudulent, refunded, or chargeback transactions.',
-          'Withdrawal rules, minimum thresholds, and tax obligations (including TDS or GST where applicable) follow in-app display and Indian law.',
+          'Commission is credited after validation. The Company may withhold or reverse commission on fraudulent, refunded, or disputed Google Play billing entries.',
+          'Commission payout rules, minimum thresholds, and tax obligations (including TDS or GST where applicable) follow in-app display and Indian law.',
         ],
       },
       {

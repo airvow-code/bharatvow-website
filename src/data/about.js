@@ -31,7 +31,7 @@ export const ABOUT_PAGE = {
     paragraphs: [
       'BharatVow is a Digital Life Organizer — an Android application that helps you keep everyday information in one place instead of scattered across notebooks, chats, screenshots, and separate apps.',
       'Use it to manage personal records such as lend-and-borrow notes, household budgets, daily expenses, home bills and assets, vehicle documents, events, trips, grocery lists, saved links, important dates, saved places, and other information you refer to regularly.',
-      'BharatVow is built for personal organization. It is not a bank, payment service, or navigation app. Each Digital Tool focuses on a specific part of everyday life — connected inside one application.',
+      'BharatVow is built for personal organization and record keeping. It is not a bank, wallet, payment service, money transfer service, lending platform, investment platform, or navigation app. Each Digital Tool focuses on a specific part of everyday life — connected inside one application.',
     ],
   },
 
@@ -91,7 +91,7 @@ export const ABOUT_PAGE = {
       'Core module data is stored on your device for everyday use. You can work with your records locally without needing constant internet access.',
       'Optional cloud backup is available for applicable modules when you choose to use it — useful when changing phones or keeping a backup copy linked to your account.',
       'You remain in control of your data. You can export records where the app supports it, manage your account, and request account deletion through the in-app flow or our Delete Account page.',
-      'BharatVow is for personal organization — not professional financial, legal, or medical advice. We describe only functionality that exists in the app today.',
+      'BharatVow is for personal organization — not professional legal, tax, or medical advice. We describe only functionality that exists in the app today.',
     ],
     privacyPath: '/privacy-policy',
     privacyLabel: 'Read our Privacy Policy',

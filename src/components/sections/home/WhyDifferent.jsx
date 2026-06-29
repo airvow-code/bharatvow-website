@@ -1,5 +1,5 @@
 import {
-  Wallet,
+  PieChart,
   Home,
   Users,
   Car,
@@ -16,7 +16,7 @@ import Button from '@/components/ui/Button';
 import { WHY_DIFFERENT, WHY_DIFFERENT_ANCHOR } from '@/data/whyDifferent';
 import { cn } from '@/utils/cn';
 
-const PLATFORM_ICONS = [Wallet, Home, Users, Car, ShoppingCart, Plane, Link2];
+const PLATFORM_ICONS = [PieChart, Home, Users, Car, ShoppingCart, Plane, Link2];
 
 function TraditionalColumn() {
   const { traditional } = WHY_DIFFERENT;

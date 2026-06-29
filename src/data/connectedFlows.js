@@ -13,7 +13,6 @@ import {
   PartyPopper,
   Users,
   Gift,
-  Wallet,
   Bell,
   ShoppingCart,
   CheckSquare,
@@ -120,7 +119,7 @@ export const EVERYTHING_CONNECTED = {
           description: 'Note gifts given and received for every guest.',
         },
         {
-          icon: Wallet,
+          icon: PieChart,
           title: 'Event budget',
           description: 'Follow planned and actual celebration costs.',
         },

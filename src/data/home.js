@@ -1,5 +1,6 @@
 import {
-  Wallet,
+  Receipt,
+  PieChart,
   Home,
   Users,
   Car,
@@ -52,7 +53,7 @@ export const TRUST_PILLARS = [
 /** Relatable family moments — used only in FamiliarMoments section */
 export const FAMILIAR_MOMENTS = [
   {
-    icon: Wallet,
+    icon: Receipt,
     title: 'Month-end already?',
     story: 'Salary arrived on Monday — and by Friday everyone is asking where it went.',
     tone: 'money',
@@ -107,7 +108,7 @@ export const LIFE_AREAS_HOME = [
     slug: 'money',
     title: 'Manage Your Budget',
     description: 'Salary, udhaar, and daily expenses — organised without juggling notebooks or chats.',
-    icon: Wallet,
+    icon: PieChart,
     chip: 'money',
     toolLabel: '3 Smart Tools',
     tools: ['Smart Khata', 'Budget Pocket', 'Expenses Diary'],
@@ -199,10 +200,10 @@ export const MORNING_STORY = {
 };
 
 export const HERO = {
-  eyebrow: 'Your Complete Digital Life Organizer',
+  eyebrow: 'Indian Family Digital Life Management Platform',
   title: 'Organize your complete digital life in one place',
   description:
-    'You already manage many parts of your life every day — budgets, home, vehicles, events, grocery, and everyday records. BharatVow brings them together in one organized, secure, and easy-to-use platform.',
+    'You already manage many parts of your life every day — budgets, home, vehicles, events, grocery, and everyday records. BharatVow helps Indian families organize household activities, expenses, reminders, documents, and personal records in one secure, easy-to-use platform.',
   topics: [
     'Home',
     'Budget',

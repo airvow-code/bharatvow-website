@@ -131,7 +131,7 @@ const homeVaultPage = {
       description:
         'Store utility account numbers — electricity, water, gas, broadband, DTH, and society references in one place.',
       problemSolved:
-        'Consumer numbers and connection details are findable when paying bills or raising complaints.',
+        'Consumer numbers and connection details are findable when recording bills or raising complaints.',
     },
     {
       icon: MapPin,
@@ -241,7 +241,7 @@ const homeVaultPage = {
     {
       title: 'Electronics',
       story:
-        'Laptop and router in Home Assets. Broadband consumer number in Connections — ready when the bill payment app asks for the account ID.',
+        'Laptop and router in Home Assets. Broadband consumer number in Connections — ready when the bill record utility asks for the account ID.',
     },
   ],
 
@@ -299,8 +299,8 @@ const homeVaultPage = {
       a: 'Yes. Cloud backup helps you restore home records when you change phones.',
     },
     {
-      q: 'Is Home Vault a payment or utility bill payment app?',
-      a: 'No. Home Vault is for organising home records and maintenance. It does not pay bills, process payments, or connect to banks.',
+      q: 'Does Home Vault process bill records or move funds?',
+      a: 'No. Home Vault is for organising home records and maintenance. BharatVow does not process transactions or move funds on your behalf.',
     },
   ],
 
@@ -330,7 +330,7 @@ const homeVaultPage = {
   seo: {
     title: 'Home Vault | BharatVow Digital Life',
     metaDescription:
-      'Home Vault in BharatVow — organise home assets, bills, warranties, due services, providers, and stored items in one ecosystem. Not bill payments or banking.',
+      'Home Vault in BharatVow — organise home assets, bills, warranties, due services, providers, and stored items in one ecosystem. BharatVow does not process transactions or move funds.',
     keywords:
       'Home Vault, BharatVow, home inventory app India, appliance warranty tracker, household organizer, home maintenance records, digital life organizer',
     ogTitle: 'Home Vault — Your Complete Home Organization Ecosystem | BharatVow',

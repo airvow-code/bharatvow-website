@@ -15,15 +15,15 @@ const expensesDiaryPage = {
   slug: 'expenses-diary',
 
   valueProposition:
-    'Log daily expenses and income in one diary — so you always know where your money went this month.',
+    'Log daily expenses and income in one diary — so you always know where your spending went this month.',
 
   whyExists: {
     headline: 'Why Expenses Diary?',
     eyebrow: 'Why Expenses Diary?',
     everydayProblem:
-      'A chai here, auto fare there, cash to the kirana walla — by evening you forget half of it. Month-end arrives and the salary is gone, but you cannot explain where. Paper notes get lost. Bank messages show big transfers, not the small daily kharcha that actually adds up.',
+      'A chai here, auto fare there, cash to the kirana walla — by evening you forget half of it. Month-end arrives and the salary is gone, but you cannot explain where. Paper notes get lost. Account transfer alerts show big amounts, not the small daily kharcha that actually adds up.',
     whyFamiliesNeedIt:
-      'Expenses Diary is for recording and reviewing everyday spending — not payments, not a wallet, and not banking. Add entries with categories, search your history, and see monthly totals so daily financial awareness becomes a habit, not a guess.',
+      'Expenses Diary is for recording and reviewing everyday spending — BharatVow does not process transactions or move funds. Add entries with categories, search your history, and see monthly totals so daily spending awareness becomes a habit, not a guess.',
   },
 
   whoShouldUse: {
@@ -61,7 +61,7 @@ const expensesDiaryPage = {
       icon: BarChart3,
       title: 'Reports',
       description:
-        'Generate transaction reports from your filtered entries — useful for personal review and record keeping.',
+        'Generate entry reports from your filtered entries — useful for personal review and record keeping.',
     },
     {
       icon: CloudUpload,
@@ -90,7 +90,7 @@ const expensesDiaryPage = {
     },
     {
       title: 'Understand Spending Habits',
-      description: 'Use search, filters, and reports to spot patterns — where money goes most often and what to plan for next month.',
+      description: 'Use search, filters, and reports to spot patterns — where spending goes most often and what to plan for next month.',
     },
   ],
 
@@ -140,7 +140,7 @@ const expensesDiaryPage = {
     {
       slug: 'smart-khata',
       integration:
-        'Smart Khata tracks lend-and-borrow with people. Expenses Diary tracks your own daily spending — both keep different money records organised.',
+        'Smart Khata tracks lend-and-borrow with people. Expenses Diary tracks your own daily spending — both keep different spending records organised.',
     },
     {
       slug: 'trip-ledger',
@@ -156,8 +156,8 @@ const expensesDiaryPage = {
 
   faq: [
     {
-      q: 'Is Expenses Diary a payment app or wallet?',
-      a: 'No. Expenses Diary is for recording and reviewing expenses and income. It does not move money, connect to banks, or process payments.',
+      q: 'Does Expenses Diary process transactions or move funds?',
+      a: 'No. Expenses Diary is for recording and reviewing expenses and income. BharatVow does not process transactions or move funds.',
     },
     {
       q: 'How is Expenses Diary different from Budget Pocket?',
@@ -165,11 +165,11 @@ const expensesDiaryPage = {
     },
     {
       q: 'Can I log both expenses and income?',
-      a: 'Yes. Add expense entries for spending and income entries when salary or other money comes in — both appear in your monthly summary.',
+      a: 'Yes. Add expense entries for spending and income entries when salary or other income arrives — both appear in your monthly summary.',
     },
     {
       q: 'Can I search old entries?',
-      a: 'Yes. Search by keyword and filter by type or date range to find specific transactions in your history.',
+      a: 'Yes. Search by keyword and filter by type or date range to find specific entries in your history.',
     },
     {
       q: 'Does Expenses Diary work offline?',
@@ -184,16 +184,16 @@ const expensesDiaryPage = {
   seo: {
     title: 'Expenses Diary | BharatVow Digital Life',
     metaDescription:
-      'Expenses Diary in BharatVow — log daily expenses and income, organise by category, and review monthly spending. Record keeping, not payments or banking.',
+      'Expenses Diary in BharatVow — log daily expenses and income, organise by category, and review monthly spending. Record keeping — BharatVow does not process transactions or move funds.',
     keywords:
       'Expenses Diary, BharatVow, daily expense tracker India, household expense log, personal spending diary, digital life organizer',
     ogTitle: 'Expenses Diary — Track Daily Spending | BharatVow',
     ogDescription:
-      'Record everyday expenses, search your history, and see monthly totals in BharatVow. Simple expense diary — not a wallet or payment app.',
+      'Record everyday expenses, search your history, and see monthly totals in BharatVow. Simple expense diary — BharatVow does not process transactions or move funds.',
   },
 
   finalCta: {
-    title: 'See where your money goes each day',
+    title: 'See where your spending goes each day',
     description:
       'Download BharatVow and explore all Digital Tools with a 7-day free trial. See Pricing for Monthly and Yearly plans.',
     secondaryLabel: 'Explore Event Book',

@@ -29,7 +29,7 @@ export const MAIN_DASHBOARD_TOOLS = [
     key: 'KHATA',
     slug: 'smart-khata',
     label: 'Smart Khata',
-    sublabel1: 'Track lending',
+    sublabel1: 'Track lend-and-borrow',
     sublabel2: 'and borrowing',
     alwaysFree: false,
   },

@@ -12,7 +12,7 @@ export const DELETE_ACCOUNT = {
       'Deletion is irreversible',
       'All locally stored module data on device will be lost',
       'Cloud backup copies linked to your account will be removed',
-      'In-app balance handling per refund policy — request withdrawal/refund first if applicable',
+      'In-app balance handling per Cancellation & Refund Policy — submit a balance review request first if applicable',
       'Active subscriptions — cancel first to avoid future charges',
     ],
     recommendation: 'Run Master Backup export/backup if you need records before deletion.',
@@ -36,7 +36,7 @@ export const DELETE_ACCOUNT = {
   },
   timeline: [
     { label: 'Acknowledgement', value: 'Within 48 business hours' },
-    { label: 'Completion target', value: 'Within 30 days (often sooner), except data we must retain for legal/tax/transaction audit' },
+    { label: 'Completion target', value: 'Within 30 days (often sooner), except data we must retain for legal/tax/billing audit' },
   ],
   retained: [
     'Billing records required by law (subscriptions, in-app balance, tax)',

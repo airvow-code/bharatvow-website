@@ -219,7 +219,7 @@ const placeStorePage = {
     {
       slug: 'trip-ledger',
       integration:
-        'Trip Ledger organises group travel costs and trip records. Place Store saves homestays, stops, and destinations — use both when planning routes and settling travel expenses.',
+        'Trip Ledger organises group travel costs and trip records. Place Store saves homestays, stops, and destinations — use both when planning routes and balancing travel expense records.',
     },
     {
       slug: 'vehicle-vault',

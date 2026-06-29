@@ -194,7 +194,7 @@ const statusViewerPage = {
   faq: [
     {
       q: 'Is Status Viewer a messaging app?',
-      a: 'No. Status Viewer is a utility inside BharatVow. It helps you view, save, and share status media already on your device. It does not send messages, read chats, or handle payments.',
+      a: 'No. Status Viewer is a utility inside BharatVow. It helps you view, save, and share status media already on your device. It does not send messages, read chats, or process transactions or move funds.',
     },
     {
       q: 'Is Status Viewer free?',

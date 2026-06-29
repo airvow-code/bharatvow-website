@@ -88,7 +88,7 @@ export const PRICING_FAQ = [
   },
   {
     q: 'Is GST included?',
-    a: 'Prices shown are before GST. GST and other applicable taxes are added at checkout as shown in the app before you confirm your subscription.',
+    a: 'Prices shown are before GST. GST and other applicable taxes are added on the subscription confirmation screen in the app before you confirm your subscription.',
   },
   {
     q: 'How can I cancel my subscription?',

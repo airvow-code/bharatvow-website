@@ -2,7 +2,7 @@ import {
   HelpCircle,
   Users,
   Rocket,
-  CreditCard,
+  Receipt,
   Shield,
   Cloud,
   Layers,
@@ -11,7 +11,7 @@ import {
   Scale,
   WifiOff,
   NotebookPen,
-  Wallet,
+  PieChart,
   HandCoins,
   CalendarCheck,
   Luggage,
@@ -50,8 +50,8 @@ export const FAQ_CATEGORY_DEFS = [
   {
     id: 'subscription',
     label: 'Subscription & Pricing',
-    icon: CreditCard,
-    description: 'Plans, GST, and billing',
+    icon: Receipt,
+    description: 'Plans, GST, and Google Play subscription billing',
   },
   {
     id: 'privacy-security',
@@ -159,7 +159,7 @@ export const FAQ_ITEMS = [
     shortAnswer:
       'Your complete digital life organizer — budgets, home, vehicles, events, and everyday records in one Android app.',
     answer:
-      'BharatVow is your complete digital life organizer — one Android application to organize budgets, daily expenses, home maintenance, vehicles, events, grocery, travel, links, saved places, and everyday records in a single app. It is for personal organization — not a bank, payment service, or navigation app.',
+      'BharatVow is an Indian family digital life management platform — one Android application to organize budgets, daily expenses, home maintenance, vehicles, events, grocery, travel, links, saved places, and everyday records in a single app. It is for personal organization — not a bank, wallet, money transfer, lending, investment, or navigation service.',
     keywords: ['platform', 'app', 'digital life', 'organize'],
   },
   {
@@ -232,7 +232,7 @@ export const FAQ_ITEMS = [
   {
     id: 'available-plans',
     category: 'subscription',
-    icon: CreditCard,
+    icon: Receipt,
     question: 'What plans are available?',
     shortAnswer: 'Monthly ₹300 or Yearly ₹2,000 — both include all Digital Tools.',
     answer:
@@ -242,17 +242,17 @@ export const FAQ_ITEMS = [
   {
     id: 'gst-included',
     category: 'subscription',
-    icon: CreditCard,
+    icon: Receipt,
     question: 'Is GST included?',
-    shortAnswer: 'No — GST and applicable taxes are added at checkout as shown in the app.',
+    shortAnswer: 'No — GST and applicable taxes are added on the subscription confirmation screen in the app.',
     answer:
-      'Prices shown for Monthly and Yearly plans are before GST. GST and other applicable taxes are added at checkout. The final amount is displayed in the app before you confirm your subscription.',
+      'Prices shown for Monthly and Yearly plans are before GST. GST and other applicable taxes are added before you confirm your subscription in the app. The final amount is displayed before you complete the Google Play subscription step.',
     keywords: ['gst', 'tax', 'price', 'included'],
   },
   {
     id: 'change-subscription',
     category: 'subscription',
-    icon: CreditCard,
+    icon: Receipt,
     question: 'Can I change my subscription?',
     shortAnswer:
       'Yes — switch between Monthly and Yearly through subscription settings when available.',
@@ -263,7 +263,7 @@ export const FAQ_ITEMS = [
   {
     id: 'cancel-subscription',
     category: 'subscription',
-    icon: CreditCard,
+    icon: Receipt,
     question: 'How do I cancel?',
     shortAnswer:
       'Cancel through Google Play subscription settings — billing stops at the end of the current period.',
@@ -281,7 +281,7 @@ export const FAQ_ITEMS = [
     shortAnswer:
       'Records stay on your phone first, protected by OTP and PIN login.',
     answer:
-      'Your module records are stored on your device for everyday use. Account access is protected by OTP verification and a PIN. Optional encrypted cloud backup is available for applicable modules when you choose to use it. BharatVow is for personal organization — not professional financial, legal, or medical advice.',
+      'Your module records are stored on your device for everyday use. Account access is protected by OTP verification and a PIN. Optional encrypted cloud backup is available for applicable modules when you choose to use it. BharatVow is for personal organization — not professional legal, tax, or medical advice.',
     keywords: ['secure', 'pin', 'otp', 'encrypted', 'privacy'],
   },
   {
@@ -360,19 +360,19 @@ export const FAQ_ITEMS = [
     icon: HandCoins,
     question: 'What is Smart Khata?',
     shortAnswer:
-      'Personal lend-and-borrow records with a running balance per person — not a payment app.',
+      'Personal lend-and-borrow records with a running balance per person — BharatVow does not process transactions or move funds.',
     answer:
-      'Smart Khata tracks personal lending and borrowing with other people — dated entries and a clear running balance per person. It is for your own records — not a payment or money-transfer service.',
-    keywords: ['smart khata', 'khata', 'lending', 'borrowing', 'udhaar'],
+      'Smart Khata tracks personal lend-and-borrow entries with other people — dated records and a clear running balance per person. It is for your own records — BharatVow does not process transactions or move funds.',
+    keywords: ['smart khata', 'khata', 'lend', 'borrow', 'udhaar'],
   },
   {
     id: 'tool-budget-pocket',
     category: 'digital-tools',
-    icon: Wallet,
+    icon: PieChart,
     question: 'What is Budget Pocket?',
     shortAnswer: 'Plan and control household budget by category before the month runs out.',
     answer:
-      'Budget Pocket helps you set household budget limits by category and track spending against those limits through the month. It is for personal budget planning — not a bank account or payment service.',
+      'Budget Pocket helps you set household budget limits by category and track spending against those limits through the month. It is for personal budget planning — not a bank account or regulated financial service.',
     keywords: ['budget pocket', 'budget', 'category', 'spending'],
   },
   {
@@ -382,7 +382,7 @@ export const FAQ_ITEMS = [
     question: 'What is Expenses Diary?',
     shortAnswer: 'Manage daily expense and income records in one diary.',
     answer:
-      'Expenses Diary is your daily register for expenses and income — so you can see where household money went. It tracks your own spending records — not lending with others (that is Smart Khata).',
+      'Expenses Diary is your daily register for expenses and income — so you can see where household spending went. It tracks your own spending records — not lend-and-borrow with others (that is Smart Khata).',
     keywords: ['expenses diary', 'expense', 'income', 'daily'],
   },
   {
@@ -400,9 +400,9 @@ export const FAQ_ITEMS = [
     category: 'digital-tools',
     icon: Luggage,
     question: 'What is Trip Ledger?',
-    shortAnswer: 'Split group trip expenses and settle who owes whom.',
+    shortAnswer: 'Record shared trip costs and review split balances fairly.',
     answer:
-      'Trip Ledger records shared trip costs — who paid what and how expenses are split — so group travel settlements are clear and fair.',
+      'Trip Ledger records shared trip costs — who covered what and how expenses are split — so group travel balance summaries stay clear and fair.',
     keywords: ['trip ledger', 'trip', 'travel', 'split', 'expense'],
   },
   {
@@ -483,9 +483,9 @@ export const FAQ_ITEMS = [
     icon: HandCoins,
     question: 'Is Smart Khata the same as Expenses Diary?',
     shortAnswer:
-      'No — Khata is for lending and borrowing; Expenses Diary is for your own spending.',
+      'No — Khata is for lend-and-borrow records; Expenses Diary is for your own spending.',
     answer:
-      'No. Smart Khata tracks lending and borrowing with other people — who owes what. Expenses Diary tracks your own daily spending and income records.',
+      'No. Smart Khata tracks lend-and-borrow entries with other people — who owes what on your records. Expenses Diary tracks your own daily spending and income records.',
     keywords: ['khata', 'expenses', 'difference'],
   },
 
@@ -548,7 +548,7 @@ export const FAQ_ITEMS = [
   {
     id: 'manage-subscription',
     category: 'account',
-    icon: CreditCard,
+    icon: Receipt,
     question: 'Where can I manage my subscription?',
     shortAnswer:
       'In BharatVow subscription settings and Google Play subscription management.',
@@ -594,7 +594,7 @@ export const FAQ_ITEMS = [
     icon: FileText,
     question: 'Disclaimer',
     shortAnswer: 'BharatVow is for personal organisation — not professional advice.',
-    answer: 'BharatVow is for personal organisation. It does not provide professional financial, legal, or medical advice.',
+    answer: 'BharatVow is for personal organisation. It does not provide banking, wallet, payment, money transfer, lending, investment, insurance, or professional legal or medical advice.',
     links: [{ label: 'Disclaimer', path: '/disclaimer' }],
     keywords: ['disclaimer', 'legal'],
   },

@@ -25,7 +25,7 @@ export const CONTENT_GUIDELINES = {
       'Feature dumping in the Hero or first scroll',
       'Long paragraphs (max 2–3 sentences in body copy)',
       'Technical jargon without plain explanation',
-      'Payment/banking language unless truly applicable',
+      'Transaction, banking, wallet, or money-transfer language unless truly applicable',
       'Buzzwords: revolutionary, best-in-class, super app, synergy',
       'Unshipped features (iOS Status Viewer, AI, push notifications)',
     ],

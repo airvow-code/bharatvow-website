@@ -3,7 +3,7 @@ import {
   FileText,
   AlertCircle,
   Building2,
-  CreditCard,
+  Receipt,
   Scale,
   Trash2,
   Users,
@@ -16,7 +16,7 @@ export const LEGAL_HUB = {
   title: 'Legal Center',
   headline: 'Legal Center',
   intro:
-    'Transparent policies and compliance documents for BharatVow — your complete digital life organizer.',
+    'Transparent policies and compliance documents for BharatVow — an Indian family digital life management platform.',
   description:
     'BharatVow Legal Center — privacy policy, terms, refund policy, grievance redressal, and account deletion information.',
   keywords:
@@ -60,7 +60,7 @@ export const LEGAL_HUB_CARDS = [
   {
     id: 'refund-policy',
     path: LEGAL_PATHS.refundPolicy,
-    icon: CreditCard,
+    icon: Receipt,
     title: 'Cancellation & Refund Policy',
     description: LEGAL_PAGES['refund-policy'].description,
   },

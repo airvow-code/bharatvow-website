@@ -2,7 +2,7 @@ import {
   CalendarHeart,
   Users,
   Send,
-  Wallet,
+  PieChart,
   Receipt,
   Store,
   ShoppingCart,
@@ -77,7 +77,7 @@ const eventBookPage = {
         'Send invitations and track attendance — know who is invited and who has confirmed without separate spreadsheets.',
     },
     {
-      icon: Wallet,
+      icon: PieChart,
       title: 'Budget Planning',
       description:
         'Set an event budget and compare planned amount against spending as costs are recorded through planning.',
@@ -227,7 +227,7 @@ const eventBookPage = {
     },
     {
       q: 'Can I track gifts given and received?',
-      a: 'Yes. Record gifts per guest — cash or item — with optional notes for each entry.',
+      a: 'Yes. Record gifts per guest — amount or item — with optional notes for each entry.',
     },
     {
       q: 'Does Event Book connect to Budget Pocket?',
@@ -238,15 +238,15 @@ const eventBookPage = {
       a: 'Yes. Cloud backup and Excel export help you keep event data safe when you change phones.',
     },
     {
-      q: 'Is Event Book a payment or ticketing app?',
-      a: 'No. Event Book is for planning and record keeping. It does not process payments, sell tickets, or connect to banks.',
+      q: 'Does Event Book process transactions or sell tickets?',
+      a: 'No. Event Book is for planning and record keeping. BharatVow does not process transactions or move funds, and it does not sell tickets.',
     },
   ],
 
   seo: {
     title: 'Event Book | BharatVow Digital Life',
     metaDescription:
-      'Event Book in BharatVow — plan weddings, birthdays, and functions with guests, budget, vendors, shopping, and expenses in one register. Not payments or banking.',
+      'Event Book in BharatVow — plan weddings, birthdays, and functions with guests, budget, vendors, shopping, and expenses in one register. BharatVow does not process transactions or move funds.',
     keywords:
       'Event Book, BharatVow, wedding planning app India, event guest list, function organizer, celebration planning, digital life organizer',
     ogTitle: 'Event Book — Plan Celebrations in One Place | BharatVow',

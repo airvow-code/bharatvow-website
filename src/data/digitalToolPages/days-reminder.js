@@ -183,7 +183,7 @@ const daysReminderPage = {
     {
       title: 'Bill due date',
       story:
-        'Electricity bill due on the tenth — saved as a custom reminder. On the ninth, it shows in Upcoming so payment is not delayed.',
+        'Electricity bill due on the tenth — saved as a custom reminder. On the ninth, it shows in Upcoming so the bill record is not missed.',
     },
     {
       title: 'Medicine reminder',

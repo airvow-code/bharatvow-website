@@ -87,7 +87,7 @@ export function softwareApplicationJsonLd() {
     operatingSystem: 'Android',
     applicationCategory: 'LifestyleApplication',
     description:
-      'Secure digital organization platform for everyday life — budget planning, home management, vehicles, events, and daily records. Not a bank or payment app.',
+      'Secure Indian family digital life management platform — budget planning, home management, vehicles, events, and daily records. BharatVow does not process transactions or move funds.',
     offers: {
       '@type': 'Offer',
       price: '0',

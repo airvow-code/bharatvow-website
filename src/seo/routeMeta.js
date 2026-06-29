@@ -9,9 +9,9 @@ export const ROUTE_META = {
   [PATHS.home]: {
     fullTitle: `${SITE.name} — ${SITE.tagline}`,
     description:
-      'Stop juggling apps. BharatVow brings budgets, home, vehicles, events, grocery, trips, links, and everyday records into one secure digital life organizer. Free tools on Google Play.',
+      'An Indian family digital life management platform. Organize household activities, expenses, reminders, groceries, documents, vehicles, trips, events, and personal records in one secure place. Free tools on Google Play.',
     keywords:
-      'BharatVow, digital life organizer, daily life management India, personal organization app, budget tracking app, home organization, vehicle records, Indian productivity app',
+      'BharatVow, family digital life management, daily life management India, personal organization app, budget tracking, home organization, Indian productivity app',
     ogType: 'website',
   },
   [PATHS.about]: {

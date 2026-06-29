@@ -1,5 +1,5 @@
 import {
-  Wallet,
+  PieChart,
   Bell,
   Car,
   FileText,
@@ -20,7 +20,7 @@ export const WHY_DIFFERENT = {
     label: 'The traditional way',
     caption: 'Separate apps. Separate habits. Nothing shared.',
     apps: [
-      { icon: Wallet, label: 'Budget app' },
+      { icon: PieChart, label: 'Budget app' },
       { icon: Bell, label: 'Reminder app' },
       { icon: Car, label: 'Vehicle app' },
       { icon: FileText, label: 'Notes app' },
