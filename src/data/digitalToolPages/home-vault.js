@@ -75,7 +75,7 @@ const homeVaultPage = {
         'Warranty expiry appears on the Home Vault dashboard — know which appliances need attention before coverage ends.',
     },
     {
-      title: 'Never Miss Services',
+      title: 'Stay on Top of Services',
       description:
         'Due Services tracks upcoming and overdue maintenance — AC servicing, chimney cleaning, and more on your radar.',
     },
@@ -161,7 +161,7 @@ const homeVaultPage = {
       icon: CloudUpload,
       title: 'Backup & Restore',
       description:
-        'Back up Home Vault data to the cloud — restore when you change phones so years of home records stay safe.',
+        'Optional cloud backup when you enable it — restore when you change phones so years of home records stay safe.',
       problemSolved:
         'Household records survive a phone change — not lost when you upgrade or replace your device.',
     },
@@ -296,7 +296,7 @@ const homeVaultPage = {
     },
     {
       q: 'Can I back up my Home Vault data?',
-      a: 'Yes. Cloud backup helps you restore home records when you change phones.',
+      a: 'Yes. Optional cloud backup is available for this module when you enable it — useful when you change phones. Link Vault and Status Viewer are not included in master cloud backup scope.',
     },
     {
       q: 'Does Home Vault process bill records or move funds?',
@@ -332,10 +332,10 @@ const homeVaultPage = {
     metaDescription:
       'Home Vault in BharatVow — organise home assets, bills, warranties, due services, providers, and stored items in one ecosystem. BharatVow does not process transactions or move funds.',
     keywords:
-      'Home Vault, BharatVow, home inventory app India, appliance warranty tracker, household organizer, home maintenance records, digital life organizer',
+      'Home Vault, BharatVow, home inventory app India, appliance warranty tracker, household organizer, home maintenance records, Personal Digital Life Platform',
     ogTitle: 'Home Vault — Your Complete Home Organization Ecosystem | BharatVow',
     ogDescription:
-      'Manage assets, bills, services, providers, and Find My Stuff in BharatVow. Complete home organisation — your complete digital life organizer.',
+      'Manage assets, bills, services, providers, and Find My Stuff in BharatVow. Complete home organisation — part of the BharatVow Personal Digital Life Platform.',
   },
 
   finalCta: {

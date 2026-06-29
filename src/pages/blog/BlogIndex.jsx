@@ -16,6 +16,7 @@ export default function BlogIndex() {
         description: meta?.description,
         keywords: meta?.keywords,
         path: PATHS.blog,
+        noIndex: true,
       }}
       breadcrumbs={crumbs}
       hero={{

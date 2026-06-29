@@ -104,9 +104,9 @@ export const FAQ_PAGE = {
   headline: 'Frequently Asked Questions',
   intro: 'Find answers about BharatVow, subscriptions, Digital Tools and your account.',
   description:
-    'BharatVow FAQ — answers about subscriptions, Digital Tools, privacy, backup, and account management. Based on implemented features only.',
+    'BharatVow FAQ — answers about subscriptions, Digital Tools, privacy, backup, and account management for our Personal Digital Life Platform. Based on implemented features only.',
   keywords:
-    'BharatVow FAQ, BharatVow help, digital life organizer questions, BharatVow subscription, BharatVow backup, BharatVow privacy',
+    'BharatVow FAQ, BharatVow help, Personal Digital Life Platform questions, BharatVow subscription, BharatVow backup, BharatVow privacy',
   seo: {
     ogTitle: 'Frequently Asked Questions | BharatVow',
     ogDescription:
@@ -157,9 +157,9 @@ export const FAQ_ITEMS = [
     icon: HelpCircle,
     question: 'What is BharatVow?',
     shortAnswer:
-      'Your complete digital life organizer — budgets, home, vehicles, events, and everyday records in one Android app.',
+      'A Personal Digital Life Platform — budgets, home, vehicles, events, and everyday records in one Android app.',
     answer:
-      'BharatVow is an Indian family digital life management platform — one Android application to organize budgets, daily expenses, home maintenance, vehicles, events, grocery, travel, links, saved places, and everyday records in a single app. It is for personal organization — not a bank, wallet, money transfer, lending, investment, or navigation service.',
+      'BharatVow is a Personal Digital Life Platform — one Android application to organize budgets, daily expenses, home maintenance, vehicles, events, grocery, travel, links, saved places, and everyday records in a single app. It is for personal organization — not a bank, wallet, money transfer, lending, investment, or navigation service.',
     keywords: ['platform', 'app', 'digital life', 'organize'],
   },
   {
@@ -203,7 +203,7 @@ export const FAQ_ITEMS = [
     shortAnswer:
       'Download from Google Play, sign in with OTP, and open any Digital Tool from the dashboard.',
     answer:
-      'Download BharatVow from Google Play, sign in with your mobile number using OTP, and set up your PIN. Open any Digital Tool from the main dashboard to start organizing your records. A 7-day free trial lets you explore all Digital Tools before choosing a subscription.',
+      'Download BharatVow from Google Play, sign in with your mobile number using OTP, and set up your PIN. Open any Digital Tool from the main dashboard to start organizing your records. A 7-day free trial lets you explore all ten premium Digital Tools before choosing a subscription.',
     keywords: ['start', 'download', 'install', 'otp', 'begin'],
   },
   {
@@ -211,9 +211,9 @@ export const FAQ_ITEMS = [
     category: 'getting-started',
     icon: Rocket,
     question: 'Is there a free trial?',
-    shortAnswer: 'Yes — a 7-day free trial to explore all Digital Tools.',
+    shortAnswer: 'Yes — a 7-day free trial to explore all ten premium Digital Tools.',
     answer:
-      'Yes. BharatVow includes a 7-day free trial so you can explore all Digital Tools before choosing a subscription. Link Vault and Status Viewer remain available without a subscription after the trial ends.',
+      'Yes. BharatVow includes a 7-day free trial so you can explore all ten premium Digital Tools before choosing a subscription. Link Vault and Status Viewer remain available without a subscription after the trial ends.',
     keywords: ['free', 'trial', '7 day', 'premium'],
   },
   {
@@ -234,9 +234,9 @@ export const FAQ_ITEMS = [
     category: 'subscription',
     icon: Receipt,
     question: 'What plans are available?',
-    shortAnswer: 'Monthly ₹300 or Yearly ₹2,000 — both include all Digital Tools.',
+    shortAnswer: 'Monthly ₹300 or Yearly ₹2,000 — unlocks all ten premium Digital Tools.',
     answer:
-      'BharatVow offers a Monthly plan at ₹300 per month and a Yearly plan at ₹2,000 per year. Both plans include access to all Digital Tools on the dashboard. Start with the 7-day free trial before subscribing. See the Pricing page for full details.',
+      'BharatVow offers a Monthly plan at ₹300 per month and a Yearly plan at ₹2,000 per year. Both plans unlock all ten premium Digital Tools on the dashboard. Link Vault and Status Viewer remain free without a subscription. Start with the 7-day free trial before subscribing. See the Pricing page for full details.',
     keywords: ['plans', 'monthly', 'yearly', 'price', '300', '2000'],
   },
   {
@@ -316,7 +316,7 @@ export const FAQ_ITEMS = [
     shortAnswer:
       'Optional cloud backup is available for applicable modules when you enable it.',
     answer:
-      'BharatVow stores your everyday records on your device first. Optional cloud backup is available for applicable modules when you choose to use it — useful when changing phones or keeping a backup copy linked to your account. Individual tools may also offer export or module-specific backup screens inside the app.',
+      'BharatVow stores your everyday records on your device first. Optional cloud backup is available for applicable premium modules when you choose to use it — useful when changing phones or keeping a backup copy linked to your account. Link Vault and Status Viewer are not included in master cloud backup scope. Individual tools may also offer export or module-specific backup screens inside the app.',
     keywords: ['backup', 'cloud', 'sync'],
   },
   {
@@ -607,6 +607,17 @@ export const FAQ_ITEMS = [
     answer: 'How to raise a complaint about BharatVow under applicable Indian law.',
     links: [{ label: 'Grievance Redressal', path: '/grievance-redressal' }],
     keywords: ['grievance', 'complaint', 'legal'],
+  },
+  {
+    id: 'legal-distributor',
+    category: 'legal',
+    icon: FileText,
+    question: 'Is there a distributor or referral program?',
+    shortAnswer: 'Yes — optional in-app referral program under the Distributor Agreement.',
+    answer:
+      'BharatVow offers an optional distributor referral program for eligible users. Enrollment, commissions, and conduct rules are described in the in-app program and our Distributor Agreement. The program does not change BharatVow\'s core positioning — personal record keeping, not banking or payment services.',
+    links: [{ label: 'Distributor Agreement', path: '/distributor-agreement' }],
+    keywords: ['distributor', 'referral', 'commission', 'legal'],
   },
   {
     id: 'legal-delete-account',

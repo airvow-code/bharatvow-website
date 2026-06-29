@@ -16,8 +16,8 @@ import {
 /** Hero trust badges — used only in HeroSection */
 export const HERO_TRUST_BADGES = [
   { label: 'Built for Everyday Life', icon: 'users' },
-  { label: 'Offline First', icon: 'wifi-off' },
-  { label: 'Secure & Private', icon: 'shield' },
+  { label: 'Local-first records', icon: 'wifi-off' },
+  { label: 'Privacy-first', icon: 'shield' },
   { label: 'Optional Backup', icon: 'cloud' },
   { label: 'Free to Start', icon: 'sparkles' },
 ];
@@ -29,13 +29,13 @@ export const TRUST_PILLARS = [
   {
     icon: Users,
     title: 'Built for Everyday Life',
-    description: 'Helping you organize everyday digital life in one secure place.',
+    description: 'Helping you organize everyday digital life in one organized place.',
   },
   {
     icon: ShieldCheck,
-    title: 'Private & Secure',
+    title: 'Privacy-first design',
     description:
-      'Your personal data stays protected with secure local storage and optional cloud backup.',
+      'Records stay on your device for everyday use, with optional encrypted cloud backup when you choose it.',
   },
   {
     icon: LayoutGrid,
@@ -119,7 +119,7 @@ export const LIFE_AREAS_HOME = [
     description: 'Bills, maintenance, and where things are kept — ready when the house needs you.',
     icon: Home,
     chip: 'home',
-    toolLabel: '6 Smart Tools',
+    toolLabel: '1 Digital Tool · 6 modules',
     tools: [
       'Home Assets',
       'Find My Stuff',
@@ -178,6 +178,9 @@ export const LIFE_AREAS_HOME = [
 
 /** Product proof carousel — see src/data/screenshots.js + generated manifest */
 
+export const TESTIMONIALS_DISCLAIMER =
+  'Illustrative examples based on typical BharatVow use cases — not verified individual reviews.';
+
 export const TESTIMONIALS = [
   {
     quote:
@@ -200,10 +203,10 @@ export const MORNING_STORY = {
 };
 
 export const HERO = {
-  eyebrow: 'Indian Family Digital Life Management Platform',
+  eyebrow: 'Personal Digital Life Platform',
   title: 'Organize your complete digital life in one place',
   description:
-    'You already manage many parts of your life every day — budgets, home, vehicles, events, grocery, and everyday records. BharatVow helps Indian families organize household activities, expenses, reminders, documents, and personal records in one secure, easy-to-use platform.',
+    'You already manage many parts of your life every day — budgets, home, vehicles, events, grocery, and everyday records. BharatVow helps you organize personal records, expenses, reminders, documents, and daily tools in one privacy-first, easy-to-use platform.',
   topics: [
     'Home',
     'Budget',

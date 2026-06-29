@@ -22,6 +22,9 @@ import {
   PRICING_PAGE,
   PRICING_PLANS,
   PRICING_INCLUDED_TOOLS,
+  PRICING_INCLUDED_NOTE,
+  PRICING_BALANCE_NOTE,
+  PRICING_FREE_TOOLS,
   PRICING_BENEFITS,
   PRICING_FAQ,
   PRICING_LEGAL_LINKS,
@@ -30,8 +33,8 @@ import { SITE } from '@/utils/constants';
 import { cn } from '@/utils/cn';
 
 const BENEFIT_ICONS = {
-  'Access All Digital Tools': Layers,
-  'Secure Backup': CloudUpload,
+  'Ten Premium Digital Tools': Layers,
+  'Optional Secure Backup': CloudUpload,
   'Regular Updates': RefreshCw,
   'Organized Digital Life': LayoutGrid,
 };
@@ -164,7 +167,10 @@ export default function Pricing() {
             What&apos;s Included
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-sm leading-relaxed text-muted md:text-base">
-            All subscription plans include access to BharatVow&apos;s complete Digital Life ecosystem.
+            {PRICING_INCLUDED_NOTE}
+          </p>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-sm leading-relaxed text-muted md:text-base">
+            {PRICING_BALANCE_NOTE}
           </p>
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
             {PRICING_INCLUDED_TOOLS.map((tool) => (
@@ -173,7 +179,12 @@ export default function Pricing() {
                 className="flex items-center gap-3 rounded-xl border border-border bg-surface px-4 py-3 text-sm text-body"
               >
                 <Check size={16} strokeWidth={2.5} className="shrink-0 text-accent-green" aria-hidden />
-                {tool}
+                <span>
+                  {tool}
+                  {PRICING_FREE_TOOLS.includes(tool) && (
+                    <span className="ml-2 text-xs font-medium text-secondary-dark">Free</span>
+                  )}
+                </span>
               </li>
             ))}
           </ul>

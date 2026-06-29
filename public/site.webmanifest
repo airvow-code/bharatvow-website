@@ -1,7 +1,7 @@
 {
   "name": "BharatVow",
   "short_name": "BharatVow",
-  "description": "Indian Family Digital Life Management Platform",
+  "description": "Personal Digital Life Platform",
   "start_url": "/",
   "display": "browser",
   "background_color": "#05204E",
@@ -9,15 +9,15 @@
   "lang": "en-IN",
   "icons": [
     {
-      "src": "/favicon.png",
+      "src": "/images/logo-header.webp",
       "sizes": "192x192",
-      "type": "image/png",
+      "type": "image/webp",
       "purpose": "any"
     },
     {
-      "src": "/favicon.png",
+      "src": "/images/logo-header.webp",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/webp",
       "purpose": "any"
     }
   ]

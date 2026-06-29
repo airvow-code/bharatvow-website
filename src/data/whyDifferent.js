@@ -15,7 +15,7 @@ export const WHY_DIFFERENT = {
   eyebrow: 'The difference is connection',
   title: 'Your digital life shouldn\u2019t live across six different apps',
   intro:
-    'Most people already juggle a budget tracker, reminder alerts, grocery lists in chat, vehicle papers in a folder, and notes scattered everywhere. BharatVow brings those everyday needs into one calm platform — so less time is spent searching, and more time stays on what matters.',
+    'Most people already juggle a budget tracker, in-app reminders, grocery lists in chat, vehicle papers in a folder, and notes scattered everywhere. BharatVow brings those everyday needs into one calm platform — so less time is spent searching, and more time stays on what matters.',
   traditional: {
     label: 'The traditional way',
     caption: 'Separate apps. Separate habits. Nothing shared.',

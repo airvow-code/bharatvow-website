@@ -23,7 +23,7 @@ export const LEGAL_PAGES = {
       {
         heading: '1. Introduction',
         paragraphs: [
-          `${SITE.company} ("Company", "we", "us") operates BharatVow ("App", "Service") — an Indian family digital life management platform for Android. This Privacy Policy explains how we collect, use, store, and protect your information when you use BharatVow and related pages at ${SITE.url}.`,
+          `${SITE.company} ("Company", "we", "us") operates BharatVow ("App", "Service") — a Personal Digital Life Platform for Android. This Privacy Policy explains how we collect, use, store, and protect your information when you use BharatVow and related pages at ${SITE.url}.`,
           'By using BharatVow, you agree to this Privacy Policy. If you do not agree, please do not use the Service.',
         ],
       },
@@ -58,12 +58,13 @@ export const LEGAL_PAGES = {
             ],
           },
           {
-            heading: '2.2 Subscription and billing information',
+            heading: '2.2 Subscription, billing, and program information',
             list: [
               'Subscription purchase and renewal records',
               'In-app balance credit records where applicable',
               'Google Play subscription billing references',
               'Distributor commission records if you enrol in the referral program',
+              'Distributor KYC and payout details you provide for the referral program — such as identity and bank account information required for lawful commission payout, as displayed in-app',
             ],
           },
           {
@@ -77,7 +78,53 @@ export const LEGAL_PAGES = {
           {
             heading: '2.4 Cloud backup data',
             paragraphs: [
-              'If you enable optional cloud backup for applicable modules, encrypted backup data is stored on our cloud infrastructure so you can restore records when changing phones.',
+              'If you enable optional cloud backup for applicable modules, encrypted backup data is stored on our cloud infrastructure so you can restore records when changing phones. Link Vault and Status Viewer are not included in master cloud backup scope.',
+            ],
+          },
+          {
+            heading: '2.5 Device permissions and sensitive data',
+            paragraphs: [
+              'BharatVow requests Android permissions only when a feature you choose to use requires them. You may decline a permission; the related feature may not work until permission is granted.',
+            ],
+            list: [
+              'Phone — mobile number and OTP verification for login, account security, and account deletion confirmation (BharatVow does not use Google Sign-In for account login)',
+              'SMS — used only as needed to receive or verify OTP messages for authentication where supported on your device',
+              'Storage and media / photos — Status Viewer: read status media from a folder you explicitly select; Vehicle Vault and other tools: save photos or documents you choose to attach to your personal records',
+              'Camera — when you choose to capture a photo for vehicle documents or similar attachments in-app',
+              'Location — Place Store: set and preview map pins for places you save; BharatVow does not provide turn-by-turn navigation',
+              'Notifications — BharatVow does not currently send push notifications. Days Reminder and similar tools show reminders inside the app when you open it',
+              'Internet / network — login, optional cloud backup, subscription verification, and support requests',
+            ],
+            afterList: [
+              'BharatVow does not access your device contact list. Names in Smart Khata and other tools are personal entries you type yourself.',
+              'BharatVow does not use the device microphone.',
+              'BharatVow does not use Google Sign-In. Account access uses OTP verification to your registered mobile number and an app PIN.',
+            ],
+          },
+          {
+            heading: '2.6 Third-party services and SDKs',
+            paragraphs: ['We use trusted third-party services to operate BharatVow, including:'],
+            list: [
+              'Google Play Billing — subscription purchase, renewal, and refund processing through Google Play',
+              'Google Firebase and related Google SDKs — OTP/authentication support, crash reporting, and app stability analytics where enabled in the app',
+              'Cloud infrastructure providers — optional encrypted backup, account services, and server hosting under contract',
+            ],
+            afterList: [
+              'These processors handle data only to provide the Service and under contractual confidentiality and security obligations. SDK data collection is limited to what is needed for the stated purpose.',
+            ],
+          },
+          {
+            heading: '2.7 International data transfers',
+            paragraphs: [
+              'If you enable cloud backup or use online account features, your data may be stored on servers located in India or other countries where our infrastructure providers operate. We require appropriate safeguards for cross-border processing where applicable under Indian law.',
+            ],
+          },
+          {
+            heading: '2.8 Website cookies and logs',
+            paragraphs: [
+              `When you visit ${SITE.url}, standard web server and security logs may record technical information such as IP address, browser type, pages viewed, and request timestamps.`,
+              'We may use essential cookies or similar technologies needed for site functionality and security. We do not use website advertising cookies or sell website visitor data.',
+              'If we introduce optional analytics on the website in future, we will update this Privacy Policy before doing so.',
             ],
           },
         ],
@@ -98,6 +145,18 @@ export const LEGAL_PAGES = {
         afterList: ['We do not sell your personal data to third parties for advertising.'],
       },
       {
+        heading: '3A. Legal Basis for Processing (India)',
+        paragraphs: [
+          'Where the Digital Personal Data Protection Act, 2023 applies, we process personal data on one or more of the following bases:',
+        ],
+        list: [
+          'Consent — for example, when you register, enable optional cloud backup, or enrol in optional programs',
+          'Performance of a contract — to provide the Service, subscriptions, and support you request',
+          'Legal obligation — for billing, tax, fraud prevention, and regulatory compliance',
+          'Legitimate uses permitted by law — such as improving app security and stability using limited diagnostic data',
+        ],
+      },
+      {
         heading: '4. How Information Is Used and Stored',
         subsections: [
           {
@@ -115,7 +174,25 @@ export const LEGAL_PAGES = {
           {
             heading: '4.3 Retention',
             paragraphs: [
-              'We retain account and billing records as needed to provide the Service and meet legal obligations. You may request account deletion as described in our Delete Account policy.',
+              'We retain personal data only as long as needed for the purposes described in this Privacy Policy, including:',
+            ],
+            list: [
+              'Account and profile data — while your account is active and for a limited period after deletion where required for billing, tax, fraud prevention, or legal compliance',
+              'Subscription and billing records — as required by applicable law and Google Play billing records',
+              'Support and grievance correspondence — as needed to resolve your request and meet legal obligations',
+              'Optional cloud backup — until you delete backup data, delete your account, or we remove it under our Delete Account policy',
+              'Aggregated or anonymised analytics — only where it no longer reasonably identifies you, and only as permitted by law',
+            ],
+            afterList: [
+              `You may request account deletion at ${SITE.url}${LEGAL_PATHS.deleteAccount}. Some records may be retained where the law requires.`,
+            ],
+          },
+          {
+            heading: '4.4 Data deletion',
+            paragraphs: [
+              'You can delete your BharatVow account through the in-app deletion flow or by following the verified process on our Delete Account page.',
+              'When deletion is completed, we remove your account profile and delete optional cloud backup copies linked to your account where applicable. Locally stored data on your device is removed when you uninstall or reset the app after deletion.',
+              'Some billing, tax, fraud-prevention, grievance, or legally required records may be retained in limited form after deletion, as described on our Delete Account page.',
             ],
           },
         ],
@@ -156,13 +233,14 @@ export const LEGAL_PAGES = {
           'Lodge a grievance with our Grievance Officer',
         ],
         afterList: [
-          `Grievance Officer: Shailendra Gahlot · ${SITE.email} · ${SITE.phone}`,
+          `Grievance Officer: Shailendra Gahlot · ${SITE.grievanceEmail} · ${SITE.phone}`,
+          `Account deletion: ${SITE.url}${LEGAL_PATHS.deleteAccount}`,
         ],
       },
       {
         heading: "8. Children's Privacy",
         paragraphs: [
-          'BharatVow is a personal organization app and is not directed at children under 13 without parental involvement. Parents or guardians should supervise minors\' use.',
+          `BharatVow is intended for users aged 18 and older, or use under supervision of a parent or legal guardian. The Service is not directed at children under 13. If you believe a child under 13 has provided personal data without appropriate consent, contact us at ${SITE.privacyEmail}.`,
         ],
       },
       {
@@ -182,7 +260,8 @@ export const LEGAL_PAGES = {
         paragraphs: [
           SITE.company,
           '507, 5th Floor, Gordhansky Tower, Jhotwara, Jaipur, Rajasthan – 302012, India',
-          `Email: ${SITE.email}`,
+          `Support: ${SITE.email}`,
+          `Privacy enquiries: ${SITE.privacyEmail}`,
           `Phone: ${SITE.phone}`,
           `Website: ${SITE.url}`,
         ],
@@ -231,7 +310,7 @@ export const LEGAL_PAGES = {
       {
         heading: '4. Services Description',
         paragraphs: [
-          'BharatVow is an Indian family digital life management platform providing Digital Tools for everyday records — including budgets, expenses, home information, vehicles, events, grocery lists, travel, links, saved places, and related utilities.',
+          'BharatVow is a Personal Digital Life Platform providing Digital Tools for everyday records — including budgets, expenses, home information, vehicles, events, grocery lists, travel, links, saved places, and related utilities.',
           'Link Vault and Status Viewer (Android) are available without a subscription. Other Digital Tools require an active subscription after the 7-day free trial unless stated otherwise in-app.',
           'Features are described on our website and in the app. We may modify features with reasonable notice where practicable.',
           'BharatVow is for personal organization and record keeping. It is not a bank, wallet, payment service, money transfer service, lending platform, investment platform, or professional advisory service.',
@@ -243,7 +322,9 @@ export const LEGAL_PAGES = {
           'BharatVow offers a 7-day free trial to explore Digital Tools before subscribing',
           'Paid plans include Monthly (₹300/month) and Yearly (₹2,000/year) options as displayed in-app before purchase',
           'Prices shown are before GST and applicable taxes, which are added on the subscription confirmation screen in the app before you confirm purchase',
-          'Subscriptions renew per the selected period unless cancelled through Google Play and/or in-app subscription settings',
+          'Subscriptions automatically renew at the end of each billing period unless you cancel at least 24 hours before renewal through Google Play subscription settings and/or in-app subscription management',
+          'If you do not cancel before your free trial ends, your trial may convert to a paid subscription and Google Play may charge the selected plan price plus applicable taxes using your payment method on file with Google Play',
+          'Google Play is the merchant of record for subscription purchases; payment processing and renewal billing are governed by Google Play terms and policies',
           'Refunds are governed by our Cancellation & Refund Policy',
         ],
       },
@@ -305,7 +386,8 @@ export const LEGAL_PAGES = {
       {
         heading: '13. Termination',
         paragraphs: [
-          'We may suspend or terminate accounts for violation of these Terms. You may delete your account at any time per our Delete Account policy.',
+          `We may suspend or terminate accounts for violation of these Terms. You may delete your account at any time per our Delete Account policy at ${SITE.url}${LEGAL_PATHS.deleteAccount}.`,
+          'Upon termination or account deletion, your right to use the Service ends. Handling of your personal data after deletion is described in our Privacy Policy and Delete Account policy, subject to legal retention requirements.',
         ],
       },
       {
@@ -319,7 +401,10 @@ export const LEGAL_PAGES = {
         paragraphs: [
           SITE.company,
           '507, 5th Floor, Gordhansky Tower, Jhotwara, Jaipur, Rajasthan – 302012, India',
-          `${SITE.email} · ${SITE.phone}`,
+          `Email: ${SITE.email} · Phone: ${SITE.phone}`,
+          `Website: ${SITE.url}`,
+          'Grievance Officer: Shailendra Gahlot',
+          `CIN: ${SITE.cin} · GSTIN: ${SITE.gstin}`,
         ],
       },
     ],
@@ -328,7 +413,7 @@ export const LEGAL_PAGES = {
   disclaimer: {
     id: 'disclaimer',
     title: 'Disclaimer',
-    description: 'BharatVow is a digital life organizer for personal records — not professional advice.',
+    description: 'BharatVow is a Personal Digital Life Platform for personal records — not professional advice.',
     path: LEGAL_PATHS.disclaimer,
     lastUpdated: LAST_UPDATED,
     lead: 'BharatVow helps you organize everyday information. You remain responsible for your own records.',
@@ -336,14 +421,14 @@ export const LEGAL_PAGES = {
     seo: {
       ogTitle: 'Disclaimer | BharatVow',
       ogDescription:
-        'BharatVow is an Indian family digital life management platform — not banking, wallet, payment, lending, investment, or professional advisory services.',
+        'BharatVow is a Personal Digital Life Platform — not banking, wallet, payment, lending, investment, or professional advisory services.',
     },
     sections: [
       {
-        heading: 'Digital Life Organizer',
+        heading: 'Digital Life Management Platform',
         paragraphs: [
-          `BharatVow is an Indian family digital life management platform. The app helps you save, organize, and access everyday household information — such as personal records, budgets, home details, vehicle documents, events, and daily lists — in one place on your phone.`,
-          `${SITE.company} provides BharatVow on an "as is" and "as available" basis for personal organization purposes.`,
+          `BharatVow is a Personal Digital Life Platform for personal digital organization. The app helps you save, organize, and access your personal information — such as personal records, budgets, home details, vehicle documents, events, and daily lists — in one place on your phone.`,
+          `${SITE.company} provides BharatVow on an "as is" and "as available" basis for personal organization purposes. BharatVow is distributed on Google Play for Android devices.`,
         ],
       },
       {
@@ -357,11 +442,18 @@ export const LEGAL_PAGES = {
         paragraphs: ['BharatVow does not provide professional legal, tax, medical, or regulated advisory services. In particular:'],
         list: [
           'Smart Khata, Budget Pocket, and Expenses Diary are personal record tools — not substitutes for statutory accounting, tax filing, or licensed professional services',
-          'Home Vault and Vehicle Vault help organize household and vehicle information — they do not replace original documents or prove legal ownership on their own',
+          'Home Vault and Vehicle Vault help organize personal home and vehicle records — they do not replace original documents or prove legal ownership on their own',
           'Event Book, Days Reminder, and similar tools rely on information you enter',
           'Place Store is a location organizer — not a navigation or maps replacement',
         ],
         afterList: ['Consult qualified professionals for decisions that require expert advice.'],
+      },
+      {
+        heading: 'Status Viewer and Media on Your Device',
+        paragraphs: [
+          'Status Viewer helps you browse and save photos or videos already available in storage locations you explicitly allow on your Android device. BharatVow does not bypass encryption, access private messaging accounts, or collect status media without your action in the app.',
+          'You are responsible for saving and sharing media lawfully and for respecting the rights of others.',
+        ],
       },
       {
         heading: 'Your Records',
@@ -389,7 +481,11 @@ export const LEGAL_PAGES = {
       },
       {
         heading: 'Contact',
-        paragraphs: [`${SITE.email} · ${SITE.phone}`, `${SITE.company}, Jaipur, Rajasthan, India`],
+        paragraphs: [
+          `${SITE.email} · ${SITE.phone}`,
+          `${SITE.company}, 507, 5th Floor, Gordhansky Tower, Jhotwara, Jaipur, Rajasthan – 302012, India`,
+          `Grievance Officer: Shailendra Gahlot · ${LEGAL_PATHS.grievanceRedressal}`,
+        ],
       },
     ],
   },
@@ -426,15 +522,31 @@ export const LEGAL_PAGES = {
         ],
       },
       {
-        heading: 'Product',
+        heading: 'Company Registration',
+        paragraphs: [`CIN: ${SITE.cin}`, `GSTIN: ${SITE.gstin}`],
+      },
+      {
+        heading: 'Android Application',
         paragraphs: [
-          'BharatVow — Your Complete Digital Life Organizer',
-          'Android application for organizing everyday digital life records.',
+          'BharatVow for Android is distributed on Google Play.',
+          SITE.androidPackageName
+            ? `Application ID: ${SITE.androidPackageName}`
+            : 'Application ID is shown on the Google Play listing and in-app About section.',
         ],
       },
       {
-        heading: 'Support Email',
-        paragraphs: [SITE.email],
+        heading: 'Product',
+        paragraphs: [
+          'BharatVow — Personal Digital Life Platform',
+          'Android application for organizing everyday digital life records. Distributed on Google Play.',
+        ],
+      },
+      {
+        heading: 'Support & privacy contact',
+        paragraphs: [
+          `General support: ${SITE.email}`,
+          `Privacy enquiries: ${SITE.privacyEmail}`,
+        ],
       },
       {
         heading: 'Website',
@@ -444,7 +556,7 @@ export const LEGAL_PAGES = {
         heading: 'Grievance Officer',
         paragraphs: [
           'Shailendra Gahlot',
-          `Email: ${SITE.email}`,
+          `Email: ${SITE.grievanceEmail}`,
           `Phone: ${SITE.phone}`,
           `See our Grievance Redressal policy for the complaint process.`,
         ],
@@ -482,6 +594,14 @@ export const LEGAL_PAGES = {
         paragraphs: [
           'BharatVow includes a 7-day free trial to explore Digital Tools before subscribing.',
           'If you do not wish to continue on a paid plan, cancel before the trial ends through Google Play subscription settings and/or in-app subscription management to avoid charges for the next billing period, as applicable.',
+          'Unless you cancel in time, your trial may automatically convert to a paid subscription and Google Play may charge the plan price you selected (plus applicable taxes) at the end of the trial period.',
+        ],
+      },
+      {
+        heading: '3A. Subscription Auto-Renewal',
+        paragraphs: [
+          'Paid subscriptions renew automatically at the end of each billing period (Monthly or Yearly) unless you cancel through Google Play Store → Payments & subscriptions → Subscriptions → BharatVow and/or BharatVow in-app subscription settings before the renewal date.',
+          'When a subscription renews, Google Play charges the then-current plan price plus applicable taxes using your selected payment method on file with Google Play.',
         ],
       },
       {
@@ -517,6 +637,13 @@ export const LEGAL_PAGES = {
         ],
       },
       {
+        heading: '6A. Failed or Declined Payments',
+        paragraphs: [
+          'If a Google Play subscription payment fails or is declined, Google Play may retry billing according to its policies. BharatVow does not charge your payment method directly outside Google Play.',
+          'If you believe you were charged in error after a failed renewal attempt, contact us at support with your Google Play order ID or contact Google Play support through your order history.',
+        ],
+      },
+      {
         heading: '7. In-App Balance (Where Applicable)',
         list: [
           'In-app balance, where available, is for subscriptions and eligible in-app services',
@@ -536,7 +663,9 @@ export const LEGAL_PAGES = {
       {
         heading: '9. Google Play Purchases',
         paragraphs: [
-          'Purchases through Google Play may follow Google Play refund timelines and policies. Some refund requests must be raised directly through the Play Store.',
+          'Google Play is the merchant of record for BharatVow subscription purchases. Payment processing, renewal billing, and many refund requests are handled under Google Play policies and timelines.',
+          'You may request a refund through Google Play order history within Google Play\'s applicable refund window, or contact us at support@bharatvow.com with your Google Play order ID. Some refund requests must be raised directly through the Play Store.',
+          'To manage or cancel your subscription: open Google Play Store → Payments & subscriptions → Subscriptions → BharatVow.',
         ],
       },
       {
@@ -574,7 +703,7 @@ export const LEGAL_PAGES = {
           'Name: Shailendra Gahlot',
           'Designation: Grievance Officer',
           `Company: ${SITE.company}`,
-          `Email: ${SITE.email}`,
+          `Email: ${SITE.grievanceEmail}`,
           `Phone: ${SITE.phone}`,
           'Address: 507, 5th Floor, Gordhansky Tower, Jhotwara, Jaipur, Rajasthan – 302012, India',
         ],
@@ -593,7 +722,7 @@ export const LEGAL_PAGES = {
       {
         heading: 'How to File a Grievance',
         list: [
-          `Email ${SITE.email} with subject line: Grievance — [Brief topic]`,
+          `Email ${SITE.grievanceEmail} with subject line: Grievance — [Brief topic]`,
           'Include: your full name, registered mobile number, app version, device details, description of the issue, date of incident, and desired resolution',
           'Attach screenshots or Google Play billing references where relevant',
         ],
@@ -605,8 +734,9 @@ export const LEGAL_PAGES = {
         heading: 'Support Process',
         paragraphs: [
           'Grievances are reviewed during business hours (Monday – Saturday, 10:00 AM – 6:00 PM IST).',
-          'We aim to acknowledge receipt and work toward resolution as promptly as practicable. Complex cases may require additional review — we will keep you informed of status.',
-          'Response time varies depending on the nature of the request and information provided.',
+          'We aim to acknowledge every grievance within twenty-four (24) hours of receipt on business days.',
+          'We aim to resolve or respond substantively within fifteen (15) days of receipt, or inform you of the reason for delay and expected timeline where additional review is required.',
+          'Complex cases involving billing verification, account access, or legal review may require additional time — we will keep you informed of status by email to your registered contact details.',
         ],
       },
       {
@@ -620,7 +750,8 @@ export const LEGAL_PAGES = {
       {
         heading: 'Privacy Complaints',
         paragraphs: [
-          'For data protection concerns, you may also exercise rights described in our Privacy Policy, including correction and deletion requests.',
+          'For data protection concerns, you may exercise rights described in our Privacy Policy, including correction and deletion requests at our Delete Account page.',
+          `Privacy Policy: ${SITE.url}${LEGAL_PATHS.privacyPolicy} · Delete Account: ${SITE.url}${LEGAL_PATHS.deleteAccount}`,
         ],
       },
     ],
@@ -671,6 +802,13 @@ export const LEGAL_PAGES = {
         ],
       },
       {
+        heading: '3A. Promotional and Metadata Compliance',
+        paragraphs: [
+          'When promoting BharatVow, you must describe the app accurately and consistently with our website, Google Play listing, Privacy Policy, Terms, and Disclaimer. Do not state or imply that BharatVow provides banking, wallet, payment transfer, lending, investment, or insurance services.',
+          'Do not use Google Play badges, screenshots, or promotional claims in a misleading way. Follow Google Play Developer Program policies and applicable Indian advertising and consumer protection laws.',
+        ],
+      },
+      {
         heading: '4. Commission and Payouts',
         paragraphs: [
           'Commission rates and qualifying events are defined in-app at enrollment and may be updated with notice where required.',
@@ -693,6 +831,12 @@ export const LEGAL_PAGES = {
         ],
       },
       {
+        heading: '7. Privacy and Referral Data',
+        paragraphs: [
+          'Referral activity, commission records, and KYC or payout details you provide are processed as described in our Privacy Policy. You must not collect, sell, or misuse personal data of prospects beyond lawful sharing of your referral code and accurate product information.',
+        ],
+      },
+      {
         heading: 'Contact',
         paragraphs: [`Program questions: ${SITE.email} · ${SITE.phone}`],
       },
@@ -705,7 +849,7 @@ export const LEGAL_PAGES = {
     description: 'How to permanently delete your BharatVow account and associated personal data.',
     path: LEGAL_PATHS.deleteAccount,
     lastUpdated: LAST_UPDATED,
-    lead: 'Permanent and irreversible. Cancel active subscriptions before you delete.',
+    lead: 'Permanent and irreversible. Cancel active Google Play subscriptions before you delete. This page describes account and data deletion as required by Google Play policies.',
     keywords: 'BharatVow delete account, remove BharatVow data',
     seo: {
       ogTitle: 'Delete Account | BharatVow',

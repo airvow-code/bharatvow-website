@@ -48,7 +48,7 @@ const linkVaultPage = {
       },
       {
         title: 'Families',
-        description: 'Share-worthy links for school forms, utility sites, and household resources in one family-friendly vault.',
+        description: 'Share-worthy links for school forms, utility sites, and household resources in one organised vault.',
       },
     ],
     situations: [],
@@ -223,7 +223,7 @@ const linkVaultPage = {
   faq: [
     {
       q: 'Is Link Vault a browser bookmark manager?',
-      a: 'No. Link Vault is part of BharatVow — a digital life organizer for important links and online resources you use across daily life, not a replacement for your phone\'s browser bookmarks.',
+      a: 'No. Link Vault is part of BharatVow — a Personal Digital Life Platform for important links and online resources you use across daily life, not a replacement for your phone\'s browser bookmarks.',
     },
     {
       q: 'Is Link Vault free?',
@@ -270,10 +270,10 @@ const linkVaultPage = {
     metaDescription:
       'Link Vault in BharatVow — save, categorize, and search important links with notes and favourites. Free digital link organizer — BharatVow does not process transactions or move funds.',
     keywords:
-      'Link Vault, BharatVow, save links app India, digital bookmark organizer, URL manager, link collection app, digital life organizer',
+      'Link Vault, BharatVow, save links app India, digital bookmark organizer, URL manager, link collection app, Personal Digital Life Platform',
     ogTitle: 'Link Vault — Your Digital Link Organizer | BharatVow',
     ogDescription:
-      'Organize government portals, tutorials, and everyday links in BharatVow. Free without a subscription — your complete digital life organizer.',
+      'Organize government portals, tutorials, and everyday links in BharatVow. Free without a subscription — part of the BharatVow Personal Digital Life Platform.',
   },
 
   finalCta: {

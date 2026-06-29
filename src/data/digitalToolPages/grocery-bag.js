@@ -128,7 +128,7 @@ const groceryBagPage = {
       icon: CloudUpload,
       title: 'Backup & Restore',
       description:
-        'Back up lists to the cloud or export to Excel — restore when you change phones so shopping history stays safe.',
+        'Optional cloud backup when you enable it, or export to Excel — restore when you change phones so shopping history stays safe.',
     },
   ],
 
@@ -238,7 +238,7 @@ const groceryBagPage = {
     },
     {
       q: 'Can I back up my grocery lists?',
-      a: 'Yes. Cloud backup and Excel export help you keep lists safe when you change phones.',
+      a: 'Yes. Optional cloud backup is available for this module when you enable it — useful when you change phones. Link Vault and Status Viewer are not included in master cloud backup scope. Excel export is also available where noted in the app.',
     },
     {
       q: 'Is Grocery Bag a delivery app that moves funds?',
@@ -269,10 +269,10 @@ const groceryBagPage = {
     metaDescription:
       'Grocery Bag in BharatVow — plan grocery lists, track quantities and prices, share with family, and review shopping history. Grocery planning — not delivery; BharatVow does not process transactions or move funds.',
     keywords:
-      'Grocery Bag, BharatVow, grocery list app India, shopping planner, household grocery organizer, kirana list app, digital life organizer',
+      'Grocery Bag, BharatVow, grocery list app India, shopping planner, household grocery organizer, kirana list app, Personal Digital Life Platform',
     ogTitle: 'Grocery Bag — Complete Grocery Planning Organizer | BharatVow',
     ogDescription:
-      'Plan lists, record prices, share with family, and review shopping history in BharatVow. Your complete digital life organizer.',
+      'Plan lists, record prices, share lists, and review shopping history in BharatVow. Part of the BharatVow Personal Digital Life Platform.',
   },
 
   finalCta: {

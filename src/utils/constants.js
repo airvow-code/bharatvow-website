@@ -1,6 +1,8 @@
 import { PATHS } from '@/config/paths';
 import { digitalLifePath, legalPath } from '@/utils/routes';
 
+const SUPPORT_EMAIL = 'support@bharatvow.com';
+
 /** Footer link columns — all routes must exist */
 export const FOOTER_COLUMNS = [
   {
@@ -38,15 +40,28 @@ export const FOOTER_COLUMNS = [
 
 export const SITE_CONFIG = {
   name: 'BharatVow',
-  tagline: 'Indian Family Digital Life Management Platform',
+  tagline: 'Personal Digital Life Platform',
   url: 'https://bharatvow.com',
-  email: 'support@bharatvow.com',
+  email: import.meta.env.VITE_SUPPORT_EMAIL?.trim() || SUPPORT_EMAIL,
+  /** Defaults to support@ — override with VITE_PRIVACY_EMAIL when a dedicated inbox is used */
+  privacyEmail:
+    import.meta.env.VITE_PRIVACY_EMAIL?.trim() ||
+    import.meta.env.VITE_SUPPORT_EMAIL?.trim() ||
+    SUPPORT_EMAIL,
+  /** Defaults to support@ — override with VITE_GRIEVANCE_EMAIL when a dedicated inbox is used */
+  grievanceEmail:
+    import.meta.env.VITE_GRIEVANCE_EMAIL?.trim() ||
+    import.meta.env.VITE_SUPPORT_EMAIL?.trim() ||
+    SUPPORT_EMAIL,
   phone: '+91 9509945745',
   company: 'Atulit Baldhama Digital Solutions Pvt. Ltd.',
-  address: '507, 5th Floor, Gordhansky Tower, Jhotwara, Jaipur, Rajasthan – 302012',
+  address: '507, 5th Floor, Gordhansky Tower, Jhotwara, Jaipur, Rajasthan – 302012, India',
   cin: 'U51909RJ2019PTC066479',
   gstin: '08AASCA7856P1ZJ',
-  playStoreUrl: '#', // Replace with live Play Store URL before launch
+  /** Set VITE_PLAY_STORE_URL in .env before launch — e.g. https://play.google.com/store/apps/details?id=... */
+  playStoreUrl: import.meta.env.VITE_PLAY_STORE_URL?.trim() || '#',
+  /** Optional — shown on Download and Legal Information when set */
+  androidPackageName: import.meta.env.VITE_ANDROID_PACKAGE?.trim() || '',
 };
 
 /** Footer legal & compliance block — Play Store safe positioning */
@@ -55,9 +70,9 @@ export const FOOTER_COMPLIANCE = {
   countryOfOrigin: 'Made in India 🇮🇳',
   productOf: `${SITE_CONFIG.name} is a product of ${SITE_CONFIG.company}`,
   paymentNotice:
-    'BharatVow is a family digital life management platform for personal record keeping. App subscriptions are billed through Google Play. BharatVow does not provide banking, wallet, payment, money transfer, lending, investment, or insurance services.',
+    'BharatVow is a Personal Digital Life Platform for personal record keeping. App subscriptions are billed through Google Play. BharatVow does not provide banking, wallet, payment, money transfer, lending, investment, or insurance services.',
   serviceDisclaimer:
-    'BharatVow helps you organize household activities, expenses, reminders, documents, and daily records. No physical goods are sold or delivered.',
+    'BharatVow helps you organize personal records, expenses, reminders, documents, and everyday digital life tools. No physical goods are sold or delivered.',
 };
 
 /** @deprecated use SITE_CONFIG — kept for existing imports */

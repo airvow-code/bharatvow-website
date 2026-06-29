@@ -67,7 +67,7 @@ const expensesDiaryPage = {
       icon: CloudUpload,
       title: 'Backup & Restore',
       description:
-        'Back up your diary to the cloud or export to Excel — restore when you change phones so years of entries stay safe.',
+        'Optional cloud backup when you enable it, or export to Excel — restore when you change phones so years of entries stay safe.',
     },
   ],
 
@@ -186,7 +186,7 @@ const expensesDiaryPage = {
     metaDescription:
       'Expenses Diary in BharatVow — log daily expenses and income, organise by category, and review monthly spending. Record keeping — BharatVow does not process transactions or move funds.',
     keywords:
-      'Expenses Diary, BharatVow, daily expense tracker India, household expense log, personal spending diary, digital life organizer',
+      'Expenses Diary, BharatVow, daily expense tracker India, household expense log, personal spending diary, Personal Digital Life Platform',
     ogTitle: 'Expenses Diary — Track Daily Spending | BharatVow',
     ogDescription:
       'Record everyday expenses, search your history, and see monthly totals in BharatVow. Simple expense diary — BharatVow does not process transactions or move funds.',

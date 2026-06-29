@@ -92,7 +92,7 @@ function defaultKeywords(module) {
     module.name,
     'BharatVow',
     'BharatVow Digital Tools',
-    'digital life organizer',
+    'Personal Digital Life Platform',
     'personal organization app India',
     module.lifeArea?.replace('-', ' '),
   ]

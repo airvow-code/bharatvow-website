@@ -16,7 +16,7 @@ export const LEGAL_HUB = {
   title: 'Legal Center',
   headline: 'Legal Center',
   intro:
-    'Transparent policies and compliance documents for BharatVow — an Indian family digital life management platform.',
+    'Transparent policies and compliance documents for BharatVow — a Personal Digital Life Platform.',
   description:
     'BharatVow Legal Center — privacy policy, terms, refund policy, grievance redressal, and account deletion information.',
   keywords:
@@ -98,6 +98,8 @@ export const LEGAL_HUB_LINKS = LEGAL_HUB_CARDS.map(({ id, title, description, pa
 export const LEGAL_FOOTER_LINKS = [
   { label: 'Privacy Policy', path: LEGAL_PATHS.privacyPolicy },
   { label: 'Terms', path: LEGAL_PATHS.terms },
+  { label: 'Disclaimer', path: LEGAL_PATHS.disclaimer },
+  { label: 'Grievance', path: LEGAL_PATHS.grievanceRedressal },
   { label: 'Refund', path: LEGAL_PATHS.refundPolicy },
   { label: 'Delete Account', path: LEGAL_PATHS.deleteAccount },
   { label: 'Contact', path: PATHS.contact },

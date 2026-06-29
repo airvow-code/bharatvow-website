@@ -19,7 +19,7 @@ export default function TrustBar() {
       labelledBy="trust-heading"
     >
       <p id="trust-heading" className="sr-only">
-        Why families trust BharatVow
+        Why users trust BharatVow
       </p>
 
       <ul className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4 lg:gap-5">

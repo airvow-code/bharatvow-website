@@ -2,7 +2,7 @@ import Section from '@/components/ui/Section';
 import SectionHeading from '@/components/ui/SectionHeading';
 import SurfaceCard from '@/components/ui/SurfaceCard';
 import AnimateIn from '@/components/common/AnimateIn';
-import { TESTIMONIALS } from '@/data/home';
+import { TESTIMONIALS, TESTIMONIALS_DISCLAIMER } from '@/data/home';
 import { HOME_ANCHORS } from '@/utils/anchors';
 
 export default function Testimonials() {
@@ -10,7 +10,7 @@ export default function Testimonials() {
     <Section id={HOME_ANCHORS.testimonials} tone="surface" labelledBy="testimonials-heading">
       <SectionHeading
         id="testimonials-heading"
-        eyebrow="Families like yours"
+        eyebrow="Everyday users"
         title="What users say"
         align="left"
         className="mb-10 md:mb-12"
@@ -39,7 +39,7 @@ export default function Testimonials() {
           </AnimateIn>
         ))}
       </div>
-      <p className="mt-6 text-xs text-muted">Verified quotes only before publish.</p>
+      <p className="mt-6 text-xs text-muted">{TESTIMONIALS_DISCLAIMER}</p>
     </Section>
   );
 }

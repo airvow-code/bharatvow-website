@@ -145,6 +145,7 @@ export default function About() {
               </p>
             </address>
             <p className="mt-4">{ABOUT_PAGE.company.description}</p>
+            <p className="mt-3 text-sm text-muted">{ABOUT_PAGE.company.registration}</p>
           </ProseSection>
 
           <ProseSection heading={ABOUT_PAGE.trust.heading}>
@@ -167,6 +168,18 @@ export default function About() {
                 {ABOUT_PAGE.trust.privacyLabel} →
               </InternalLink>
             </p>
+            {ABOUT_PAGE.trust.legalLinks?.length > 0 && (
+              <nav
+                aria-label="Legal policies"
+                className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm"
+              >
+                {ABOUT_PAGE.trust.legalLinks.map(({ label, path }) => (
+                  <InternalLink key={path} to={path}>
+                    {label} →
+                  </InternalLink>
+                ))}
+              </nav>
+            )}
           </ProseSection>
 
           <section className="border-b border-border py-10">

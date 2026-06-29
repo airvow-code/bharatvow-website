@@ -241,10 +241,10 @@ const statusViewerPage = {
     metaDescription:
       'Status Viewer in BharatVow — view, save, and share status photos and videos already on your Android device. Free utility — not a messaging app.',
     keywords:
-      'Status Viewer, BharatVow, save status media Android, status photo saver, digital life organizer, free utility app India',
+      'Status Viewer, BharatVow, save status media Android, status photo saver, Personal Digital Life Platform, free utility app India',
     ogTitle: 'Status Viewer — Save Status Media on Your Device | BharatVow',
     ogDescription:
-      'View, preview, save, and share status photos and videos in BharatVow. Free on Android — your complete digital life organizer.',
+      'View, preview, save, and share status photos and videos in BharatVow. Free on Android — part of the BharatVow Personal Digital Life Platform.',
   },
 
   finalCta: {

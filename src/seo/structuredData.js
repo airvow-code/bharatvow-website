@@ -7,7 +7,7 @@ export function organizationJsonLd() {
     '@type': 'Organization',
     name: SITE.company,
     url: SITE.url,
-    logo: `${SITE.url}/og/bharatvow-default.png`,
+    logo: `${SITE.url}/images/logo-header.webp`,
     brand: {
       '@type': 'Brand',
       name: SITE.name,
@@ -87,11 +87,42 @@ export function softwareApplicationJsonLd() {
     operatingSystem: 'Android',
     applicationCategory: 'LifestyleApplication',
     description:
-      'Secure Indian family digital life management platform — budget planning, home management, vehicles, events, and daily records. BharatVow does not process transactions or move funds.',
+      'Personal Digital Life Platform — budget planning, home management, vehicles, events, and daily records. BharatVow does not process transactions or move funds.',
+    ...(SITE.androidPackageName
+      ? {
+          identifier: {
+            '@type': 'PropertyValue',
+            propertyID: 'Android application ID',
+            value: SITE.androidPackageName,
+          },
+        }
+      : {}),
     offers: {
-      '@type': 'Offer',
-      price: '0',
+      '@type': 'AggregateOffer',
       priceCurrency: 'INR',
+      lowPrice: '0',
+      highPrice: '2000',
+      offerCount: '3',
+      offers: [
+        {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'INR',
+          description: 'Link Vault and Status Viewer — free without subscription',
+        },
+        {
+          '@type': 'Offer',
+          price: '300',
+          priceCurrency: 'INR',
+          description: 'Monthly subscription (before GST)',
+        },
+        {
+          '@type': 'Offer',
+          price: '2000',
+          priceCurrency: 'INR',
+          description: 'Yearly subscription (before GST)',
+        },
+      ],
     },
     downloadUrl: SITE.playStoreUrl !== '#' ? SITE.playStoreUrl : undefined,
     image: DEFAULT_OG_IMAGE,

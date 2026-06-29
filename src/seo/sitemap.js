@@ -12,7 +12,7 @@ const STATIC_ROUTES = [
   { path: PATHS.pricing, changefreq: 'monthly', priority: '0.85' },
   { path: PATHS.faq, changefreq: 'monthly', priority: '0.85' },
   { path: PATHS.contact, changefreq: 'monthly', priority: '0.8' },
-  { path: PATHS.blog, changefreq: 'weekly', priority: '0.7' },
+  // Blog excluded — page is noindex until articles are published
   { path: PATHS.download, changefreq: 'monthly', priority: '0.85' },
   { path: LEGAL_PATHS.hub, changefreq: 'yearly', priority: '0.5' },
   { path: LEGAL_PATHS.privacyPolicy, changefreq: 'yearly', priority: '0.5' },

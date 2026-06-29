@@ -102,7 +102,7 @@ const daysReminderPage = {
       icon: Heart,
       title: 'Anniversary Reminders',
       description:
-        'Track wedding and relationship anniversaries separately — never miss a year of celebration again.',
+        'Track wedding and relationship anniversaries separately — keep important celebration dates organised in one register.',
     },
     {
       icon: Calendar,
@@ -132,7 +132,7 @@ const daysReminderPage = {
       icon: CloudUpload,
       title: 'Backup & Restore',
       description:
-        'Back up reminders to the cloud or export to Excel — restore when you change phones so years of dates stay safe.',
+        'Optional cloud backup when you enable it, or export to Excel — restore when you change phones so years of dates stay safe.',
     },
   ],
 
@@ -154,7 +154,7 @@ const daysReminderPage = {
       description: 'Pick how far in advance to flag each entry — one day before, on the day, or one week ahead.',
     },
     {
-      title: 'Never Miss Important Days',
+      title: 'Keep Important Days Visible',
       description: 'Check Today and Upcoming on the dashboard — send wishes, make calls, or act on renewals on time.',
     },
   ],
@@ -248,7 +248,7 @@ const daysReminderPage = {
     },
     {
       q: 'Can I back up my reminders?',
-      a: 'Yes. Cloud backup and Excel export help you keep reminder data safe when you change phones.',
+      a: 'Yes. Optional cloud backup is available for this module when you enable it — useful when you change phones. Link Vault and Status Viewer are not included in master cloud backup scope. Excel export is also available where noted in the app.',
     },
     {
       q: 'Is Days Reminder a calendar or scheduling app?',
@@ -259,7 +259,7 @@ const daysReminderPage = {
   relatedArticles: [
     {
       slug: 'never-miss-important-dates',
-      title: 'Never Miss Important Dates',
+      title: 'Organize Important Dates',
       description: 'Simple habits for keeping birthdays, renewals, and appointments on your radar — coming soon on the BharatVow blog.',
     },
     {
@@ -279,10 +279,10 @@ const daysReminderPage = {
     metaDescription:
       'Days Reminder in BharatVow — birthdays, anniversaries, renewals, and custom date reminders in one register. Your personal reminder companion — not a calendar app.',
     keywords:
-      'Days Reminder, BharatVow, birthday reminder app India, anniversary tracker, important dates organizer, personal reminder app, digital life organizer',
-    ogTitle: 'Days Reminder — Never Miss Important Days | BharatVow',
+      'Days Reminder, BharatVow, birthday reminder app India, anniversary tracker, important dates organizer, personal reminder app, Personal Digital Life Platform',
+    ogTitle: 'Days Reminder — Important Dates Organized | BharatVow',
     ogDescription:
-      'Remember birthdays, anniversaries, renewals, and custom dates in BharatVow. Complete personal reminder companion — your complete digital life organizer.',
+      'Remember birthdays, anniversaries, renewals, and custom dates in BharatVow. Personal reminder companion — part of the BharatVow Personal Digital Life Platform.',
   },
 
   finalCta: {

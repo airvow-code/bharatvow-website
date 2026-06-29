@@ -116,7 +116,7 @@ const eventBookPage = {
       icon: CloudUpload,
       title: 'Backup & Restore',
       description:
-        'Back up event data to the cloud or export to Excel — restore when you change phones so past events stay safe.',
+        'Optional cloud backup when you enable it, or export to Excel — restore when you change phones so past events stay safe.',
     },
   ],
 
@@ -235,7 +235,7 @@ const eventBookPage = {
     },
     {
       q: 'Can I back up my events?',
-      a: 'Yes. Cloud backup and Excel export help you keep event data safe when you change phones.',
+      a: 'Yes. Optional cloud backup is available for this module when you enable it — useful when you change phones. Link Vault and Status Viewer are not included in master cloud backup scope. Excel export is also available where noted in the app.',
     },
     {
       q: 'Does Event Book process transactions or sell tickets?',
@@ -248,10 +248,10 @@ const eventBookPage = {
     metaDescription:
       'Event Book in BharatVow — plan weddings, birthdays, and functions with guests, budget, vendors, shopping, and expenses in one register. BharatVow does not process transactions or move funds.',
     keywords:
-      'Event Book, BharatVow, wedding planning app India, event guest list, function organizer, celebration planning, digital life organizer',
+      'Event Book, BharatVow, event record keeping app India, event guest list, function organizer, celebration planning, personal digital life platform',
     ogTitle: 'Event Book — Plan Celebrations in One Place | BharatVow',
     ogDescription:
-      'Manage guests, budget, vendors, shopping, and event expenses in BharatVow. Complete event planning — your complete digital life organizer.',
+      'Manage guests, budget, vendors, shopping, and event expenses in BharatVow. Event record keeping — part of the BharatVow Personal Digital Life Platform.',
   },
 
   finalCta: {

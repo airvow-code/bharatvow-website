@@ -124,7 +124,7 @@ export const CONTENT_GUIDELINES = {
 
   writingConsistency: {
     productName: 'BharatVow',
-    tagline: 'Your Complete Digital Life Organizer',
+    tagline: 'Personal Digital Life Platform',
     digitalTools: 'Digital Tools — capitalised',
     toolName: 'Official names only (Smart Khata, not Khata Module)',
   },

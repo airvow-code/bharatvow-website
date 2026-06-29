@@ -173,9 +173,9 @@ export const EVERYTHING_CONNECTED = {
     },
     {
       icon: Bell,
-      title: 'Never miss what matters',
+      title: 'Keep important dates visible',
       description:
-        'Due services, renewals, and important dates surface before they become last-minute emergencies.',
+        'Due services, renewals, and important dates surface in the app before they become last-minute emergencies.',
     },
     {
       icon: Link2,

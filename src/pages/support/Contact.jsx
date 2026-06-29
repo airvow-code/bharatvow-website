@@ -23,6 +23,8 @@ const crumbs = [
   { label: 'Contact', path: CONTACT.path },
 ];
 
+const addressOption = CONTACT.supportOptions.find((option) => option.id === 'address');
+
 export default function Contact() {
   const meta = getPageMeta(CONTACT.path);
   const ogTitle = CONTACT.seo?.ogTitle ?? CONTACT.title;
@@ -69,6 +71,16 @@ export default function Contact() {
               <Mail size={16} strokeWidth={2} aria-hidden />
               {SITE.email}
             </a>
+            <p className="mt-3 text-xs text-muted">
+              Privacy enquiries:{' '}
+              <a
+                href={`mailto:${SITE.privacyEmail}?subject=${encodeURIComponent('Privacy Request')}`}
+                className="text-primary-light hover:text-primary"
+              >
+                {SITE.privacyEmail}
+              </a>{' '}
+              — use subject &ldquo;Privacy Request&rdquo;.
+            </p>
           </SurfaceCard>
 
           <SurfaceCard hover="lift" className="p-6 motion-safe:animate-fade-up">
@@ -103,12 +115,23 @@ export default function Contact() {
             <h2 className="mt-4 font-display text-lg font-bold text-heading">Business Address</h2>
             <address className="mt-3 not-italic text-sm leading-relaxed text-body">
               <span className="font-medium text-heading">{SITE.company}</span>
-              {CONTACT.supportOptions[2].addressLines.map((line) => (
+              {addressOption?.addressLines.map((line) => (
                 <span key={line} className="block">
                   {line}
                 </span>
               ))}
             </address>
+            <p className="mt-3 text-xs text-muted">
+              Grievance enquiries:{' '}
+              <a
+                href={`mailto:${SITE.grievanceEmail}?subject=${encodeURIComponent('Grievance')}`}
+                className="text-primary-light hover:text-primary"
+              >
+                {SITE.grievanceEmail}
+              </a>{' '}
+              with subject &ldquo;Grievance&rdquo;. See{' '}
+              <InternalLink to="/grievance-redressal">Grievance Redressal</InternalLink>.
+            </p>
           </SurfaceCard>
         </div>
 
@@ -152,14 +175,14 @@ export default function Contact() {
               <h2 className="mt-4 font-display text-lg font-bold text-heading">Office Location</h2>
               <address className="mt-3 not-italic text-sm leading-relaxed text-body">
                 <span className="font-medium text-heading">{SITE.company}</span>
-                {CONTACT.supportOptions[2].addressLines.map((line) => (
+                {addressOption?.addressLines.map((line) => (
                   <span key={line} className="block">
                     {line}
                   </span>
                 ))}
               </address>
               <p className="mt-4 text-xs text-muted">
-                Grievance Officer: {CONTACT.grievanceOfficer} — same email and phone.{' '}
+                {CONTACT.grievanceOfficerNote}{' '}
                 <InternalLink to="/grievance-redressal">Grievance procedure →</InternalLink>
               </p>
             </SurfaceCard>

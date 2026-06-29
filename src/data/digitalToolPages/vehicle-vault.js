@@ -63,9 +63,9 @@ const vehicleVaultPage = {
 
   realBenefits: [
     {
-      title: 'Never Miss Renewals',
+      title: 'Track Renewals on Time',
       description:
-        'Insurance and PUC expiry dates stay visible on your vehicle dashboard — with alerts when renewal is due or overdue.',
+        'Insurance and PUC expiry dates stay visible on your vehicle dashboard — with in-app reminders when renewal is due or overdue.',
     },
     {
       title: 'Complete Vehicle Records',
@@ -123,7 +123,7 @@ const vehicleVaultPage = {
       icon: BellRing,
       title: 'Renewal Reminders',
       description:
-        'See insurance and PUC expiry dates on the dashboard — alerts when renewal is approaching or overdue.',
+        'See insurance and PUC expiry dates on the dashboard — in-app reminders when renewal is approaching or overdue.',
     },
     {
       icon: Shield,
@@ -177,7 +177,7 @@ const vehicleVaultPage = {
       icon: CloudUpload,
       title: 'Backup & Restore',
       description:
-        'Back up vehicle data to the cloud or export to Excel — restore when you change phones so records stay safe.',
+        'Optional cloud backup when you enable it, or export to Excel — restore when you change phones so records stay safe.',
     },
   ],
 
@@ -204,7 +204,7 @@ const vehicleVaultPage = {
     },
     {
       title: 'Receive Reminder',
-      description: 'Check renewal alerts for insurance and PUC expiry on the vehicle dashboard before dates pass.',
+      description: 'Check renewal reminders for insurance and PUC expiry on the vehicle dashboard before dates pass.',
     },
     {
       title: 'Maintain Complete Vehicle History',
@@ -287,11 +287,11 @@ const vehicleVaultPage = {
     },
     {
       q: 'Does Vehicle Vault remind me about insurance renewal?',
-      a: 'Yes. Insurance and PUC expiry dates appear on the vehicle dashboard with alerts when renewal is due or overdue.',
+      a: 'Yes. Insurance and PUC expiry dates appear on the vehicle dashboard with in-app reminders when renewal is due or overdue.',
     },
     {
       q: 'Can I back up my vehicle records?',
-      a: 'Yes. Cloud backup and Excel export help you keep vehicle data safe when you change phones.',
+      a: 'Yes. Optional cloud backup is available for this module when you enable it — useful when you change phones. Link Vault and Status Viewer are not included in master cloud backup scope. Excel export is also available where noted in the app.',
     },
     {
       q: 'Does Vehicle Vault process transactions or sell insurance?',
@@ -322,10 +322,10 @@ const vehicleVaultPage = {
     metaDescription:
       'Vehicle Vault in BharatVow — RC, insurance, PUC, fuel logs, service history, and vehicle expenses in one digital garage. BharatVow does not process transactions or move funds, and it does not sell insurance.',
     keywords:
-      'Vehicle Vault, BharatVow, vehicle document app India, RC insurance tracker, fuel log app, car maintenance records, digital life organizer',
+      'Vehicle Vault, BharatVow, vehicle document app India, RC insurance tracker, fuel log app, car maintenance records, Personal Digital Life Platform',
     ogTitle: 'Vehicle Vault — Your Complete Digital Garage | BharatVow',
     ogDescription:
-      'Manage RC, insurance, PUC, fuel, service, and vehicle history in BharatVow. Complete vehicle records — your complete digital life organizer.',
+      'Manage RC, insurance, PUC, fuel, service, and vehicle history in BharatVow. Complete vehicle records — part of the BharatVow Personal Digital Life Platform.',
   },
 
   finalCta: {

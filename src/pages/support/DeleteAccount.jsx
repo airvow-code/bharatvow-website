@@ -84,10 +84,16 @@ export default function DeleteAccount() {
       <ProseSection title="What data is deleted">
         <p>When your account is deleted:</p>
         <ul className="list-disc space-y-2 pl-5">
-          <li>Your BharatVow account profile linked to your registered mobile number is removed</li>
-          <li>Cloud backup copies linked to your account are removed where applicable</li>
-          <li>Locally stored module data on your device is removed when you uninstall or reset the app</li>
+          {DELETE_ACCOUNT.afterDeletion.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
+      </ProseSection>
+
+      <ProseSection title={DELETE_ACCOUNT.cloudBackup.title}>
+        {DELETE_ACCOUNT.cloudBackup.paragraphs.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
       </ProseSection>
 
       <ProseSection title="Data retained for legal purposes">
@@ -100,10 +106,21 @@ export default function DeleteAccount() {
         <p>Retained data is used only for legal compliance — not for marketing.</p>
       </ProseSection>
 
+      <ProseSection title="Cancel Google Play subscription first">
+        <p>
+          Cancel your subscription <strong>before</strong> deleting your account to prevent renewal charges:
+        </p>
+        <ol className="list-decimal space-y-2 pl-5">
+          {DELETE_ACCOUNT.googlePlayCancel.map((step) => (
+            <li key={step}>{step}</li>
+          ))}
+        </ol>
+      </ProseSection>
+
       <ProseSection title="Subscriptions">
         <p>
-          Cancel Google Play or in-app subscriptions <strong>before</strong> deletion to prevent renewal
-          charges.
+          Account deletion does not automatically cancel an active Google Play subscription. Cancel through
+          Google Play as described above before you delete your account.
         </p>
       </ProseSection>
 
@@ -118,7 +135,15 @@ export default function DeleteAccount() {
 
       <p className="mt-8 text-sm text-muted">
         Questions about data handling? See our <InternalLink to={PATHS.privacyPolicy}>Privacy Policy</InternalLink>{' '}
-        or <InternalLink to={PATHS.grievanceRedressal}>Grievance Redressal</InternalLink>.
+        or <InternalLink to={PATHS.grievanceRedressal}>Grievance Redressal</InternalLink>.{' '}
+        {DELETE_ACCOUNT.supportContact.note}{' '}
+        <a
+          href={`mailto:${DELETE_ACCOUNT.supportContact.email}`}
+          className="font-medium text-primary-light hover:text-primary"
+        >
+          {DELETE_ACCOUNT.supportContact.email}
+        </a>
+        .
       </p>
     </LegalDocumentLayout>
   );

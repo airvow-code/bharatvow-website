@@ -123,7 +123,7 @@ const tripLedgerPage = {
       icon: CloudUpload,
       title: 'Backup & Restore',
       description:
-        'Back up trips to the cloud or export to Excel — restore when you change phones so travel history stays safe.',
+        'Optional cloud backup when you enable it, or export to Excel — restore when you change phones so travel history stays safe.',
     },
   ],
 
@@ -251,10 +251,10 @@ const tripLedgerPage = {
     metaDescription:
       'Trip Ledger in BharatVow — organise trips with expenses, timeline, notes, and travel history. Group splits and summaries — BharatVow does not process transactions or move funds, and it does not book travel.',
     keywords:
-      'Trip Ledger, BharatVow, group trip expense splitter India, travel organizer app, trip planning, shared travel costs, digital life organizer',
+      'Trip Ledger, BharatVow, group trip expense records India, travel organizer app, trip planning, shared travel costs, personal digital life platform',
     ogTitle: 'Trip Ledger — Organise Every Trip in One Place | BharatVow',
     ogDescription:
-      'Plan trips, record shared expenses, track daily moments, and keep complete travel history in BharatVow. Your complete digital life organizer.',
+      'Plan trips, record shared expenses, track daily moments, and keep complete travel history in BharatVow. Part of the BharatVow Personal Digital Life Platform.',
   },
 
   finalCta: {

@@ -16,7 +16,7 @@ const smartKhataPage = {
   slug: 'smart-khata',
 
   valueProposition:
-    'Keep personal lend-and-borrow records clear — one account per person, with a running balance you can trust.',
+    'Keep personal lend-and-borrow records clear — one account per person, with a running balance you maintain from your own entries.',
 
   whyExists: {
     headline: 'Why Smart Khata?',
@@ -74,7 +74,7 @@ const smartKhataPage = {
       icon: CloudUpload,
       title: 'Backup & Restore',
       description:
-        'Back up accounts to the cloud and restore when you change phones — your personal records stay with you.',
+        'Optional cloud backup when you enable it and restore when you change phones — your personal records stay with you.',
     },
   ],
 
@@ -183,7 +183,7 @@ const smartKhataPage = {
     metaDescription:
       'Smart Khata keeps personal lend-and-borrow records in BharatVow — dated entries, running balance per person, search, share, export, and backup. BharatVow does not process transactions or move funds.',
     keywords:
-      'Smart Khata, BharatVow, personal khata app, lend borrow records, udhaar record keeping, digital life organizer India',
+      'Smart Khata, BharatVow, personal khata app, lend borrow records, udhaar record keeping, Personal Digital Life Platform India',
     ogTitle: 'Smart Khata — Personal Lend & Borrow Records | BharatVow',
     ogDescription:
       'Record personal accounts, track balances, and keep lend-and-borrow history clear in BharatVow. Simple record keeping — BharatVow does not process transactions or move funds.',

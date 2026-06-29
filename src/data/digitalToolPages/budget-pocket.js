@@ -73,7 +73,7 @@ const budgetPocketPage = {
       icon: CloudUpload,
       title: 'Backup & Restore',
       description:
-        'Back up your budget data to the cloud and restore when you change phones — your plans stay with you.',
+        'Optional cloud backup when you enable it and restore when you change phones — your plans stay with you.',
     },
   ],
 
@@ -187,7 +187,7 @@ const budgetPocketPage = {
     metaDescription:
       'Budget Pocket in BharatVow — plan household budgets by category, track spending, and see remaining budget. Simple budgeting — BharatVow does not process transactions or move funds.',
     keywords:
-      'Budget Pocket, BharatVow, household budget app India, monthly budget planner, personal budget tracking, digital life organizer',
+      'Budget Pocket, BharatVow, household budget app India, monthly budget planner, personal budget tracking, Personal Digital Life Platform',
     ogTitle: 'Budget Pocket — Plan & Track Your Budget | BharatVow',
     ogDescription:
       'Set category budgets, record expenses, and see what remains each month in BharatVow. Practical planning — BharatVow does not process transactions or move funds.',

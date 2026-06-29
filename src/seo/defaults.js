@@ -1,23 +1,23 @@
 import { SITE } from '@/utils/constants';
 import { ROUTE_META, getRouteMeta } from '@/seo/routeMeta';
 
-/** Default social / OG image — replace with 1200×630 composed asset before launch. */
-export const DEFAULT_OG_IMAGE = `${SITE.url}/og/bharatvow-default.png`;
+/** Default social / OG image — uses site logo until a dedicated 1200×630 asset is added. */
+export const DEFAULT_OG_IMAGE = `${SITE.url}/images/logo-header.webp`;
 
 export const SEO_DEFAULTS = {
   siteName: SITE.name,
   locale: 'en_IN',
   localeAlternate: 'hi_IN',
-  twitterCard: 'summary_large_image',
+  twitterCard: 'summary',
   twitterSite: '@bharatvow',
   author: SITE.company,
   themeColor: '#05204E',
   defaultDescription:
-    'An Indian family digital life management platform — organize household activities, expenses, reminders, documents, vehicles, trips, events, and personal records in one secure app. Free tools on Google Play.',
+    'A Personal Digital Life Platform — organize personal records, expenses, reminders, documents, vehicles, trips, events, and everyday digital life tools in one secure app. Free tools on Google Play.',
   defaultKeywords: [
     'BharatVow',
     'BharatVow app',
-    'digital life organizer',
+    'Personal Digital Life Platform',
     'daily life management India',
     'personal organization app',
     'budget tracking app',

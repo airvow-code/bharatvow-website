@@ -203,7 +203,7 @@ export const DIGITAL_LIFE_PAGE = {
   description:
     'Every BharatVow tool simplifies a real part of everyday life — budgets, home, vehicles, events, grocery, travel, links, and daily records — all connected inside one app.',
   keywords:
-    'BharatVow Digital Life, digital life organizer, Smart Khata, Home Vault, personal organization India',
+    'BharatVow Digital Life, Personal Digital Life Platform, Smart Khata, Home Vault, personal organization India',
   intro:
     'These are not isolated apps. Each tool connects inside BharatVow — so your budgets, home records, vehicles, and daily life stay organized in one place. Start free with Link Vault and Status Viewer. Try all Digital Tools with a 7-day free trial.',
 };

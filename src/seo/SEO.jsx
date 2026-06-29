@@ -87,8 +87,6 @@ export default function SEO({
     setMeta('og:locale:alternate', SEO_DEFAULTS.localeAlternate, 'property');
     setMeta('og:image', ogImage, 'property');
     setMeta('og:image:alt', imageAlt, 'property');
-    setMeta('og:image:width', '1200', 'property');
-    setMeta('og:image:height', '630', 'property');
 
     // Twitter
     setMeta('twitter:card', SEO_DEFAULTS.twitterCard);

@@ -136,7 +136,7 @@ const placeStorePage = {
       icon: CloudUpload,
       title: 'Backup & Restore',
       description:
-        'Back up places to the cloud — restore when you change phones so your location library stays safe.',
+        'Optional cloud backup when you enable it — restore when you change phones so your location library stays safe.',
     },
   ],
 
@@ -248,7 +248,7 @@ const placeStorePage = {
     },
     {
       q: 'Can I back up my saved places?',
-      a: 'Yes. Cloud backup helps you restore your place library when you change phones.',
+      a: 'Yes. Optional cloud backup is available for this module when you enable it — useful when you change phones. Link Vault and Status Viewer are not included in master cloud backup scope.',
     },
     {
       q: 'How is Place Store different from Trip Ledger?',
@@ -283,10 +283,10 @@ const placeStorePage = {
     metaDescription:
       'Place Store in BharatVow — save places with map pin, categories, notes, and favourites. Smart location organizer — not a navigation or maps replacement app.',
     keywords:
-      'Place Store, BharatVow, save places app India, location organizer, favourite places, map pin saver, digital life organizer',
+      'Place Store, BharatVow, save places app India, location organizer, favourite places, map pin saver, Personal Digital Life Platform',
     ogTitle: 'Place Store — Your Smart Location Organizer | BharatVow',
     ogDescription:
-      'Save and organise important places with map preview, search, and backup in BharatVow. Your complete digital life organizer.',
+      'Save and organise important places with map preview, search, and backup in BharatVow. Part of the BharatVow Personal Digital Life Platform.',
   },
 
   finalCta: {

@@ -1,28 +1,45 @@
 import { MAIN_DASHBOARD_TOOLS } from '@/config/mainDashboard';
 import { PATHS } from '@/config/paths';
 
-/** All Digital Tools included in subscription — Main Dashboard order */
+/** Premium Digital Tools included in subscription — Main Dashboard order */
+export const PRICING_PREMIUM_TOOLS = MAIN_DASHBOARD_TOOLS.filter((tool) => !tool.alwaysFree).map(
+  ({ label }) => label,
+);
+
+/** Always-free Digital Tools on the dashboard */
+export const PRICING_FREE_TOOLS = MAIN_DASHBOARD_TOOLS.filter((tool) => tool.alwaysFree).map(
+  ({ label }) => label,
+);
+
+/** @deprecated use PRICING_PREMIUM_TOOLS + PRICING_FREE_TOOLS */
 export const PRICING_INCLUDED_TOOLS = MAIN_DASHBOARD_TOOLS.map(({ label }) => label);
+
+export const PRICING_INCLUDED_NOTE =
+  'Subscriptions unlock all ten premium Digital Tools on the dashboard. Link Vault and Status Viewer remain free without a subscription.';
+
+export const PRICING_BALANCE_NOTE =
+  'In-app balance from the distributor referral program is separate from Google Play subscription billing. Refund and balance handling follow our Cancellation & Refund Policy.';
 
 export const PRICING_PAGE = {
   path: PATHS.pricing,
   title: 'Pricing',
   headline: 'Simple & Transparent Pricing',
-  intro: 'Choose the plan that fits your digital life.',
+  intro: 'Ten premium Digital Tools with a subscription. Two free tools to start.',
   description:
-    'BharatVow subscription plans — ₹300/month or ₹2,000/year. Start with a 7-day free trial. Access all Digital Tools in one organized app.',
+    'BharatVow subscription plans — ₹300/month or ₹2,000/year for ten premium Digital Tools. Link Vault and Status Viewer are free. Start with a 7-day free trial.',
   keywords:
-    'BharatVow pricing, BharatVow subscription, digital life organizer India, BharatVow free trial, BharatVow monthly yearly plan',
+    'BharatVow pricing, BharatVow subscription, Personal Digital Life Platform India, BharatVow free trial, BharatVow monthly yearly plan',
   seo: {
     ogTitle: 'Simple & Transparent Pricing | BharatVow',
     ogDescription:
-      'Start with a 7-day free trial. Monthly ₹300 or yearly ₹2,000 — access BharatVow\'s complete Digital Life ecosystem. GST extra where applicable.',
+      'Start with a 7-day free trial for premium Digital Tools. Monthly ₹300 or yearly ₹2,000 — Link Vault and Status Viewer stay free. GST extra where applicable.',
   },
 
   trial: {
     heading: '7-Day Free Trial',
-    body: 'Start using BharatVow with a 7-day free trial.',
-    detail: 'Explore all premium Digital Tools before choosing a subscription.',
+    body: 'Start using BharatVow with a 7-day free trial for premium Digital Tools.',
+    detail:
+      'Explore all ten premium Digital Tools before choosing a subscription. Link Vault and Status Viewer remain free without a subscription.',
   },
 
   gstNote: 'GST Extra. Taxes will be applied where applicable.',
@@ -49,21 +66,21 @@ export const PRICING_PLANS = [
     price: '₹2,000',
     period: '/ Year',
     description:
-      'Save more with an annual subscription and enjoy uninterrupted access to BharatVow.',
+      'Save more with an annual subscription and enjoy uninterrupted access to premium Digital Tools.',
     highlighted: true,
   },
 ];
 
 export const PRICING_BENEFITS = [
   {
-    title: 'Access All Digital Tools',
+    title: 'Ten Premium Digital Tools',
     description:
-      'One subscription unlocks every Digital Tool on the BharatVow dashboard — budgets, home, vehicles, events, and everyday records.',
+      'One subscription unlocks every premium Digital Tool on the BharatVow dashboard — budgets, home, vehicles, events, and everyday records.',
   },
   {
-    title: 'Secure Backup',
+    title: 'Optional Secure Backup',
     description:
-      'Optional cloud backup is available for applicable modules — restore your records when you change phones.',
+      'Optional cloud backup is available for applicable premium modules when you enable it — restore your records when you change phones. Link Vault and Status Viewer are not included in master cloud backup scope.',
   },
   {
     title: 'Regular Updates',
@@ -80,7 +97,7 @@ export const PRICING_BENEFITS = [
 export const PRICING_FAQ = [
   {
     q: 'What happens after the 7-day trial?',
-    a: 'When your free trial ends, premium Digital Tools require an active subscription to continue using. You can choose the Monthly or Yearly plan in the app. Your existing records remain on your device.',
+    a: 'When your free trial ends, premium Digital Tools require an active subscription to continue using. You can choose the Monthly or Yearly plan in the app. Your existing records remain on your device. Link Vault and Status Viewer stay free without a subscription.',
   },
   {
     q: 'Can I switch plans later?',

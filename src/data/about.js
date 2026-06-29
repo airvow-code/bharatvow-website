@@ -17,11 +17,11 @@ export const ABOUT_PAGE = {
   heroSupportLine:
     'BharatVow is developed by Atulit Baldhama Digital Solutions Pvt. Ltd., a Jaipur-based technology company dedicated to building innovative mobile applications, software solutions and digital platforms that simplify everyday life.',
   description:
-    'Learn about BharatVow — a digital life organizer by Atulit Baldhama Digital Solutions. Organize budgets, home records, vehicles, events, and everyday information in one Android app.',
+    'Learn about BharatVow — a Personal Digital Life Platform by Atulit Baldhama Digital Solutions. Organize budgets, home records, vehicles, events, and everyday information in one Android app.',
   keywords:
-    'About BharatVow, digital life organizer, Atulit Baldhama Digital Solutions, personal organization app India, Jaipur mobile app',
+    'About BharatVow, Personal Digital Life Platform, Atulit Baldhama Digital Solutions, personal organization app India, Jaipur mobile app',
   seo: {
-    ogTitle: 'About BharatVow — Your Complete Digital Life Organizer',
+    ogTitle: 'About BharatVow — Personal Digital Life Platform',
     ogDescription:
       'What BharatVow is, who builds it, and how it helps you organize everyday digital life — honest, transparent information for users and reviewers.',
   },
@@ -29,7 +29,7 @@ export const ABOUT_PAGE = {
   whatIs: {
     heading: 'What is BharatVow?',
     paragraphs: [
-      'BharatVow is a Digital Life Organizer — an Android application that helps you keep everyday information in one place instead of scattered across notebooks, chats, screenshots, and separate apps.',
+      'BharatVow is a Personal Digital Life Platform — an Android application that helps you keep everyday information in one place instead of scattered across notebooks, chats, screenshots, and separate apps.',
       'Use it to manage personal records such as lend-and-borrow notes, household budgets, daily expenses, home bills and assets, vehicle documents, events, trips, grocery lists, saved links, important dates, saved places, and other information you refer to regularly.',
       'BharatVow is built for personal organization and record keeping. It is not a bank, wallet, payment service, money transfer service, lending platform, investment platform, or navigation app. Each Digital Tool focuses on a specific part of everyday life — connected inside one application.',
     ],
@@ -46,14 +46,14 @@ export const ABOUT_PAGE = {
 
   vision: {
     heading: 'Our Vision',
-    body: 'We want to help people stay organized in their everyday digital life — so personal records, household information, and daily planning feel manageable rather than overwhelming.',
+    body: 'Become India\'s most trusted Personal Digital Life Platform — so personal records, household information, and daily planning feel manageable rather than overwhelming.',
   },
 
   mission: {
     heading: 'Our Mission',
     paragraphs: [
-      'Build a trusted digital life organizer that people can rely on for everyday information — with clear tools, honest descriptions, and respect for user privacy.',
-      'Ship features that work as described. Keep the app simple enough to use without a manual. Listen to real workflows from individuals, families, and professionals who use BharatVow every day.',
+      'Help every person organize their digital life in one secure place — with clear tools, honest descriptions, and respect for user privacy.',
+      'Ship features that work as described. Keep the app simple enough to use without a manual. Listen to real workflows from individuals and professionals who use BharatVow every day.',
       'Improve continuously based on user feedback — without overpromising or adding complexity for its own sake.',
     ],
   },
@@ -61,7 +61,7 @@ export const ABOUT_PAGE = {
   ecosystem: {
     heading: 'Digital Life Ecosystem',
     intro:
-      'BharatVow includes twelve Digital Tools on the main dashboard — each designed for a specific part of everyday life. Link Vault and Status Viewer are free without a subscription. Other Digital Tools are available with a 7-day free trial before choosing a Monthly or Yearly plan.',
+      'BharatVow includes twelve Digital Tools on the main dashboard — each designed for a specific part of everyday life. Link Vault and Status Viewer are free without a subscription. The other ten Digital Tools are available with a 7-day free trial before choosing a Monthly (₹300/month) or Yearly (₹2,000/year) plan billed through Google Play. Subscriptions renew automatically unless cancelled in Google Play subscription settings. An optional distributor referral program is available in-app under separate program rules and the Distributor Agreement.',
     tools: ECOSYSTEM_TOOLS,
     ctaLabel: 'Explore Digital Life',
     ctaPath: PATHS.digitalLife,
@@ -80,6 +80,7 @@ export const ABOUT_PAGE = {
     ],
     description:
       'Atulit Baldhama Digital Solutions Pvt. Ltd. is a Jaipur-based technology company specializing in mobile application development, software development, and modern digital solutions. The company is the creator and developer of BharatVow.',
+    registration: `CIN: ${SITE.cin} · GSTIN: ${SITE.gstin}`,
   },
 
   trust: {
@@ -89,12 +90,19 @@ export const ABOUT_PAGE = {
     ],
     points: [
       'Core module data is stored on your device for everyday use. You can work with your records locally without needing constant internet access.',
-      'Optional cloud backup is available for applicable modules when you choose to use it — useful when changing phones or keeping a backup copy linked to your account.',
+      'Optional cloud backup is available for applicable premium modules when you choose to use it — useful when changing phones or keeping a backup copy linked to your account. Link Vault and Status Viewer are not included in master cloud backup scope.',
       'You remain in control of your data. You can export records where the app supports it, manage your account, and request account deletion through the in-app flow or our Delete Account page.',
       'BharatVow is for personal organization — not professional legal, tax, or medical advice. We describe only functionality that exists in the app today.',
+      'Subscriptions are billed through Google Play. Cancel renewal anytime through Google Play subscription settings before the next billing period.',
     ],
     privacyPath: '/privacy-policy',
     privacyLabel: 'Read our Privacy Policy',
+    legalLinks: [
+      { label: 'Terms & Conditions', path: '/terms' },
+      { label: 'Delete Account', path: PATHS.deleteAccount },
+      { label: 'Grievance Redressal', path: '/grievance-redressal' },
+      { label: 'Cancellation & Refund', path: '/refund-policy' },
+    ],
   },
 
   values: {
@@ -141,7 +149,7 @@ export const ABOUT_PAGE = {
   cta: {
     title: 'Start Organizing Your Digital Life.',
     description:
-      'Download BharatVow on Google Play — start with free tools, then explore all Digital Tools with a 7-day free trial before subscribing.',
+      'Download BharatVow on Google Play — start with Link Vault and Status Viewer free, then explore ten premium Digital Tools with a 7-day free trial before subscribing.',
     primaryLabel: 'Download BharatVow',
     secondaryLabel: 'Explore Digital Life',
     secondaryPath: PATHS.digitalLife,
