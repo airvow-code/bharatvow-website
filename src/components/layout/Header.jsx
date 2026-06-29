@@ -4,8 +4,7 @@ import { Menu, X } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import OptimizedImage from '@/components/common/OptimizedImage';
-import HeaderNavLink from '@/components/layout/HeaderNavLink';
-import { HEADER_NAV, isHeaderNavActive } from '@/components/layout/headerNav';
+import HeaderNavMenu from '@/components/layout/HeaderNavMenu';
 import { SITE } from '@/utils/constants';
 import { HEADER_LOGO, HEADER_LOGO_HEIGHT, HEADER_LOGO_WIDTH } from '@/utils/images';
 import { cn } from '@/utils/cn';
@@ -97,7 +96,6 @@ export default function Header() {
       )}
     >
       <Container className="relative flex h-[72px] min-w-0 items-center justify-between gap-3 lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-6 xl:gap-8">
-        {/* Logo */}
         <Link
           to="/"
           className="flex shrink-0 items-center rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2"
@@ -112,22 +110,13 @@ export default function Header() {
           />
         </Link>
 
-        {/* Desktop navigation — centered */}
         <nav
-          className="hidden items-center justify-center gap-4 lg:flex xl:gap-7"
+          className="hidden min-w-0 justify-center lg:flex"
           aria-label="Main navigation"
         >
-          {HEADER_NAV.map((item) => (
-            <HeaderNavLink
-              key={item.id}
-              to={item.to}
-              label={item.label}
-              active={isHeaderNavActive(item, pathname, hash)}
-            />
-          ))}
+          <HeaderNavMenu pathname={pathname} hash={hash} />
         </nav>
 
-        {/* Desktop actions */}
         <div className="hidden items-center justify-end lg:flex">
           <Button
             href={SITE.playStoreUrl}
@@ -140,7 +129,6 @@ export default function Header() {
           </Button>
         </div>
 
-        {/* Mobile menu toggle */}
         <button
           ref={menuButtonRef}
           type="button"
@@ -158,7 +146,6 @@ export default function Header() {
         </button>
       </Container>
 
-      {/* Mobile backdrop */}
       <div
         aria-hidden
         className={cn(
@@ -168,7 +155,6 @@ export default function Header() {
         onClick={closeMenu}
       />
 
-      {/* Mobile drawer — slides from right */}
       <aside
         id="mobile-nav-drawer"
         ref={drawerRef}
@@ -177,11 +163,11 @@ export default function Header() {
         aria-label="Mobile navigation"
         aria-hidden={!menuOpen}
         className={cn(
-          'fixed inset-y-0 right-0 z-50 flex w-[min(100vw-2.5rem,20rem)] flex-col border-l border-border bg-surface/98 shadow-lg backdrop-blur-md transition-transform duration-300 ease-entrance lg:hidden',
-          menuOpen ? 'translate-x-0' : 'translate-x-full',
+          'fixed inset-y-0 right-0 z-50 flex h-[100dvh] w-[min(100vw-2.5rem,20rem)] min-w-0 flex-col border-l border-border bg-surface shadow-lg backdrop-blur-md transition-transform duration-300 ease-entrance lg:hidden',
+          menuOpen ? 'translate-x-0' : 'pointer-events-none translate-x-full',
         )}
       >
-        <div className="flex items-center justify-between border-b border-border px-5 py-4">
+        <div className="flex shrink-0 items-center justify-between border-b border-border px-5 py-4">
           <span className="font-display text-sm font-bold text-heading">Menu</span>
           <button
             type="button"
@@ -194,19 +180,15 @@ export default function Header() {
         </div>
 
         <nav
-          className="flex flex-1 flex-col gap-1.5 overflow-y-auto overscroll-contain px-3 py-4 pb-[max(1rem,env(safe-area-inset-bottom))]"
+          className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-4 pb-[max(1rem,env(safe-area-inset-bottom))]"
           aria-label="Mobile navigation"
         >
-          {HEADER_NAV.map((item) => (
-            <HeaderNavLink
-              key={item.id}
-              to={item.to}
-              label={item.label}
-              active={isHeaderNavActive(item, pathname, hash)}
-              mobile
-              onClick={handleMobileNavClick}
-            />
-          ))}
+          <HeaderNavMenu
+            pathname={pathname}
+            hash={hash}
+            mobile
+            onItemClick={handleMobileNavClick}
+          />
         </nav>
       </aside>
     </header>
