@@ -204,7 +204,7 @@ export const MORNING_STORY = {
 
 export const HERO = {
   eyebrow: 'Personal Digital Life Platform',
-  title: 'Organize your complete digital life in one place',
+  title: 'Organize your Personal digital life in one place',
   description:
     'You already manage many parts of your life every day — budgets, home, vehicles, events, grocery, and everyday records. BharatVow helps you organize personal records, expenses, reminders, documents, and daily tools in one privacy-first, easy-to-use platform.',
   topics: [

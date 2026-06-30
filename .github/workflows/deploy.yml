@@ -10,23 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
-      - name: Install Dependencies
-        run: npm ci
+      - run: npm ci
 
-      - name: Build Project
-        run: npm run build
+      - run: npm run build
 
-      - name: Deploy to NetSpaceIndia FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
@@ -34,3 +30,7 @@ jobs:
           local-dir: ./dist/
           server-dir: ${{ secrets.FTP_REMOTE_DIR }}
           dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.github/**
+            web.config
