@@ -5,6 +5,7 @@
 import { mkdirSync, existsSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { buildScreenshotCatalog } from '../src/config/screenshotCatalog.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -14,135 +15,8 @@ const outDir = path.join(root, 'public', 'images');
 const screenshotsOutDir = path.join(outDir, 'screenshots');
 const generatedDir = path.join(root, 'src', 'generated');
 
-/** Canonical screenshot IDs → source filenames (first match wins; raster preferred over SVG). */
-const SCREENSHOT_CATALOG = [
-  {
-    id: 'bharatvow-splash',
-    files: [
-      'bharatvow-splash.webp',
-      'bharatvow-splash.png',
-      'bharatvow-splash.jpg',
-    ],
-  },
-  {
-    id: 'main-dashboard',
-    files: [
-      'home-dashboard.webp',
-      'home-dashboard.png',
-      'home-dashboard.jpg',
-      'main-dashboard.webp',
-      'main-dashboard.png',
-      'main-dashboard.svg',
-    ],
-  },
-  {
-    id: 'smart-khata',
-    files: [
-      'smart-khata-dashboard.webp',
-      'smart-khata.webp',
-      'smart-khata.png',
-      'smart-khata.jpg',
-      'smart-khata.svg',
-    ],
-  },
-  {
-    id: 'budget-pocket',
-    files: [
-      'budget-pocket-dashboard.webp',
-      'budget-pocket.webp',
-      'budget-pocket.png',
-      'budget-pocket.jpg',
-    ],
-  },
-  {
-    id: 'expenses-diary',
-    files: [
-      'expenses-dashboard.webp',
-      'expenses-diary-dashboard.webp',
-      'expenses-diary.webp',
-      'expenses-diary.png',
-    ],
-  },
-  {
-    id: 'event-book',
-    files: [
-      'event-book-dashboard.webp',
-      'event-book.webp',
-      'event-book.png',
-    ],
-  },
-  {
-    id: 'trip-ledger',
-    files: [
-      'trip-ledger-dashboard.webp',
-      'trip-ledger.webp',
-      'trip-ledger.png',
-    ],
-  },
-  {
-    id: 'vehicle-vault',
-    files: [
-      'vehicle-vault-dashboard.webp',
-      'vehicle-vault.webp',
-      'vehicle-vault.png',
-    ],
-  },
-  {
-    id: 'home-vault',
-    files: [
-      'home-vault-dashboard.webp',
-      'home-vault-dashboard.png',
-      'home-vault-dashboard.jpg',
-      'home-vault.webp',
-      'home-vault.png',
-      'home-vault.svg',
-    ],
-  },
-  {
-    id: 'days-reminder',
-    files: [
-      'days-reminder-dashboard.webp',
-      'days-reminder.webp',
-      'days-reminder.png',
-      'days-reminder.jpg',
-      'days-reminder.svg',
-    ],
-  },
-  {
-    id: 'grocery-bag',
-    files: [
-      'grocery-bag-dashboard.webp',
-      'grocery-bag.webp',
-      'grocery-bag.png',
-    ],
-  },
-  {
-    id: 'link-vault',
-    files: [
-      'link-vault-dashboard.webp',
-      'link-vault.webp',
-      'link-vault.png',
-      'link-vault.jpg',
-      'link-vault.svg',
-    ],
-  },
-  {
-    id: 'status-viewer',
-    files: [
-      'status-viewer-dashboard.webp',
-      'status-viewer.webp',
-      'status-viewer.png',
-    ],
-  },
-  {
-    id: 'place-store',
-    files: [
-      'place-store-dashboard.webp',
-      'place-store.webp',
-      'place-store.png',
-    ],
-  },
-];
+/** Catalog IDs and file patterns — driven by modules.config.js screenshotIds */
+const SCREENSHOT_CATALOG = buildScreenshotCatalog();
 
 const RESPONSIVE_WIDTHS = [360, 480, 720];
 const DEFAULT_MAX_WIDTH = 720;

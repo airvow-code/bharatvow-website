@@ -3,7 +3,7 @@
  * Run `npm run generate:sitemap` to regenerate public/sitemap.xml
  */
 import { PATHS, LEGAL_PATHS } from '../config/paths.js';
-import { MAIN_DASHBOARD_SLUGS } from '../config/mainDashboard.js';
+import { getDashboardModuleSlugs } from '../config/moduleSelectors.js';
 
 const STATIC_ROUTES = [
   { path: PATHS.home, changefreq: 'weekly', priority: '1.0' },
@@ -27,7 +27,7 @@ const STATIC_ROUTES = [
 
 export const SITEMAP_ENTRIES = [
   ...STATIC_ROUTES,
-  ...MAIN_DASHBOARD_SLUGS.map((slug) => ({
+  ...getDashboardModuleSlugs().map((slug) => ({
     path: `${PATHS.digitalLife}/${slug}`,
     changefreq: 'monthly',
     priority: '0.75',

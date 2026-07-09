@@ -21,7 +21,7 @@ export const SCREENSHOT_MANIFEST = {
   "main-dashboard": {
     "id": "main-dashboard",
     "width": 1080,
-    "height": 2400,
+    "height": 2392,
     "src": "/images/screenshots/main-dashboard-720.webp",
     "srcSet": "/images/screenshots/main-dashboard-360.webp 360w, /images/screenshots/main-dashboard-480.webp 480w, /images/screenshots/main-dashboard-720.webp 720w",
     "sizes": "(max-width: 640px) 360px, (max-width: 1024px) 480px, 720px",
@@ -92,17 +92,17 @@ export const SCREENSHOT_MANIFEST = {
   },
   "days-reminder": {
     "id": "days-reminder",
-    "width": 1080,
-    "height": 2400,
-    "src": "/images/screenshots/days-reminder-720.webp",
-    "srcSet": "/images/screenshots/days-reminder-360.webp 360w, /images/screenshots/days-reminder-480.webp 480w, /images/screenshots/days-reminder-720.webp 720w",
-    "sizes": "(max-width: 640px) 360px, (max-width: 1024px) 480px, 720px",
-    "isPlaceholder": false
+    "width": 1024,
+    "height": 1024,
+    "src": "/images/app-mockup.webp",
+    "srcSet": "/images/app-mockup.webp 560w",
+    "sizes": "560px",
+    "isPlaceholder": true
   },
   "grocery-bag": {
     "id": "grocery-bag",
     "width": 1080,
-    "height": 2400,
+    "height": 2392,
     "src": "/images/screenshots/grocery-bag-720.webp",
     "srcSet": "/images/screenshots/grocery-bag-360.webp 360w, /images/screenshots/grocery-bag-480.webp 480w, /images/screenshots/grocery-bag-720.webp 720w",
     "sizes": "(max-width: 640px) 360px, (max-width: 1024px) 480px, 720px",
@@ -129,7 +129,7 @@ export const SCREENSHOT_MANIFEST = {
   "place-store": {
     "id": "place-store",
     "width": 1080,
-    "height": 2400,
+    "height": 2392,
     "src": "/images/screenshots/place-store-720.webp",
     "srcSet": "/images/screenshots/place-store-360.webp 360w, /images/screenshots/place-store-480.webp 480w, /images/screenshots/place-store-720.webp 720w",
     "sizes": "(max-width: 640px) 360px, (max-width: 1024px) 480px, 720px",

@@ -1,4 +1,5 @@
 import { ALL_DIGITAL_TOOL_PAGE_SLUGS } from './mainDashboard.js';
+import { LIFE_AREA_SLUGS as LIFE_AREA_SLUG_LIST } from './lifeAreas.config.js';
 
 export const LEGAL_PATHS = {
   hub: '/legal',
@@ -73,15 +74,7 @@ export function blogPostPath(slug) {
   return slug ? `${PATHS.blog}/${slug}` : PATHS.blog;
 }
 
-export const LIFE_AREA_SLUGS = [
-  'money',
-  'home',
-  'family',
-  'vehicle',
-  'grocery',
-  'travel',
-  'daily-life',
-];
+export const LIFE_AREA_SLUGS = [...LIFE_AREA_SLUG_LIST];
 
 export const DIGITAL_TOOL_SLUGS = ALL_DIGITAL_TOOL_PAGE_SLUGS;
 

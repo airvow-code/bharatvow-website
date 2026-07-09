@@ -2,6 +2,8 @@
 
 The BharatVow **mobile app Main Dashboard** is the official navigation reference for all Digital Tool pages on the website.
 
+> **Phase 1:** Dashboard data is defined in `src/config/modules.config.js` and re-exported through `mainDashboard.js`. Edit `MODULE_REGISTRY` when syncing with the app — see [`src/config/MODULES_ARCHITECTURE.md`](src/config/MODULES_ARCHITECTURE.md).
+
 ## Mobile source
 
 ```
@@ -11,7 +13,8 @@ src/screens/Dashboard/DashboardScreen.js → MY_SERVICES
 ## Website mirror
 
 ```
-website/src/config/mainDashboard.js
+website/src/config/modules.config.js   ← single source of truth
+website/src/config/mainDashboard.js    ← backwards-compatible exports
 ```
 
 | Export | Purpose |
