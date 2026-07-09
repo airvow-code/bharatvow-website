@@ -266,9 +266,9 @@ const vehicleVaultPage = {
         'Road trips often pair Trip Ledger for shared group travel costs with Vehicle Vault for fuel logs and mileage on your own vehicle.',
     },
     {
-      slug: 'days-reminder',
+      slug: 'birthdays-anniversaries',
       integration:
-        'Insurance and PUC expiry dates live in Vehicle Vault. Days Reminder helps you remember renewal dates and other vehicle milestones before they arrive.',
+        'Insurance and PUC expiry dates live in Vehicle Vault. Birthdays & Anniversaries helps you remember renewal dates and other vehicle milestones before they arrive.',
     },
   ],
 

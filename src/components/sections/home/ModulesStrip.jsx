@@ -9,6 +9,7 @@ import { getDashboardModules } from '@/data/modules';
 import { HOME_ANCHORS } from '@/utils/anchors';
 import { digitalLifePath } from '@/utils/routes';
 import { cn } from '@/utils/cn';
+import { HOMEPAGE_MODULE_COPY } from '@/data/homepageCopy';
 
 function ModuleRow({ module, delay }) {
   const Icon = module.icon;
@@ -45,8 +46,8 @@ export default function ModulesStrip() {
       <SectionHeading
         id="modules-heading"
         eyebrow="Tools inside the app"
-        title="Twelve connected Digital Tools. One digital life ecosystem."
-        description="Start free with Link Vault and Status Viewer. Try all Digital Tools with a 7-day free trial — then choose a Monthly or Yearly plan."
+        title={HOMEPAGE_MODULE_COPY.connectedToolsTitle}
+        description={HOMEPAGE_MODULE_COPY.connectedToolsDescription}
         align="left"
         className="mb-10 md:mb-12"
       />

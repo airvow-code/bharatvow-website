@@ -213,9 +213,9 @@ const tripLedgerPage = {
         'Road trips often pair Trip Ledger for shared group costs with Vehicle Vault for fuel logs and mileage on your own vehicle — travel records where each belongs.',
     },
     {
-      slug: 'days-reminder',
+      slug: 'birthdays-anniversaries',
       integration:
-        'Trip dates live in Trip Ledger. Days Reminder helps you remember departure dates, bookings, and travel milestones before the journey starts.',
+        'Trip dates live in Trip Ledger. Birthdays & Anniversaries helps you remember departure dates, bookings, and travel milestones before the journey starts.',
     },
   ],
 

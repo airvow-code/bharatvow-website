@@ -139,7 +139,19 @@
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://bharatvow.com/digital-life/days-reminder</loc>
+    <loc>https://bharatvow.com/digital-life/birthdays-anniversaries</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://bharatvow.com/digital-life/smart-reminders</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://bharatvow.com/digital-life/festival-studio</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>

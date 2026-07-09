@@ -266,9 +266,9 @@ const homeVaultPage = {
         'Home bills and service costs affect your monthly plan. Budget Pocket sets category limits — Home Vault tracks what your home actually costs to run.',
     },
     {
-      slug: 'days-reminder',
+      slug: 'birthdays-anniversaries',
       integration:
-        'Due dates and bill reminders live in Home Vault. Days Reminder helps you remember warranty expiry, service dates, and other home milestones.',
+        'Due dates and bill reminders live in Home Vault. Birthdays & Anniversaries helps you remember warranty expiry, service dates, and other home milestones.',
     },
     {
       slug: 'link-vault',
@@ -342,8 +342,8 @@ const homeVaultPage = {
     title: 'Organise your home with less stress and fewer lost details',
     description:
       'Download BharatVow and explore all Digital Tools with a 7-day free trial. See Pricing for Monthly and Yearly plans.',
-    secondaryLabel: 'Explore Days Reminder',
-    secondaryTo: '/digital-life/days-reminder',
+    secondaryLabel: 'Explore Birthdays & Anniversaries',
+    secondaryTo: '/digital-life/birthdays-anniversaries',
   },
 
   sectionTitles: {

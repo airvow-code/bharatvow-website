@@ -2,6 +2,7 @@ import { MAIN_DASHBOARD_SLUGS } from '@/config/mainDashboard';
 import { resolveModuleIcon } from '@/config/moduleIcons';
 import { MODULE_GROUP_DEFINITIONS } from '@/config/lifeAreas.config';
 import { getEnabledModuleConfigs, getLegacyHomeStripSlugs } from '@/config/moduleSelectors';
+import { HOMEPAGE_MODULE_COPY } from '@/data/homepageCopy';
 
 /** Main Dashboard order — re-exported from config/mainDashboard.js */
 export const DASHBOARD_TOOL_SLUGS = MAIN_DASHBOARD_SLUGS;
@@ -70,13 +71,12 @@ export const MODULE_GROUPS = MODULE_GROUP_DEFINITIONS.map((group) => ({
 export const DIGITAL_LIFE_PAGE = {
   path: '/digital-life',
   title: 'Digital Life',
-  headline: 'Twelve connected tools. One digital life ecosystem.',
+  headline: HOMEPAGE_MODULE_COPY.digitalLifeHeadline,
   description:
-    'Every BharatVow tool simplifies a real part of everyday life — budgets, home, vehicles, events, grocery, travel, links, and daily records — all connected inside one app.',
+    'Every BharatVow tool simplifies a real part of everyday life — budgets, home, vehicles, events, celebrations, reminders, grocery, travel, links, and daily records — all connected inside one app.',
   keywords:
     'BharatVow Digital Life, Personal Digital Life Platform, Smart Khata, Home Vault, personal organization India',
-  intro:
-    'These are not isolated apps. Each tool connects inside BharatVow — so your budgets, home records, vehicles, and daily life stay organized in one place. Start free with Link Vault and Status Viewer. Try all Digital Tools with a 7-day free trial.',
+  intro: HOMEPAGE_MODULE_COPY.digitalLifeIntro,
 };
 
 /** @deprecated use DIGITAL_LIFE_PAGE */

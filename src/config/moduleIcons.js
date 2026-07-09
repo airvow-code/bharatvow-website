@@ -15,6 +15,8 @@ import {
   HandCoins,
   MapPinCheck,
   ScanLine,
+  AlarmClock,
+  PartyPopper,
 } from 'lucide-react';
 
 /** @type {Record<string, import('lucide-react').LucideIcon>} */
@@ -31,6 +33,8 @@ export const MODULE_ICONS = {
   BookOpen,
   ScanLine,
   MapPinCheck,
+  AlarmClock,
+  PartyPopper,
 };
 
 export function resolveModuleIcon(iconKey) {

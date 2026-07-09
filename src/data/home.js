@@ -11,7 +11,15 @@ import {
   LayoutGrid,
   Sparkles,
   FileSearch,
+  PartyPopper,
 } from 'lucide-react';
+import {
+  LIFE_AREA_MODULE_SLUGS,
+  HOME_VAULT_SUB_MODULE_LABELS,
+  resolveModuleDisplayNames,
+  getLifeAreaToolLabel,
+} from '@/config/lifeAreas.config';
+import { HOMEPAGE_MODULE_COPY } from '@/data/homepageCopy';
 
 /** Hero trust badges — used only in HeroSection */
 export const HERO_TRUST_BADGES = [
@@ -71,6 +79,12 @@ export const FAMILIAR_MOMENTS = [
     tone: 'family',
   },
   {
+    icon: PartyPopper,
+    title: 'Festival wish ready?',
+    story: 'Diwali morning — you meant to send cards to family, but the right greeting and contact list were not ready in time.',
+    tone: 'family',
+  },
+  {
     icon: FileSearch,
     title: 'Where did we keep that paper?',
     story: 'School forms, rent receipts, ID copies — each in a different drawer or phone gallery.',
@@ -97,7 +111,7 @@ export const FAMILIAR_MOMENTS_CLOSING =
   'Thankfully, these daily problems don\u2019t have to stay complicated.';
 
 export const LIFE_AREAS_INTRO =
-  'BharatVow is one connected platform for the different parts of your digital life — budget and accounts, home, vehicles, celebrations, grocery, travel, and daily tools. Each area has dedicated Digital Tools that work together in the same app.';
+  'BharatVow is one connected platform for the different parts of your digital life — budget and accounts, home, vehicles, celebrations, reminders, festivals, grocery, travel, and daily tools. Each area has dedicated Digital Tools that work together in the same app.';
 
 export const LIFE_AREAS_CLOSING =
   'Every tool connects to simplify your complete digital life.';
@@ -110,8 +124,8 @@ export const LIFE_AREAS_HOME = [
     description: 'Salary, udhaar, and daily expenses — organised without juggling notebooks or chats.',
     icon: PieChart,
     chip: 'money',
-    toolLabel: '3 Smart Tools',
-    tools: ['Smart Khata', 'Budget Pocket', 'Expenses Diary'],
+    toolLabel: getLifeAreaToolLabel('money'),
+    tools: resolveModuleDisplayNames(LIFE_AREA_MODULE_SLUGS.money),
   },
   {
     slug: 'home',
@@ -119,24 +133,17 @@ export const LIFE_AREAS_HOME = [
     description: 'Bills, maintenance, and where things are kept — ready when the house needs you.',
     icon: Home,
     chip: 'home',
-    toolLabel: '1 Digital Tool · 6 modules',
-    tools: [
-      'Home Assets',
-      'Find My Stuff',
-      'Bills & Price Book',
-      'Due Services',
-      'Service Providers',
-      'Connection References',
-    ],
+    toolLabel: getLifeAreaToolLabel('home'),
+    tools: [...HOME_VAULT_SUB_MODULE_LABELS],
   },
   {
     slug: 'family',
     title: 'Celebrations & Reminders',
-    description: 'Weddings, gifts, and important dates — cared for without scattered messages.',
+    description: 'Weddings, gifts, festival greetings, and important dates — cared for without scattered messages.',
     icon: Users,
     chip: 'family',
-    toolLabel: '2 Smart Tools',
-    tools: ['Event Book', 'Days Reminder'],
+    toolLabel: getLifeAreaToolLabel('family'),
+    tools: resolveModuleDisplayNames(LIFE_AREA_MODULE_SLUGS.family),
   },
   {
     slug: 'vehicle',
@@ -144,8 +151,8 @@ export const LIFE_AREAS_HOME = [
     description: 'RC, insurance, and service history — on your phone when it matters.',
     icon: Car,
     chip: 'vehicle',
-    toolLabel: '1 Smart Tool',
-    tools: ['Vehicle Vault'],
+    toolLabel: getLifeAreaToolLabel('vehicle'),
+    tools: resolveModuleDisplayNames(LIFE_AREA_MODULE_SLUGS.vehicle),
   },
   {
     slug: 'grocery',
@@ -153,8 +160,8 @@ export const LIFE_AREAS_HOME = [
     description: 'One shopping list that travels with you to the market.',
     icon: ShoppingCart,
     chip: 'grocery',
-    toolLabel: '1 Smart Tool',
-    tools: ['Grocery Bag'],
+    toolLabel: getLifeAreaToolLabel('grocery'),
+    tools: resolveModuleDisplayNames(LIFE_AREA_MODULE_SLUGS.grocery),
   },
   {
     slug: 'travel',
@@ -162,17 +169,17 @@ export const LIFE_AREAS_HOME = [
     description: 'Fair trip splits and saved places — memories without maths homework.',
     icon: Plane,
     chip: 'travel',
-    toolLabel: '2 Smart Tools',
-    tools: ['Trip Ledger', 'Place Store'],
+    toolLabel: getLifeAreaToolLabel('travel'),
+    tools: resolveModuleDisplayNames(LIFE_AREA_MODULE_SLUGS.travel),
   },
   {
     slug: 'daily-life',
     title: 'Manage Your Daily Life',
-    description: 'Links, status, and everyday capture — free tools that stay with your account.',
+    description: 'Links, WhatsApp status, and everyday capture — free tools that stay with your account.',
     icon: Link2,
     chip: 'daily',
-    toolLabel: '2 Free Tools',
-    tools: ['Link Vault', 'Status Viewer'],
+    toolLabel: getLifeAreaToolLabel('daily-life'),
+    tools: resolveModuleDisplayNames(LIFE_AREA_MODULE_SLUGS['daily-life']),
   },
 ];
 
@@ -199,20 +206,21 @@ export const TESTIMONIALS = [
 
 export const MORNING_STORY = {
   title: 'A morning with BharatVow',
-  body: 'Before the day gets busy: today\u2019s reminders checked, yesterday\u2019s expenses logged, AC service due next week flagged. No five apps. No hunting through WhatsApp.',
+  body: 'Before the day gets busy: festival greetings ready in Festival Studio, today\u2019s birthdays flagged in Birthdays & Anniversaries, Smart Reminders showing what is due, yesterday\u2019s expenses logged, and AC service flagged in Home Vault. No five apps. No hunting through WhatsApp.',
 };
 
 export const HERO = {
   eyebrow: 'Personal Digital Life Platform',
   title: 'Organize your personal digital life in one place',
   description:
-    'You already manage many parts of your life every day — budgets, home, vehicles, events, grocery, and everyday records. BharatVow helps you organize personal records, expenses, reminders, documents, and daily tools in one privacy-first, easy-to-use platform.',
+    'You already manage many parts of your life every day — budgets, home, vehicles, events, celebrations, reminders, festivals, grocery, and everyday records. BharatVow helps you organize personal records, expenses, reminders, documents, and daily tools in one privacy-first, easy-to-use platform.',
   topics: [
     'Home',
     'Budget',
     'Expenses',
     'Vehicles',
     'Events',
+    'Festivals',
     'Grocery',
     'Trips',
     'Links',
@@ -224,6 +232,5 @@ export const HERO = {
 
 export const DOWNLOAD = {
   title: 'Start organizing your digital life today.',
-  description:
-    'Link Vault and Status Viewer are free. Premium tools include a 7-day free trial — explore at your own pace.',
+  description: HOMEPAGE_MODULE_COPY.downloadBandDescription,
 };

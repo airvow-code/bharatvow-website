@@ -1,9 +1,8 @@
 /**
- * Life area and module grouping definitions.
- * Homepage marketing copy (titles, descriptions) stays in src/data/home.js until Phase 2.
- * Slug-based tool lists here drive future config-driven homepage wiring.
+ * Life area and module grouping definitions — slug lists resolve via MODULE_REGISTRY.
  */
 import { getModuleConfigBySlug } from './moduleSelectors.js';
+import { MODULE_COUNTS } from './moduleCounts.js';
 
 /** Canonical life area slugs */
 export const LIFE_AREA_SLUGS = Object.freeze([
@@ -18,7 +17,6 @@ export const LIFE_AREA_SLUGS = Object.freeze([
 
 /**
  * @deprecated Main Dashboard order is canonical — kept for legacy references only.
- * Slugs reference MODULE_REGISTRY; resolved at read time.
  */
 export const MODULE_GROUP_DEFINITIONS = Object.freeze([
   {
@@ -30,8 +28,15 @@ export const MODULE_GROUP_DEFINITIONS = Object.freeze([
   {
     id: 'home-celebrations',
     title: 'Home & celebrations',
-    description: 'Ghar, events, and reminders',
-    slugs: ['home-vault', 'home-assets', 'event-book', 'days-reminder'],
+    description: 'Ghar, events, reminders, and festival greetings',
+    slugs: [
+      'home-vault',
+      'home-assets',
+      'event-book',
+      'birthdays-anniversaries',
+      'smart-reminders',
+      'festival-studio',
+    ],
   },
   {
     id: 'travel-vehicles',
@@ -47,21 +52,18 @@ export const MODULE_GROUP_DEFINITIONS = Object.freeze([
   },
 ]);
 
-/**
- * Life area → dashboard module slugs (for Phase 2 homepage bento wiring).
- * Home area uses Home Vault sub-module labels — not separate registry entries.
- */
+/** Life area → dashboard module slugs (homepage bento wiring). */
 export const LIFE_AREA_MODULE_SLUGS = Object.freeze({
   money: ['smart-khata', 'budget-pocket', 'expenses-diary'],
   home: [],
-  family: ['event-book', 'days-reminder'],
+  family: ['event-book', 'birthdays-anniversaries', 'smart-reminders', 'festival-studio'],
   vehicle: ['vehicle-vault'],
   grocery: ['grocery-bag'],
   travel: ['trip-ledger', 'place-store'],
   'daily-life': ['link-vault', 'status-viewer'],
 });
 
-/** Home Vault sub-module labels shown on homepage bento (not separate MODULE_REGISTRY entries). */
+/** Home Vault sub-module labels (not separate MODULE_REGISTRY entries). */
 export const HOME_VAULT_SUB_MODULE_LABELS = Object.freeze([
   'Home Assets',
   'Find My Stuff',
@@ -71,11 +73,21 @@ export const HOME_VAULT_SUB_MODULE_LABELS = Object.freeze([
   'Connection References',
 ]);
 
+/** Dynamic tool-count labels for homepage life area cards. */
+export function getLifeAreaToolLabel(areaSlug) {
+  if (areaSlug === 'home') {
+    return '1 Digital Tool · 6 modules';
+  }
+  if (areaSlug === 'daily-life') {
+    return `${MODULE_COUNTS.free} Free Tools`;
+  }
+  const count = LIFE_AREA_MODULE_SLUGS[areaSlug]?.length ?? 0;
+  return count === 1 ? '1 Smart Tool' : `${count} Smart Tools`;
+}
+
 /** Resolve module slugs to display names via central config. */
 export function resolveModuleDisplayNames(slugs) {
-  return slugs
-    .map((slug) => getModuleConfigBySlug(slug)?.displayName)
-    .filter(Boolean);
+  return slugs.map((slug) => getModuleConfigBySlug(slug)?.displayName).filter(Boolean);
 }
 
 /** @deprecated */

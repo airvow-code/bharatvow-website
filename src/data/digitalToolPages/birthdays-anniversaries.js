@@ -9,22 +9,22 @@ import {
 } from 'lucide-react';
 
 /**
- * Days Reminder — Digital Tool page content (Step 25).
+ * Birthdays & Anniversaries — Digital Tool page content.
  * Template format — @see DigitalToolPageTemplate.jsx
  */
-const daysReminderPage = {
-  slug: 'days-reminder',
+const birthdaysAnniversariesPage = {
+  slug: 'birthdays-anniversaries',
 
   valueProposition:
     'Remember birthdays, anniversaries, renewals, appointments, and every important date — your personal reminder companion across daily life.',
 
   whyExists: {
-    headline: 'Why Days Reminder?',
-    eyebrow: 'Why Days Reminder?',
+    headline: 'Why Birthdays & Anniversaries?',
+    eyebrow: 'Why Birthdays & Anniversaries?',
     everydayProblem:
       'A cousin\'s birthday passes before you send a wish. Your parents\' anniversary slips your mind until the day is over. Insurance renewal, a doctor visit, or a bill due date — all remembered differently in head, calendar, and messages. Important days scatter across memory and missed reminders become awkward moments or missed deadlines.',
     whyFamiliesNeedIt:
-      'Days Reminder keeps important dates in one organised register — birthdays, anniversaries, and custom reminders with notes, tags, and a calendar view — so you check what matters today and what is coming next without relying on memory alone.',
+      'Birthdays & Anniversaries keeps important dates in one organised register — birthdays, anniversaries, and custom reminders with notes, tags, and a calendar view — so you check what matters today and what is coming next without relying on memory alone.',
   },
 
   whoShouldUse: {
@@ -82,7 +82,7 @@ const daysReminderPage = {
     {
       title: 'Reduce Stress',
       description:
-        'Less mental load trying to remember every date — open Days Reminder and see what is today or coming soon.',
+        'Less mental load trying to remember every date — open Birthdays & Anniversaries and see what is today or coming soon.',
     },
     {
       title: 'Build Better Habits',
@@ -199,8 +199,8 @@ const daysReminderPage = {
 
   screenshots: [
     {
-      id: 'days-reminder',
-      label: 'Days Reminder dashboard',
+      id: 'birthdays-anniversaries',
+      label: 'Birthdays & Anniversaries dashboard',
       caption:
         'Today and upcoming reminders with birthdays, anniversaries, and custom dates — sorted and ready each morning.',
     },
@@ -210,41 +210,51 @@ const daysReminderPage = {
     {
       slug: 'home-vault',
       integration:
-        'Home Vault tracks bill due dates and service schedules for your home. Days Reminder keeps personal and family dates — use both for household and life reminders.',
+        'Home Vault tracks bill due dates and service schedules for your home. Birthdays & Anniversaries keeps personal and family dates — use both for household and life reminders.',
     },
     {
       slug: 'vehicle-vault',
       integration:
-        'Vehicle Vault shows insurance and PUC expiry on the vehicle dashboard. Days Reminder helps you remember renewal dates and other vehicle milestones in your personal calendar.',
+        'Vehicle Vault shows insurance and PUC expiry on the vehicle dashboard. Birthdays & Anniversaries helps you remember renewal dates and other vehicle milestones in your personal calendar.',
     },
     {
       slug: 'event-book',
       integration:
-        'Event Book plans celebrations with dates and guests. Days Reminder remembers the birthdays and anniversaries that start the planning.',
+        'Event Book plans celebrations with dates and guests. Birthdays & Anniversaries remembers the birthdays and anniversaries that start the planning.',
+    },
+    {
+      slug: 'festival-studio',
+      integration:
+        'Festival Studio supplies greeting cards for celebrations — Birthdays & Anniversaries handles personal birthdays and anniversary wishes.',
+    },
+    {
+      slug: 'smart-reminders',
+      integration:
+        'Smart Reminders handles everyday tasks and routines — Birthdays & Anniversaries focuses on people and special dates.',
     },
     {
       slug: 'trip-ledger',
       integration:
-        'Trip Ledger organises travel dates and group trips. Days Reminder flags departure dates and personal travel milestones before you leave.',
+        'Trip Ledger organises travel dates and group trips. Birthdays & Anniversaries flags departure dates and personal travel milestones before you leave.',
     },
   ],
 
   faq: [
     {
-      q: 'Can I send birthday or anniversary greetings from Days Reminder?',
+      q: 'Can I send birthday or anniversary greetings from Birthdays & Anniversaries?',
       a: 'If your app version supports it, you can manually start a greeting session and select contacts. Each message is sent individually at your direction — there is no automatic or bulk messaging. Optional Accessibility Service may help complete delivery through your messaging app. See our Privacy Policy section on Accessibility Service.',
     },
     {
-      q: 'Is Days Reminder only for birthdays?',
-      a: 'No. Days Reminder covers birthdays, anniversaries, and custom reminders — insurance renewals, bill dates, appointments, and any important day you choose to save.',
+      q: 'Is Birthdays & Anniversaries only for birthdays?',
+      a: 'No. Birthdays & Anniversaries covers birthdays, anniversaries, and custom reminders — insurance renewals, bill dates, appointments, and any important day you choose to save.',
     },
     {
       q: 'Can I add reminders that are not birthdays or anniversaries?',
       a: 'Yes. Use Custom Day for any date — renewals, medicine schedules, bill due dates, appointments, and personal events.',
     },
     {
-      q: 'Does Days Reminder send push notifications?',
-      a: 'No promotional push notifications. Days Reminder highlights today and upcoming dates inside the app when you open it. If you choose to send greetings through a supported user-initiated messaging flow, you start each session yourself and select recipients — see our Privacy Policy section on Accessibility Service.',
+      q: 'Does Birthdays & Anniversaries send push notifications?',
+      a: 'No promotional push notifications. Birthdays & Anniversaries highlights today and upcoming dates inside the app when you open it. If you choose to send greetings through a supported user-initiated messaging flow, you start each session yourself and select recipients — see our Privacy Policy section on Accessibility Service.',
     },
     {
       q: 'Can I organise reminders by family, friends, or colleagues?',
@@ -255,8 +265,8 @@ const daysReminderPage = {
       a: 'Yes. Optional cloud backup is available for this module when you enable it — useful when you change phones. Link Vault and Status Viewer are not included in master cloud backup scope. Excel export is also available where noted in the app.',
     },
     {
-      q: 'Is Days Reminder a calendar or scheduling app?',
-      a: 'No. Days Reminder is for remembering important personal dates and life events — not full daily scheduling, meetings, or task management.',
+      q: 'Is Birthdays & Anniversaries a calendar or scheduling app?',
+      a: 'No. Birthdays & Anniversaries is for remembering important personal dates and life events — not full daily scheduling, meetings, or task management.',
     },
   ],
 
@@ -279,12 +289,12 @@ const daysReminderPage = {
   ],
 
   seo: {
-    title: 'Days Reminder | BharatVow Digital Life',
+    title: 'Birthdays & Anniversaries | BharatVow Digital Life',
     metaDescription:
-      'Days Reminder in BharatVow — birthdays, anniversaries, renewals, and custom date reminders in one register. Your personal reminder companion — not a calendar app.',
+      'Birthdays & Anniversaries in BharatVow — birthdays, anniversaries, renewals, and custom date reminders in one register. Your personal reminder companion — not a calendar app.',
     keywords:
-      'Days Reminder, BharatVow, birthday reminder app India, anniversary tracker, important dates organizer, personal reminder app, Personal Digital Life Platform',
-    ogTitle: 'Days Reminder — Important Dates Organized | BharatVow',
+      'Birthdays & Anniversaries, BharatVow, birthday reminder app India, anniversary tracker, important dates organizer, personal reminder app, Personal Digital Life Platform',
+    ogTitle: 'Birthdays & Anniversaries — Important Dates Organized | BharatVow',
     ogDescription:
       'Remember birthdays, anniversaries, renewals, and custom dates in BharatVow. Personal reminder companion — part of the BharatVow Personal Digital Life Platform.',
   },
@@ -305,4 +315,4 @@ const daysReminderPage = {
   },
 };
 
-export default daysReminderPage;
+export default birthdaysAnniversariesPage;

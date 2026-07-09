@@ -1,9 +1,6 @@
 /**
  * Digital Tool page content registry.
  * Content loads on demand per slug to keep route bundles small.
- *
- * @see ../../../CONTENT_STRATEGY.md — Step 17 master content strategy
- * @see ./blueprint.js — empty template factory
  */
 import { createDigitalToolBlueprint, DIGITAL_TOOL_CONTENT_BLUEPRINT } from './blueprint';
 
@@ -16,7 +13,9 @@ const PAGE_LOADERS = {
   'trip-ledger': () => import('./trip-ledger'),
   'vehicle-vault': () => import('./vehicle-vault'),
   'home-vault': () => import('./home-vault'),
-  'days-reminder': () => import('./days-reminder'),
+  'birthdays-anniversaries': () => import('./birthdays-anniversaries'),
+  'smart-reminders': () => import('./smart-reminders'),
+  'festival-studio': () => import('./festival-studio'),
   'grocery-bag': () => import('./grocery-bag'),
   'link-vault': () => import('./link-vault'),
   'status-viewer': () => import('./status-viewer'),

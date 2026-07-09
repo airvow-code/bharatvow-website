@@ -90,14 +90,32 @@ export const SCREENSHOT_MANIFEST = {
     "sizes": "(max-width: 640px) 360px, (max-width: 1024px) 480px, 720px",
     "isPlaceholder": false
   },
-  "days-reminder": {
-    "id": "days-reminder",
-    "width": 1024,
-    "height": 1024,
-    "src": "/images/app-mockup.webp",
-    "srcSet": "/images/app-mockup.webp 560w",
-    "sizes": "560px",
-    "isPlaceholder": true
+  "birthdays-anniversaries": {
+    "id": "birthdays-anniversaries",
+    "width": 1080,
+    "height": 2392,
+    "src": "/images/screenshots/birthdays-anniversaries-720.webp",
+    "srcSet": "/images/screenshots/birthdays-anniversaries-360.webp 360w, /images/screenshots/birthdays-anniversaries-480.webp 480w, /images/screenshots/birthdays-anniversaries-720.webp 720w",
+    "sizes": "(max-width: 640px) 360px, (max-width: 1024px) 480px, 720px",
+    "isPlaceholder": false
+  },
+  "smart-reminders": {
+    "id": "smart-reminders",
+    "width": 1080,
+    "height": 2392,
+    "src": "/images/screenshots/smart-reminders-720.webp",
+    "srcSet": "/images/screenshots/smart-reminders-360.webp 360w, /images/screenshots/smart-reminders-480.webp 480w, /images/screenshots/smart-reminders-720.webp 720w",
+    "sizes": "(max-width: 640px) 360px, (max-width: 1024px) 480px, 720px",
+    "isPlaceholder": false
+  },
+  "festival-studio": {
+    "id": "festival-studio",
+    "width": 1080,
+    "height": 2392,
+    "src": "/images/screenshots/festival-studio-720.webp",
+    "srcSet": "/images/screenshots/festival-studio-360.webp 360w, /images/screenshots/festival-studio-480.webp 480w, /images/screenshots/festival-studio-720.webp 720w",
+    "sizes": "(max-width: 640px) 360px, (max-width: 1024px) 480px, 720px",
+    "isPlaceholder": false
   },
   "grocery-bag": {
     "id": "grocery-bag",

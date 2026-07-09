@@ -13,7 +13,7 @@ export const SEO_DEFAULTS = {
   author: SITE.company,
   themeColor: '#05204E',
   defaultDescription:
-    'A Personal Digital Life Platform — organize personal records, expenses, reminders, documents, vehicles, trips, events, and everyday digital life tools in one secure app. Free tools on Google Play.',
+    'A Personal Digital Life Platform — organize personal records, expenses, reminders, festivals, documents, vehicles, trips, events, and everyday digital life tools in one secure app. Link Vault and Status Viewer are free on Google Play.',
   defaultKeywords: [
     'BharatVow',
     'BharatVow app',

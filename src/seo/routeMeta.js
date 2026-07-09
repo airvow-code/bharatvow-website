@@ -1,5 +1,7 @@
 import { SITE } from '@/utils/constants';
 import { PATHS, LEGAL_PATHS, LIFE_AREA_SLUGS, DIGITAL_TOOL_SLUGS, LEGAL_DOC_SLUGS } from '@/config/paths';
+import { MARKETING_COUNT_COPY } from '@/data/homepageCopy';
+import { MODULE_COUNTS } from '@/config/moduleCounts';
 
 /**
  * SEO metadata registry — unique title, description, and keywords per route.
@@ -9,7 +11,7 @@ export const ROUTE_META = {
   [PATHS.home]: {
     fullTitle: `${SITE.name} — ${SITE.tagline}`,
     description:
-      'A Personal Digital Life Platform. Organize personal records, expenses, reminders, documents, vehicles, trips, events, and everyday digital life tools in one secure place. Free tools on Google Play.',
+      `A Personal Digital Life Platform with ${MODULE_COUNTS.dashboard} connected Digital Tools. Organize personal records, expenses, reminders, festivals, documents, vehicles, trips, events, and everyday tools in one secure place. Link Vault and Status Viewer are free on Google Play.`,
     keywords:
       'BharatVow, Personal Digital Life Platform, daily life management India, personal organization app, budget tracking, home organization, Indian productivity app',
     ogType: 'website',
@@ -17,21 +19,20 @@ export const ROUTE_META = {
   [PATHS.about]: {
     title: 'About BharatVow',
     description:
-      'Learn about BharatVow — a Personal Digital Life Platform by Atulit Baldhama Digital Solutions. Organize budgets, home records, vehicles, events, and everyday information in one Android app.',
+      `Learn about BharatVow — a Personal Digital Life Platform with ${MODULE_COUNTS.dashboard} Digital Tools by Atulit Baldhama Digital Solutions. Organize budgets, home records, vehicles, events, reminders, and everyday information in one Android app.`,
     keywords:
       'About BharatVow, Personal Digital Life Platform, Atulit Baldhama Digital Solutions, personal organization app India, Jaipur mobile app',
   },
   [PATHS.digitalLife]: {
     title: 'Digital Life',
     description:
-      'Explore every BharatVow tool in dashboard order — budgets, home, vehicles, events, grocery, travel, links, and daily records in one ecosystem.',
+      `Explore all ${MODULE_COUNTS.dashboard} BharatVow Digital Tools in dashboard order — budgets, home, vehicles, celebrations, Smart Reminders, Festival Studio, grocery, travel, links, and daily records in one ecosystem.`,
     keywords:
       'BharatVow Digital Life, Personal Digital Life Platform, Smart Khata, Home Vault, personal productivity India',
   },
   [PATHS.pricing]: {
     title: 'Pricing',
-    description:
-      'BharatVow subscription plans — ₹300/month or ₹2,000/year for ten premium Digital Tools. Link Vault and Status Viewer are free. Start with a 7-day free trial.',
+    description: MARKETING_COUNT_COPY.pricingDescription,
     keywords:
       'BharatVow pricing, BharatVow subscription, Personal Digital Life Platform India, BharatVow free trial, BharatVow monthly yearly plan',
   },
@@ -58,7 +59,7 @@ export const ROUTE_META = {
   [PATHS.download]: {
     title: 'Download',
     description:
-      'Download BharatVow on Google Play — Personal Digital Life Platform for Android. Link Vault and Status Viewer are free; ten premium Digital Tools include a 7-day free trial.',
+      `Download BharatVow on Google Play — Personal Digital Life Platform for Android. Link Vault and Status Viewer are free; ${MARKETING_COUNT_COPY.premiumToolsPhrase} include a 7-day free trial.`,
     keywords:
       'Download BharatVow, BharatVow Google Play, Personal Digital Life Platform Android',
   },

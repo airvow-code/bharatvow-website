@@ -56,7 +56,7 @@ export const LEGAL_PAGES = {
               'PIN (stored securely for app access on your device)',
               'Records you enter in Digital Tools — such as khata entries, expenses, home records, vehicle details, events, grocery lists, trips, links, and saved places',
               'Contact details you choose to import, select, or save in supported tools — for example when picking recipients for user-initiated messages or saving contacts linked to your records',
-              'Message content you compose when you manually start a supported sending action in Smart Khata, Event Book, or Days Reminder',
+              'Message content you compose when you manually start a supported sending action in Smart Khata, Event Book, Birthdays & Anniversaries, or Festival Studio',
               'Photos, documents, audio, or other media you choose to capture or attach to your records',
               'Support and grievance correspondence when you contact us',
             ],
@@ -135,7 +135,7 @@ export const LEGAL_PAGES = {
             heading: '2.5C Contacts (READ_CONTACTS)',
             paragraphs: [
               'Why: To let you import contacts or select recipients when you use features that involve people in your records or user-initiated messages.',
-              'When: Only when you tap an action that opens contact selection or import — for example choosing guests in Event Book, recipients in Days Reminder, or contacts in Smart Khata before you manually start a supported sending action.',
+              'When: Only when you tap an action that opens contact selection or import — for example choosing guests in Event Book, recipients in Birthdays & Anniversaries or Festival Studio, or contacts in Smart Khata before you manually start a supported sending action.',
               'READ_CONTACTS: Used only to show contacts you choose to pick for import or recipient selection. BharatVow does not read, sync, or automatically upload your complete device contact list to our servers.',
               'BharatVow does not declare WRITE_CONTACTS. The app does not save or modify contacts on your device phonebook.',
               'Optional: Yes. You can enter names and numbers manually instead of importing or selecting device contacts.',
@@ -180,13 +180,13 @@ export const LEGAL_PAGES = {
             list: [
               'Smart Khata — you manually start sending payment reminder messages to contacts you select',
               'Event Book — you manually start sending invitations and location details to guests you select',
-              'Days Reminder — you manually start sending birthday and anniversary greeting messages to contacts you select',
+              'Birthdays & Anniversaries and Festival Studio — you manually start sending birthday, anniversary, and festival greeting messages to contacts you select',
             ],
             afterList: [
               'Manual control: Every messaging session is initiated by you inside the app. You select recipients before sending. You can stop or cancel the process at any time before it completes.',
               'Individual messages: Messages are processed one recipient at a time through the flow you start. BharatVow does not provide an unrestricted bulk-send, “message everyone,” mass-messaging, or spam feature.',
               'No automatic or background sending: Messages are not sent automatically, on a schedule, or in the background without your explicit session start.',
-              'When it is requested: Only if you enable Accessibility Service for BharatVow in Android settings and then start a supported sending action inside Smart Khata, Event Book, or Days Reminder.',
+              'When it is requested: Only if you enable Accessibility Service for BharatVow in Android settings and then start a supported sending action inside Smart Khata, Event Book, Birthdays & Anniversaries, or Festival Studio.',
               'Optional: Accessibility Service is not required for general use of BharatVow. You can disable it at any time in Android Settings → Accessibility → BharatVow.',
               'How sending works: You compose or confirm message content in BharatVow. Accessibility Service helps complete delivery through your chosen messaging app after you start the session. BharatVow does not operate as a messaging platform or send messages from its own servers.',
               'Server transmission: Accessibility-related screen interaction stays on your device to complete the session you started. BharatVow does not transmit Accessibility session content to our servers except where optional cloud backup includes module records you saved (such as guest, khata, or reminder entries).',
@@ -216,8 +216,10 @@ export const LEGAL_PAGES = {
           {
             heading: '2.5J Reminders and notifications',
             paragraphs: [
-              'Days Reminder and similar tools show reminders inside the BharatVow app when you open it. BharatVow does not send promotional push notifications through Firebase Cloud Messaging or similar services.',
-              'User-initiated messages sent through Accessibility Service (section 2.5H) are separate from push notifications — they occur only when you start a session and choose recipients.',
+              'Smart Reminders can schedule device notifications for individual reminders you create and enable — these are task reminders you set, not promotional broadcasts.',
+              'Birthdays & Anniversaries and similar date tools surface today and upcoming dates inside the BharatVow app when you open it.',
+              'BharatVow does not send promotional push notifications through Firebase Cloud Messaging or similar services.',
+              'User-initiated messages sent through Accessibility Service (section 2.5H) are separate from device notifications — they occur only when you start a session and choose recipients.',
             ],
           },
           {
@@ -357,13 +359,13 @@ export const LEGAL_PAGES = {
         ],
         afterList: [
           'We do not share your module content for advertising resale.',
-          'User-initiated messages you send through Smart Khata, Event Book, or Days Reminder are delivered through your device messaging apps (such as WhatsApp) after you start the session. BharatVow does not receive those message contents on our servers unless you included related records in optional cloud backup.',
+          'User-initiated messages you send through Smart Khata, Event Book, Birthdays & Anniversaries, or Festival Studio are delivered through your device messaging apps (such as WhatsApp) after you start the session. BharatVow does not receive those message contents on our servers unless you included related records in optional cloud backup.',
         ],
       },
       {
         heading: '5A. Messaging and third-party apps',
         paragraphs: [
-          'BharatVow messaging features are limited to user-requested actions you manually start in Smart Khata (payment reminders), Event Book (invitations and location details), and Days Reminder (birthday and anniversary greetings). These are not automated broadcasts.',
+          'BharatVow messaging features are limited to user-requested actions you manually start in Smart Khata (payment reminders), Event Book (invitations and location details), Birthdays & Anniversaries (birthday and anniversary greetings), and Festival Studio (festival greetings). These are not automated broadcasts.',
           'When you use optional Accessibility Service messaging features, delivery happens through messaging apps already on your device. Those apps are governed by their own terms and privacy policies.',
           'BharatVow does not control, store, or monitor messages in those third-party apps except where you saved related information in your BharatVow module records or optional cloud backup.',
         ],
@@ -387,7 +389,7 @@ export const LEGAL_PAGES = {
         heading: '6A. Accessibility Service transparency',
         paragraphs: [
           'Because Accessibility Service is sensitive, we provide this summary in addition to section 2.5H:',
-          'BharatVow uses Accessibility Service only when you enable it and only to help complete messaging actions you manually start in Smart Khata, Event Book, or Days Reminder.',
+          'BharatVow uses Accessibility Service only when you enable it and only to help complete messaging actions you manually start in Smart Khata, Event Book, Birthdays & Anniversaries, or Festival Studio.',
           'You select each recipient. Each message is sent individually at your direction. You can stop the process at any time. There is no unrestricted bulk messaging.',
           'Accessibility session content is not transmitted to BharatVow servers except where optional cloud backup includes module records you saved.',
           'We do not use Accessibility Service for surveillance, credential harvesting, unrelated screen reading, monitoring other apps, user tracking, behavioural analytics, advertising, profiling, background messaging, promotional messages, or spam.',
@@ -620,7 +622,7 @@ export const LEGAL_PAGES = {
         list: [
           'Smart Khata, Budget Pocket, and Expenses Diary are personal record tools — not substitutes for statutory accounting, tax filing, or licensed professional services',
           'Home Vault and Vehicle Vault help organize personal home and vehicle records — they do not replace original documents or prove legal ownership on their own',
-          'Event Book, Days Reminder, and similar tools rely on information you enter',
+          'Event Book, Birthdays & Anniversaries, and similar tools rely on information you enter',
           'Place Store is a location organizer — not a navigation or maps replacement',
         ],
         afterList: ['Consult qualified professionals for decisions that require expert advice.'],

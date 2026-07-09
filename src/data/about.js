@@ -1,6 +1,7 @@
 import { MAIN_DASHBOARD_TOOLS } from '@/config/mainDashboard';
 import { PATHS } from '@/config/paths';
 import { SITE } from '@/utils/constants';
+import { MARKETING_COUNT_COPY } from '@/data/homepageCopy';
 
 /** Digital Life tools — dashboard order, factual one-line descriptions only */
 const ECOSYSTEM_TOOLS = MAIN_DASHBOARD_TOOLS.map(({ slug, label, sublabel1, sublabel2 }) => ({
@@ -60,8 +61,7 @@ export const ABOUT_PAGE = {
 
   ecosystem: {
     heading: 'Digital Life Ecosystem',
-    intro:
-      'BharatVow includes twelve Digital Tools on the main dashboard — each designed for a specific part of everyday life. Link Vault and Status Viewer are free without a subscription. The other ten Digital Tools are available with a 7-day free trial before choosing a Monthly (₹300/month) or Yearly (₹2,000/year) plan billed through Google Play. Subscriptions renew automatically unless cancelled in Google Play subscription settings. An optional distributor referral program is available in-app under separate program rules and the Distributor Agreement.',
+    intro: MARKETING_COUNT_COPY.ecosystemIntro,
     tools: ECOSYSTEM_TOOLS,
     ctaLabel: 'Explore Digital Life',
     ctaPath: PATHS.digitalLife,
@@ -149,7 +149,7 @@ export const ABOUT_PAGE = {
   cta: {
     title: 'Start Organizing Your Digital Life.',
     description:
-      'Download BharatVow on Google Play — start with Link Vault and Status Viewer free, then explore ten premium Digital Tools with a 7-day free trial before subscribing.',
+      `Download BharatVow on Google Play — start with Link Vault and Status Viewer free, then explore ${MARKETING_COUNT_COPY.premiumToolsPhrase} with a 7-day free trial before subscribing.`,
     primaryLabel: 'Download BharatVow',
     secondaryLabel: 'Explore Digital Life',
     secondaryPath: PATHS.digitalLife,

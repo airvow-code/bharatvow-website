@@ -64,12 +64,22 @@ export const SCREENSHOT_FILE_PATTERNS = Object.freeze({
     'home-vault.png',
     'home-vault.svg',
   ],
-  'days-reminder': [
-    'days-reminder-dashboard.webp',
-    'days-reminder.webp',
-    'days-reminder.png',
-    'days-reminder.jpg',
-    'days-reminder.svg',
+  'birthdays-anniversaries': [
+    'birthday-anniversaries-dashboard.webp',
+    'birthdays-anniversaries-dashboard.webp',
+    'birthdays-anniversaries.webp',
+    'birthdays-anniversaries.png',
+  ],
+  'smart-reminders': [
+    'smart-reminder-dashboard.webp',
+    'smart-reminders-dashboard.webp',
+    'smart-reminders.webp',
+    'smart-reminders.png',
+  ],
+  'festival-studio': [
+    'festival-studio-dashboard.webp',
+    'festival-studio.webp',
+    'festival-studio.png',
   ],
   'grocery-bag': [
     'grocery-bag-dashboard.webp',

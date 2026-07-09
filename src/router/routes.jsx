@@ -17,6 +17,7 @@ import LegacyModuleRedirect from '@/router/LegacyModuleRedirect';
 import LegacyDigitalToolRedirect from '@/router/LegacyDigitalToolRedirect';
 import LegacyLegalRedirect from '@/router/LegacyLegalRedirect';
 import { PATHS, LEGAL_PATHS, digitalLifePath } from '@/config/paths';
+import { RENAMED_DIGITAL_TOOL_SLUGS } from '@/config/legacyRoutes';
 
 /* Homepage — kept at root pages/ per project convention */
 const Home = lazy(() => import('@/pages/Home'));
@@ -70,6 +71,10 @@ export const routeConfig = [
         path: 'digital-life/home-assets',
         element: <Navigate to={digitalLifePath('home-vault')} replace />,
       },
+      ...RENAMED_DIGITAL_TOOL_SLUGS.map(({ legacy, canonical }) => ({
+        path: `digital-life/${legacy}`,
+        element: <Navigate to={digitalLifePath(canonical)} replace />,
+      })),
       { path: 'digital-life/:slug', element: lazyPage(DigitalToolDetail) },
 
       /* Support */

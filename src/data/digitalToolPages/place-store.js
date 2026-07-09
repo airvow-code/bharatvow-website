@@ -292,7 +292,7 @@ const placeStorePage = {
   finalCta: {
     title: 'You have seen every Digital Tool — now organise your places',
     description:
-      'Download BharatVow and explore all Digital Tools with a 7-day free trial. Explore the full Digital Life hub to see how all twelve tools connect in one ecosystem.',
+      'Download BharatVow and explore all Digital Tools with a 7-day free trial. Explore the full Digital Life hub to see how every connected tool fits in one ecosystem.',
     secondaryLabel: 'Explore Your Digital Life',
     secondaryTo: '/digital-life',
   },

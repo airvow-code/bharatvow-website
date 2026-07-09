@@ -28,12 +28,13 @@ import {
   PRICING_BENEFITS,
   PRICING_FAQ,
   PRICING_LEGAL_LINKS,
+  PRICING_PREMIUM_BENEFIT_TITLE,
 } from '@/data/pricing';
 import { SITE } from '@/utils/constants';
 import { cn } from '@/utils/cn';
 
 const BENEFIT_ICONS = {
-  'Ten Premium Digital Tools': Layers,
+  [PRICING_PREMIUM_BENEFIT_TITLE]: Layers,
   'Optional Secure Backup': CloudUpload,
   'Regular Updates': RefreshCw,
   'Organized Digital Life': LayoutGrid,

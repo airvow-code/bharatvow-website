@@ -1,5 +1,6 @@
 import { MAIN_DASHBOARD_TOOLS } from '@/config/mainDashboard';
 import { PATHS } from '@/config/paths';
+import { MARKETING_COUNT_COPY } from '@/data/homepageCopy';
 
 /** Premium Digital Tools included in subscription — Main Dashboard order */
 export const PRICING_PREMIUM_TOOLS = MAIN_DASHBOARD_TOOLS.filter((tool) => !tool.alwaysFree).map(
@@ -14,8 +15,7 @@ export const PRICING_FREE_TOOLS = MAIN_DASHBOARD_TOOLS.filter((tool) => tool.alw
 /** @deprecated use PRICING_PREMIUM_TOOLS + PRICING_FREE_TOOLS */
 export const PRICING_INCLUDED_TOOLS = MAIN_DASHBOARD_TOOLS.map(({ label }) => label);
 
-export const PRICING_INCLUDED_NOTE =
-  'Subscriptions unlock all ten premium Digital Tools on the dashboard. Link Vault and Status Viewer remain free without a subscription.';
+export const PRICING_INCLUDED_NOTE = MARKETING_COUNT_COPY.subscriptionUnlockNote;
 
 export const PRICING_BALANCE_NOTE =
   'In-app balance from the distributor referral program is separate from Google Play subscription billing. Refund and balance handling follow our Cancellation & Refund Policy.';
@@ -24,9 +24,8 @@ export const PRICING_PAGE = {
   path: PATHS.pricing,
   title: 'Pricing',
   headline: 'Simple & Transparent Pricing',
-  intro: 'Ten premium Digital Tools with a subscription. Two free tools to start.',
-  description:
-    'BharatVow subscription plans — ₹300/month or ₹2,000/year for ten premium Digital Tools. Link Vault and Status Viewer are free. Start with a 7-day free trial.',
+  intro: MARKETING_COUNT_COPY.pricingIntro,
+  description: MARKETING_COUNT_COPY.pricingDescription,
   keywords:
     'BharatVow pricing, BharatVow subscription, Personal Digital Life Platform India, BharatVow free trial, BharatVow monthly yearly plan',
   seo: {
@@ -38,8 +37,7 @@ export const PRICING_PAGE = {
   trial: {
     heading: '7-Day Free Trial',
     body: 'Start using BharatVow with a 7-day free trial for premium Digital Tools.',
-    detail:
-      'Explore all ten premium Digital Tools before choosing a subscription. Link Vault and Status Viewer remain free without a subscription.',
+    detail: MARKETING_COUNT_COPY.trialExploreNote,
   },
 
   gstNote: 'GST Extra. Taxes will be applied where applicable.',
@@ -71,16 +69,18 @@ export const PRICING_PLANS = [
   },
 ];
 
+export const PRICING_PREMIUM_BENEFIT_TITLE = MARKETING_COUNT_COPY.premiumBenefitTitle;
+
 export const PRICING_BENEFITS = [
   {
-    title: 'Ten Premium Digital Tools',
+    title: PRICING_PREMIUM_BENEFIT_TITLE,
     description:
-      'One subscription unlocks every premium Digital Tool on the BharatVow dashboard — budgets, home, vehicles, events, and everyday records.',
+      'One subscription unlocks every premium Digital Tool on the BharatVow dashboard — budgets, home, vehicles, events, celebrations, Smart Reminders, Festival Studio, and everyday records.',
   },
   {
     title: 'Optional Secure Backup',
     description:
-      'Optional cloud backup is available for applicable premium modules when you enable it — restore your records when you change phones. Link Vault and Status Viewer are not included in master cloud backup scope.',
+      'Optional cloud backup is available for applicable premium modules when you enable it — restore your records when you change phones. Smart Reminders includes its own backup and restore screen. Link Vault and Status Viewer are not included in master cloud backup scope.',
   },
   {
     title: 'Regular Updates',

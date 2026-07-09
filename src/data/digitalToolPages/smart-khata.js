@@ -145,9 +145,9 @@ const smartKhataPage = {
         'When lend-and-borrow records affect your monthly plan, Budget Pocket helps you see what is left in your household categories alongside Smart Khata.',
     },
     {
-      slug: 'days-reminder',
+      slug: 'birthdays-anniversaries',
       integration:
-        'Follow up on accounts around important dates — Days Reminder helps you remember birthdays and anniversaries when a gentle nudge matters.',
+        'Follow up on accounts around important dates — Birthdays & Anniversaries helps you remember birthdays and anniversaries when a gentle nudge matters.',
     },
   ],
 

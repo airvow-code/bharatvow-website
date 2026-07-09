@@ -121,6 +121,6 @@ These existing imports continue to work with identical shapes:
 
 - Update `MODULE_REGISTRY` to match live app (14 tools, renames, new modules)
 - Wire homepage life areas to `lifeAreas.config.js`
-- Replace hardcoded "twelve / ten" copy with `MODULE_COUNTS`
+- Replace hardcoded module counts with `MODULE_COUNTS`
 - Add legacy redirects for slug renames
 - Regenerate screenshots and sitemap

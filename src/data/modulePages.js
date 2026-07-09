@@ -223,10 +223,10 @@ export const MODULE_PAGES = {
       },
     ],
   },
-  'days-reminder': {
-    headline: 'Days Reminder',
+  'birthdays-anniversaries': {
+    headline: 'Birthdays & Anniversaries',
     purpose:
-      'See today\u2019s birthdays, anniversaries, and custom dates each morning.',
+      'See today\u2019s birthdays, anniversaries, and special dates each morning.',
     problemHeadline: 'Birthday wish karna bhool gaya — phir awkward.',
     problems: [
       'Dates in contacts, chats, and memory — still missed',
@@ -245,8 +245,66 @@ export const MODULE_PAGES = {
     },
     faq: [
       {
-        q: 'Can I manage reminders?',
-        a: 'Yes. Days Reminder surfaces birthdays, anniversaries, and custom dates when you open the app.',
+        q: 'Does Birthdays & Anniversaries send push notifications?',
+        a: 'No promotional push notifications. Birthdays & Anniversaries surfaces today and upcoming dates inside the app when you open it.',
+      },
+      {
+        q: 'Can I send greetings?',
+        a: 'Yes — you can manually start supported birthday and anniversary greeting flows and choose recipients yourself.',
+      },
+    ],
+  },
+  'smart-reminders': {
+    headline: 'Smart Reminders',
+    purpose:
+      'Set priority reminders with daily, weekly, and routine schedules — notified on your phone when enabled.',
+    problemHeadline: 'Important task yaad raha — par time pe alert nahi aaya.',
+    problems: [
+      'One-off tasks forgotten by evening',
+      'Weekly routines need a nudge at the right time',
+      'Scattered alarms and notes for different schedules',
+    ],
+    features: [
+      'One-time, daily, weekly, and routine reminders',
+      'Priority levels for what matters most',
+      'Device notifications when enabled per reminder',
+      'Optional cloud backup inside the app',
+    ],
+    example: {
+      title: 'Medicine routine',
+      story: 'A daily evening reminder with notifications enabled — so the routine stays on track without hunting through notes.',
+    },
+    faq: [
+      {
+        q: 'Are Smart Reminder notifications promotional?',
+        a: 'No. Notifications are scheduled only for reminders you create and enable — not promotional broadcasts.',
+      },
+    ],
+  },
+  'festival-studio': {
+    headline: 'Festival Studio',
+    purpose:
+      'Browse festival calendars, customise greeting cards, and share wishes with family and groups.',
+    problemHeadline: 'Festival wish bhejni thi — sahi card aur contacts ready nahi the.',
+    problems: [
+      'Festival morning scramble for the right greeting',
+      'Cards scattered across chats and galleries',
+      'Group wishes sent one contact at a time',
+    ],
+    features: [
+      'Indian festival calendar and greeting cards',
+      'Customise cards before sharing',
+      'Share wishes through supported user-initiated messaging flows',
+      'Works alongside Birthdays & Anniversaries for personal dates',
+    ],
+    example: {
+      title: 'Diwali morning',
+      story: 'Pick a Diwali card, personalise the message, and share with family contacts you choose — before the day gets busy.',
+    },
+    faq: [
+      {
+        q: 'Is Festival Studio automated messaging?',
+        a: 'No. You manually start each sharing session and select recipients — see our Privacy Policy on Accessibility Service.',
       },
     ],
   },

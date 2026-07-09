@@ -1,11 +1,14 @@
 import { PATHS } from '@/config/paths';
 import { SITE } from '@/utils/constants';
+import { MARKETING_COUNT_COPY } from '@/data/homepageCopy';
+
+const { premiumToolsPhrase } = MARKETING_COUNT_COPY;
 
 export const DOWNLOAD_PAGE = {
   path: PATHS.download,
   title: 'Download',
   headline: 'Get BharatVow on Google Play',
-  lead: 'Start with two free Digital Tools — Link Vault and Status Viewer. Explore all ten premium Digital Tools with a 7-day free trial, then choose a Monthly or Yearly plan.',
+  lead: `Start with two free Digital Tools — Link Vault and Status Viewer. Explore all ${premiumToolsPhrase} with a 7-day free trial, then choose a Monthly or Yearly plan.`,
   description:
     'Download BharatVow on Google Play — Personal Digital Life Platform for Android. Free tools to start; optional subscription for premium Digital Tools.',
   keywords:
@@ -13,7 +16,7 @@ export const DOWNLOAD_PAGE = {
   seo: {
     ogTitle: 'Download BharatVow on Google Play',
     ogDescription:
-      'Get BharatVow on Google Play. Link Vault and Status Viewer are free; ten premium Digital Tools include a 7-day free trial before subscribing.',
+      `Get BharatVow on Google Play. Link Vault and Status Viewer are free; ${premiumToolsPhrase} include a 7-day free trial before subscribing.`,
   },
   steps: [
     'Open Google Play Store on your Android device',
@@ -27,7 +30,7 @@ export const DOWNLOAD_PAGE = {
     tools: ['Link Vault', 'Status Viewer'],
   },
   trialNote:
-    'A 7-day free trial lets you explore all ten premium Digital Tools before choosing a Monthly (₹300/month) or Yearly (₹2,000/year) plan billed through Google Play. GST and applicable taxes are added before you confirm purchase.',
+    `A 7-day free trial lets you explore all ${premiumToolsPhrase} before choosing a Monthly (₹300/month) or Yearly (₹2,000/year) plan billed through Google Play. GST and applicable taxes are added before you confirm purchase.`,
   inAppBalanceNote:
     'If you have an in-app balance from the distributor referral program, review the Cancellation & Refund Policy before deleting your account. Balance handling follows that policy and is separate from Google Play subscription billing.',
   playStorePending:

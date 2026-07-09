@@ -108,7 +108,7 @@ Architecture details: [`ARCHITECTURE.md`](./ARCHITECTURE.md) · Performance: [`P
 |------|------|
 | `/` | Home |
 | `/digital-life` | Digital Tools hub |
-| `/digital-life/:slug` | Digital Tool detail (12 tools) |
+| `/digital-life/:slug` | Digital Tool detail (14 dashboard tools) |
 | `/about` | About |
 | `/pricing` | Pricing |
 | `/download` | Download |

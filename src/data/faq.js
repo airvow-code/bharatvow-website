@@ -18,6 +18,8 @@ import {
   Car,
   Home,
   BellRing,
+  AlarmClock,
+  PartyPopper,
   ShoppingBag,
   BookOpen,
   ScanLine,
@@ -30,6 +32,7 @@ import {
 } from 'lucide-react';
 import { MAIN_DASHBOARD_TOOLS } from '@/config/mainDashboard';
 import { PATHS } from '@/config/paths';
+import { MARKETING_COUNT_COPY } from '@/data/homepageCopy';
 
 export const FAQ_PATH = '/faq';
 export const HOME_FAQ_ANCHOR = 'questions';
@@ -97,6 +100,7 @@ export const FAQ_CATEGORIES = [
 ];
 
 const TOOL_NAMES = MAIN_DASHBOARD_TOOLS.map((tool) => tool.label).join(', ');
+const { premiumToolsPhrase, dashboardToolsShort, dashboardToolsPhrase } = MARKETING_COUNT_COPY;
 
 export const FAQ_PAGE = {
   path: FAQ_PATH,
@@ -189,8 +193,8 @@ export const FAQ_ITEMS = [
     category: 'general',
     icon: Layers,
     question: 'What Digital Tools are included?',
-    shortAnswer: `Twelve tools: ${TOOL_NAMES}.`,
-    answer: `BharatVow includes twelve Digital Tools on the main dashboard: ${TOOL_NAMES}. Each tool is designed for a specific everyday workflow. Visit the Digital Life page on this website for a brief overview of each tool.`,
+    shortAnswer: `${dashboardToolsShort}: ${TOOL_NAMES}.`,
+    answer: `BharatVow includes ${dashboardToolsPhrase}: ${TOOL_NAMES}. Each tool is designed for a specific everyday workflow. Visit the Digital Life page on this website for a brief overview of each tool.`,
     keywords: ['tools', 'modules', 'dashboard', 'included'],
   },
 
@@ -203,7 +207,7 @@ export const FAQ_ITEMS = [
     shortAnswer:
       'Download from Google Play, sign in with OTP, and open any Digital Tool from the dashboard.',
     answer:
-      'Download BharatVow from Google Play, sign in with your mobile number using OTP, and set up your PIN. Open any Digital Tool from the main dashboard to start organizing your records. A 7-day free trial lets you explore all ten premium Digital Tools before choosing a subscription.',
+      `Download BharatVow from Google Play, sign in with your mobile number using OTP, and set up your PIN. Open any Digital Tool from the main dashboard to start organizing your records. A 7-day free trial lets you explore all ${premiumToolsPhrase} before choosing a subscription.`,
     keywords: ['start', 'download', 'install', 'otp', 'begin'],
   },
   {
@@ -211,9 +215,9 @@ export const FAQ_ITEMS = [
     category: 'getting-started',
     icon: Rocket,
     question: 'Is there a free trial?',
-    shortAnswer: 'Yes — a 7-day free trial to explore all ten premium Digital Tools.',
+    shortAnswer: `Yes — a 7-day free trial to explore all ${premiumToolsPhrase}.`,
     answer:
-      'Yes. BharatVow includes a 7-day free trial so you can explore all ten premium Digital Tools before choosing a subscription. Link Vault and Status Viewer remain available without a subscription after the trial ends.',
+      `Yes. BharatVow includes a 7-day free trial so you can explore all ${premiumToolsPhrase} before choosing a subscription. Link Vault and Status Viewer remain available without a subscription after the trial ends.`,
     keywords: ['free', 'trial', '7 day', 'premium'],
   },
   {
@@ -234,9 +238,9 @@ export const FAQ_ITEMS = [
     category: 'subscription',
     icon: Receipt,
     question: 'What plans are available?',
-    shortAnswer: 'Monthly ₹300 or Yearly ₹2,000 — unlocks all ten premium Digital Tools.',
+    shortAnswer: `Monthly ₹300 or Yearly ₹2,000 — unlocks all ${premiumToolsPhrase}.`,
     answer:
-      'BharatVow offers a Monthly plan at ₹300 per month and a Yearly plan at ₹2,000 per year. Both plans unlock all ten premium Digital Tools on the dashboard. Link Vault and Status Viewer remain free without a subscription. Start with the 7-day free trial before subscribing. See the Pricing page for full details.',
+      `BharatVow offers a Monthly plan at ₹300 per month and a Yearly plan at ₹2,000 per year. Both plans unlock all ${premiumToolsPhrase} on the dashboard. Link Vault and Status Viewer remain free without a subscription. Start with the 7-day free trial before subscribing. See the Pricing page for full details.`,
     keywords: ['plans', 'monthly', 'yearly', 'price', '300', '2000'],
   },
   {
@@ -291,9 +295,9 @@ export const FAQ_ITEMS = [
     icon: Shield,
     question: 'Why does BharatVow use Accessibility Service?',
     shortAnswer:
-      'Optional — only for user-initiated messaging you manually start in Smart Khata, Event Book, or Days Reminder.',
+      'Optional — only for user-initiated messaging you manually start in Smart Khata, Event Book, Birthdays & Anniversaries, or Festival Studio.',
     answer:
-      'Accessibility Service is optional. BharatVow uses it only when you enable it in Android settings and manually start a supported messaging session — for example payment reminders in Smart Khata, invitations in Event Book, or birthday greetings in Days Reminder. You select each recipient. Messages are sent one at a time at your direction. You can stop the process at any time. BharatVow does not use Accessibility Service for monitoring, passwords, advertising, background messaging, or bulk or spam messages. You can disable it at any time in Android Settings → Accessibility → BharatVow.',
+      'Accessibility Service is optional. BharatVow uses it only when you enable it in Android settings and manually start a supported messaging session — for example payment reminders in Smart Khata, invitations in Event Book, birthday greetings in Birthdays & Anniversaries, or festival greetings in Festival Studio. You select each recipient. Messages are sent one at a time at your direction. You can stop the process at any time. BharatVow does not use Accessibility Service for monitoring, passwords, advertising, background messaging, or bulk or spam messages. You can disable it at any time in Android Settings → Accessibility → BharatVow.',
     links: [{ label: 'Privacy Policy — Accessibility Service', path: '/privacy-policy' }],
     keywords: ['accessibility', 'messaging', 'whatsapp', 'permissions', 'privacy'],
   },
@@ -331,6 +335,18 @@ export const FAQ_ITEMS = [
     keywords: ['share', 'sell', 'data', 'third party'],
   },
 
+  {
+    id: 'notifications',
+    category: 'privacy-security',
+    icon: Shield,
+    question: 'Does BharatVow send push notifications?',
+    shortAnswer:
+      'Smart Reminders can use device notifications you enable. Date tools surface inside the app. No promotional push campaigns.',
+    answer:
+      'Smart Reminders schedules device notifications only for reminders you create and enable — not promotional broadcasts. Birthdays & Anniversaries and similar date tools show today and upcoming dates inside the BharatVow app when you open it. BharatVow does not send promotional push notifications through Firebase Cloud Messaging or similar services.',
+    keywords: ['notifications', 'push', 'reminder', 'alert'],
+  },
+
   // ── Data & Backup ──
   {
     id: 'cloud-backup',
@@ -340,7 +356,7 @@ export const FAQ_ITEMS = [
     shortAnswer:
       'Optional cloud backup is available for applicable modules when you enable it.',
     answer:
-      'BharatVow stores your everyday records on your device first. Optional cloud backup is available for applicable premium modules when you choose to use it — useful when changing phones or keeping a backup copy linked to your account. Link Vault and Status Viewer are not included in master cloud backup scope. Individual tools may also offer export or module-specific backup screens inside the app.',
+      'BharatVow stores your everyday records on your device first. Optional cloud backup is available for applicable premium modules when you choose to use it — useful when changing phones or keeping a backup copy linked to your account. Link Vault and Status Viewer are not included in master cloud backup scope. Some Digital Tools — including Smart Reminders — include their own backup and restore screens inside the app. Other tools may offer export options such as Excel.',
     keywords: ['backup', 'cloud', 'sync'],
   },
   {
@@ -450,14 +466,34 @@ export const FAQ_ITEMS = [
     keywords: ['home vault', 'home', 'bills', 'appliance', 'assets'],
   },
   {
-    id: 'tool-days-reminder',
+    id: 'tool-birthdays-anniversaries',
     category: 'digital-tools',
     icon: BellRing,
-    question: 'What is Days Reminder?',
-    shortAnswer: 'Remember birthdays, anniversaries, and custom important dates.',
+    question: 'What is Birthdays & Anniversaries?',
+    shortAnswer: 'Remember birthdays, anniversaries, and special dates — with wishes when it matters.',
     answer:
-      'Days Reminder shows today\u2019s birthdays, anniversaries, and custom dates on your dashboard — plus due dates from Home Vault and Vehicle Vault where you set them. Reminders appear inside the app based on your settings.',
-    keywords: ['days reminder', 'birthday', 'anniversary', 'reminder'],
+      'Birthdays & Anniversaries shows today\u2019s birthdays, anniversaries, and special dates on your dashboard — plus due dates from Home Vault and Vehicle Vault where you set them. Dates surface inside the app when you open it. You can send birthday and anniversary greetings through supported user-initiated messaging flows.',
+    keywords: ['birthdays anniversaries', 'birthday', 'anniversary', 'reminder'],
+  },
+  {
+    id: 'tool-smart-reminders',
+    category: 'digital-tools',
+    icon: AlarmClock,
+    question: 'What is Smart Reminders?',
+    shortAnswer: 'Set priority reminders with daily, weekly, and routine schedules.',
+    answer:
+      'Smart Reminders lets you set general-purpose reminders with priority and recurrence — one-time, daily, weekly, or routine. When notifications are enabled for a reminder, BharatVow schedules device notifications for that reminder. Optional cloud backup for Smart Reminders is available inside the app when you choose to use it.',
+    keywords: ['smart reminders', 'reminder', 'priority', 'routine', 'notification'],
+  },
+  {
+    id: 'tool-festival-studio',
+    category: 'digital-tools',
+    icon: PartyPopper,
+    question: 'What is Festival Studio?',
+    shortAnswer: 'Indian festival greetings, cards, and group WhatsApp sharing.',
+    answer:
+      'Festival Studio helps you browse festival calendars, customise greeting cards, and share festival wishes with family and groups through supported user-initiated messaging flows.',
+    keywords: ['festival studio', 'festival', 'greeting', 'diwali', 'whatsapp'],
   },
   {
     id: 'tool-grocery-bag',

@@ -1,5 +1,7 @@
 import { SITE } from '@/utils/constants';
 import { DEFAULT_OG_IMAGE } from '@/seo/defaults';
+import { MODULE_COUNTS } from '@/config/moduleCounts';
+import { MARKETING_COUNT_COPY } from '@/data/homepageCopy';
 
 export function organizationJsonLd() {
   return {
@@ -87,7 +89,7 @@ export function softwareApplicationJsonLd() {
     operatingSystem: 'Android',
     applicationCategory: 'LifestyleApplication',
     description:
-      'Personal Digital Life Platform — budget planning, home management, vehicles, events, and daily records. BharatVow does not process transactions or move funds.',
+      `Personal Digital Life Platform — ${MODULE_COUNTS.dashboard} connected Digital Tools (${MARKETING_COUNT_COPY.premiumToolsPhrase} with subscription). Organize budgets, home records, vehicles, events, reminders, festivals, and everyday records. BharatVow does not process transactions or move funds.`,
     ...(SITE.androidPackageName
       ? {
           identifier: {
@@ -108,7 +110,7 @@ export function softwareApplicationJsonLd() {
           '@type': 'Offer',
           price: '0',
           priceCurrency: 'INR',
-          description: 'Link Vault and Status Viewer — free without subscription',
+          description: `Link Vault and Status Viewer — ${MODULE_COUNTS.free} free tools without subscription`,
         },
         {
           '@type': 'Offer',

@@ -285,4 +285,4 @@ src/components/templates/digital-tool/ ← section components (implement later)
 
 Author pages in this order — see `src/config/mainDashboard.js`:
 
-Smart Khata · Budget Pocket · Expenses Diary · Event Book · Trip Ledger · Vehicle Vault · Home Vault · Days Reminder · Grocery Bag · Link Vault · Status Viewer · Place Store · Home Assets (sub-page)
+Smart Khata · Budget Pocket · Expenses Diary · Event Book · Trip Ledger · Vehicle Vault · Home Vault · Birthdays & Anniversaries · Smart Reminders · Festival Studio · Grocery Bag · Link Vault · Status Viewer · Place Store · Home Assets (sub-page)

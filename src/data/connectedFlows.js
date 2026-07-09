@@ -14,6 +14,9 @@ import {
   Users,
   Gift,
   Bell,
+  BellRing,
+  AlarmClock,
+  MessageCircle,
   ShoppingCart,
   CheckSquare,
   Link2,
@@ -27,7 +30,7 @@ export const EVERYTHING_CONNECTED = {
   eyebrow: 'One platform, many connections',
   title: 'Enter it once — BharatVow carries it forward',
   intro:
-    'You should not re-type the same details in five different apps. When you save a home asset, log fuel, or plan an event, BharatVow keeps the story connected — so reminders, records, and daily views stay in sync across your digital life.',
+    'You should not re-type the same details in five different apps. When you save a home asset, log fuel, plan an event, or set a reminder, BharatVow keeps the story connected — so records, celebrations, and daily views stay in sync across your digital life.',
   flows: [
     {
       id: 'home',
@@ -99,6 +102,55 @@ export const EVERYTHING_CONNECTED = {
       ],
     },
     {
+      id: 'festival',
+      title: 'Festival morning greetings',
+      summary: 'From Festival Studio cards to personal wishes — share without last-minute scramble.',
+      steps: [
+        {
+          icon: PartyPopper,
+          title: 'Festival Studio',
+          description: 'Pick a festival greeting card or template for today\'s celebration.',
+        },
+        {
+          icon: BellRing,
+          title: 'Birthdays & Anniversaries',
+          description: 'See whose special day is today alongside festival greetings.',
+        },
+        {
+          icon: MessageCircle,
+          title: 'WhatsApp sharing',
+          description: 'Send personalised cards or group wishes to contacts you choose.',
+        },
+      ],
+    },
+    {
+      id: 'reminders',
+      title: 'Never miss what you planned',
+      summary: 'Smart Reminders connect to the records you already keep in BharatVow.',
+      steps: [
+        {
+          icon: AlarmClock,
+          title: 'Smart Reminders',
+          description: 'Set priority reminders — one-time, daily, weekly, or routine.',
+        },
+        {
+          icon: PartyPopper,
+          title: 'Event Book',
+          description: 'Plan celebration dates and guest lists in one register.',
+        },
+        {
+          icon: Car,
+          title: 'Vehicle Vault',
+          description: 'Track insurance and PUC expiry alongside your reminders.',
+        },
+        {
+          icon: Home,
+          title: 'Home Vault',
+          description: 'Flag due services and bill dates from your home records.',
+        },
+      ],
+    },
+    {
       id: 'event',
       title: 'Planning a celebration',
       summary: 'Guests, gifts, and costs — without scattered chats.',
@@ -124,8 +176,8 @@ export const EVERYTHING_CONNECTED = {
           description: 'Follow planned and actual celebration costs.',
         },
         {
-          icon: Bell,
-          title: 'Days Reminder',
+          icon: BellRing,
+          title: 'Birthdays & Anniversaries',
           description: 'See the date on the morning it matters.',
         },
       ],
@@ -163,19 +215,19 @@ export const EVERYTHING_CONNECTED = {
       icon: Sparkles,
       title: 'Enter once',
       description:
-        'Save a home asset, vehicle, or event in one place — BharatVow remembers the details for reminders and records.',
+        'Save a home asset, vehicle, event, or reminder in one place — BharatVow remembers the details for records and notifications.',
     },
     {
       icon: LayoutGrid,
       title: 'Stay organised',
       description:
-        'Home, vehicles, celebrations, and household spending share one calm account instead of scattered notes.',
+        'Home, vehicles, celebrations, festivals, and household spending share one calm account instead of scattered notes.',
     },
     {
       icon: Bell,
       title: 'Keep important dates visible',
       description:
-        'Due services, renewals, and important dates surface in the app before they become last-minute emergencies.',
+        'Due services, renewals, festival days, and personal dates surface in the app before they become last-minute emergencies.',
     },
     {
       icon: Link2,

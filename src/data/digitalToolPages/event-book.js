@@ -205,9 +205,9 @@ const eventBookPage = {
         'Event Book tracks per-function budget and spend. Budget Pocket helps with broader monthly household limits — use both when celebrations affect the month\'s plan.',
     },
     {
-      slug: 'days-reminder',
+      slug: 'birthdays-anniversaries',
       integration:
-        'Important celebration dates stay in Event Book. Days Reminder helps you remember birthdays and anniversaries before planning even starts.',
+        'Important celebration dates stay in Event Book. Birthdays & Anniversaries helps you remember birthdays and anniversaries before planning even starts.',
     },
     {
       slug: 'grocery-bag',
