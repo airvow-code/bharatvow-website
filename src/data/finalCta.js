@@ -4,7 +4,7 @@ export const FINAL_CTA = {
   eyebrow: 'Ready when you are',
   title: 'Simplify everyday life with one organized platform',
   description:
-    'Instead of juggling separate apps, BharatVow helps you organize budgets, home upkeep, vehicles, grocery, events, links, and everyday records — all in one secure place. Start free with Link Vault and Status Viewer. Upgrade only when a premium Digital Tool fits your routine.',
+    'Instead of juggling separate apps, BharatVow helps you organize budgets, home upkeep, vehicles, grocery, events, links, and everyday records — all in one secure place. Start free with Link Vault and Status Saver. Upgrade only when a premium Digital Tool fits your routine.',
   trust: [
     {
       icon: Sparkles,

@@ -217,7 +217,7 @@ export const FAQ_ITEMS = [
     question: 'Is there a free trial?',
     shortAnswer: `Yes — a 7-day free trial to explore all ${premiumToolsPhrase}.`,
     answer:
-      `Yes. BharatVow includes a 7-day free trial so you can explore all ${premiumToolsPhrase} before choosing a subscription. Link Vault and Status Viewer remain available without a subscription after the trial ends.`,
+      `Yes. BharatVow includes a 7-day free trial so you can explore all ${premiumToolsPhrase} before choosing a subscription. Link Vault and Status Saver remain available without a subscription after the trial ends.`,
     keywords: ['free', 'trial', '7 day', 'premium'],
   },
   {
@@ -226,9 +226,9 @@ export const FAQ_ITEMS = [
     icon: Rocket,
     question: 'What happens after the trial ends?',
     shortAnswer:
-      'Premium tools need an active subscription. Link Vault and Status Viewer stay available without one.',
+      'Premium tools need an active subscription. Link Vault and Status Saver stay available without one.',
     answer:
-      'When your 7-day trial ends, Digital Tools that require a subscription will need an active Monthly or Yearly plan to continue using. Your existing records remain on your device. Link Vault and Status Viewer continue to work without a subscription.',
+      'When your 7-day trial ends, Digital Tools that require a subscription will need an active Monthly or Yearly plan to continue using. Your existing records remain on your device. Link Vault and Status Saver continue to work without a subscription.',
     keywords: ['trial', 'ends', 'subscribe', 'after'],
   },
 
@@ -240,7 +240,7 @@ export const FAQ_ITEMS = [
     question: 'What plans are available?',
     shortAnswer: `Monthly ₹300 or Yearly ₹2,000 — unlocks all ${premiumToolsPhrase}.`,
     answer:
-      `BharatVow offers a Monthly plan at ₹300 per month and a Yearly plan at ₹2,000 per year. Both plans unlock all ${premiumToolsPhrase} on the dashboard. Link Vault and Status Viewer remain free without a subscription. Start with the 7-day free trial before subscribing. See the Pricing page for full details.`,
+      `BharatVow offers a Monthly plan at ₹300 per month and a Yearly plan at ₹2,000 per year. Both plans unlock all ${premiumToolsPhrase} on the dashboard. Link Vault and Status Saver remain free without a subscription. Start with the 7-day free trial before subscribing. See the Pricing page for full details.`,
     keywords: ['plans', 'monthly', 'yearly', 'price', '300', '2000'],
   },
   {
@@ -356,7 +356,7 @@ export const FAQ_ITEMS = [
     shortAnswer:
       'Optional cloud backup is available for applicable modules when you enable it.',
     answer:
-      'BharatVow stores your everyday records on your device first. Optional cloud backup is available for applicable premium modules when you choose to use it — useful when changing phones or keeping a backup copy linked to your account. Link Vault and Status Viewer are not included in master cloud backup scope. Some Digital Tools — including Smart Reminders — include their own backup and restore screens inside the app. Other tools may offer export options such as Excel.',
+      'BharatVow stores your everyday records on your device first. Optional cloud backup is available for applicable premium modules when you choose to use it — useful when changing phones or keeping a backup copy linked to your account. Link Vault and Status Saver are not included in master cloud backup scope. Some Digital Tools — including Smart Reminders — include their own backup and restore screens inside the app. Other tools may offer export options such as Excel.',
     keywords: ['backup', 'cloud', 'sync'],
   },
   {
@@ -519,11 +519,11 @@ export const FAQ_ITEMS = [
     id: 'tool-status-viewer',
     category: 'digital-tools',
     icon: ScanLine,
-    question: 'What is Status Viewer?',
+    question: 'What is Status Saver?',
     shortAnswer:
       'View and save status media already on your device — Android only, free without a subscription.',
     answer:
-      'Status Viewer lets you view and save status media that is already available in a folder you grant on your Android device. It is not a messaging app. Status Viewer is available on Android without a subscription.',
+      'Status Saver lets you view and save status media that is already available in a folder you grant on your Android device. It is not a messaging app. Status Saver is available on Android without a subscription.',
     keywords: ['status viewer', 'status', 'android', 'media', 'free'],
   },
   {

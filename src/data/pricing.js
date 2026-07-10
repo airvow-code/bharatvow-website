@@ -31,7 +31,7 @@ export const PRICING_PAGE = {
   seo: {
     ogTitle: 'Simple & Transparent Pricing | BharatVow',
     ogDescription:
-      'Start with a 7-day free trial for premium Digital Tools. Monthly ₹300 or yearly ₹2,000 — Link Vault and Status Viewer stay free. GST extra where applicable.',
+      'Start with a 7-day free trial for premium Digital Tools. Monthly ₹300 or yearly ₹2,000 — Link Vault and Status Saver stay free. GST extra where applicable.',
   },
 
   trial: {
@@ -80,7 +80,7 @@ export const PRICING_BENEFITS = [
   {
     title: 'Optional Secure Backup',
     description:
-      'Optional cloud backup is available for applicable premium modules when you enable it — restore your records when you change phones. Smart Reminders includes its own backup and restore screen. Link Vault and Status Viewer are not included in master cloud backup scope.',
+      'Optional cloud backup is available for applicable premium modules when you enable it — restore your records when you change phones. Smart Reminders includes its own backup and restore screen. Link Vault and Status Saver are not included in master cloud backup scope.',
   },
   {
     title: 'Regular Updates',
@@ -97,7 +97,7 @@ export const PRICING_BENEFITS = [
 export const PRICING_FAQ = [
   {
     q: 'What happens after the 7-day trial?',
-    a: 'When your free trial ends, premium Digital Tools require an active subscription to continue using. You can choose the Monthly or Yearly plan in the app. Your existing records remain on your device. Link Vault and Status Viewer stay free without a subscription.',
+    a: 'When your free trial ends, premium Digital Tools require an active subscription to continue using. You can choose the Monthly or Yearly plan in the app. Your existing records remain on your device. Link Vault and Status Saver stay free without a subscription.',
   },
   {
     q: 'Can I switch plans later?',

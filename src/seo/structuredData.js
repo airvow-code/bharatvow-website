@@ -110,7 +110,7 @@ export function softwareApplicationJsonLd() {
           '@type': 'Offer',
           price: '0',
           priceCurrency: 'INR',
-          description: `Link Vault and Status Viewer — ${MODULE_COUNTS.free} free tools without subscription`,
+          description: `Link Vault and Status Saver — ${MODULE_COUNTS.free} free tools without subscription`,
         },
         {
           '@type': 'Offer',

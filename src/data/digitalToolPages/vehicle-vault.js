@@ -291,7 +291,7 @@ const vehicleVaultPage = {
     },
     {
       q: 'Can I back up my vehicle records?',
-      a: 'Yes. Optional cloud backup is available for this module when you enable it — useful when you change phones. Link Vault and Status Viewer are not included in master cloud backup scope. Excel export is also available where noted in the app.',
+      a: 'Yes. Optional cloud backup is available for this module when you enable it — useful when you change phones. Link Vault and Status Saver are not included in master cloud backup scope. Excel export is also available where noted in the app.',
     },
     {
       q: 'Does Vehicle Vault process transactions or sell insurance?',

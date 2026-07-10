@@ -27,7 +27,7 @@ export const CONTENT_GUIDELINES = {
       'Technical jargon without plain explanation',
       'Transaction, banking, wallet, or money-transfer language unless truly applicable',
       'Buzzwords: revolutionary, best-in-class, super app, synergy',
-      'Unshipped features (iOS Status Viewer, AI, push notifications)',
+      'Unshipped features (iOS Status Saver, AI, push notifications)',
     ],
     prefer: [
       'Short sentences, one idea each',

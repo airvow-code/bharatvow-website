@@ -4,7 +4,7 @@ import { digitalLifePath } from '@/utils/routes';
 
 export default function PageCtaBand({
   title = 'Ready to organize your digital life?',
-  description = 'Download BharatVow — Link Vault and Status Viewer are free without a subscription.',
+  description = 'Download BharatVow — Link Vault and Status Saver are free without a subscription.',
   primaryLabel = 'Download on Google Play',
   secondaryLabel = 'Explore Your Digital Life',
   secondaryTo = digitalLifePath(),

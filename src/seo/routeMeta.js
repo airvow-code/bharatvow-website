@@ -11,7 +11,7 @@ export const ROUTE_META = {
   [PATHS.home]: {
     fullTitle: `${SITE.name} — ${SITE.tagline}`,
     description:
-      `A Personal Digital Life Platform with ${MODULE_COUNTS.dashboard} connected Digital Tools. Organize personal records, expenses, reminders, festivals, documents, vehicles, trips, events, and everyday tools in one secure place. Link Vault and Status Viewer are free on Google Play.`,
+      `A Personal Digital Life Platform with ${MODULE_COUNTS.dashboard} connected Digital Tools. Organize personal records, expenses, reminders, festivals, documents, vehicles, trips, events, and everyday tools in one secure place. Link Vault and Status Saver are free on Google Play.`,
     keywords:
       'BharatVow, Personal Digital Life Platform, daily life management India, personal organization app, budget tracking, home organization, Indian productivity app',
     ogType: 'website',
@@ -59,7 +59,7 @@ export const ROUTE_META = {
   [PATHS.download]: {
     title: 'Download',
     description:
-      `Download BharatVow on Google Play — Personal Digital Life Platform for Android. Link Vault and Status Viewer are free; ${MARKETING_COUNT_COPY.premiumToolsPhrase} include a 7-day free trial.`,
+      `Download BharatVow on Google Play — Personal Digital Life Platform for Android. Link Vault and Status Saver are free; ${MARKETING_COUNT_COPY.premiumToolsPhrase} include a 7-day free trial.`,
     keywords:
       'Download BharatVow, BharatVow Google Play, Personal Digital Life Platform Android',
   },

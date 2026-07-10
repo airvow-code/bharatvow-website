@@ -280,7 +280,7 @@ const linkVaultPage = {
     title: 'Stop losing links in old chats',
     description:
       'Download BharatVow — Link Vault is free without a subscription. Explore other Digital Tools with a 7-day free trial.',
-    secondaryLabel: 'Explore Status Viewer',
+    secondaryLabel: 'Explore Status Saver',
     secondaryTo: '/digital-life/status-viewer',
   },
 

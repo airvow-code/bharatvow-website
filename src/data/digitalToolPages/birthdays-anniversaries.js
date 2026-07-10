@@ -262,7 +262,7 @@ const birthdaysAnniversariesPage = {
     },
     {
       q: 'Can I back up my reminders?',
-      a: 'Yes. Optional cloud backup is available for this module when you enable it — useful when you change phones. Link Vault and Status Viewer are not included in master cloud backup scope. Excel export is also available where noted in the app.',
+      a: 'Yes. Optional cloud backup is available for this module when you enable it — useful when you change phones. Link Vault and Status Saver are not included in master cloud backup scope. Excel export is also available where noted in the app.',
     },
     {
       q: 'Is Birthdays & Anniversaries a calendar or scheduling app?',

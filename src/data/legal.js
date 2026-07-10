@@ -56,7 +56,7 @@ export const LEGAL_PAGES = {
               'PIN (stored securely for app access on your device)',
               'Records you enter in Digital Tools — such as khata entries, expenses, home records, vehicle details, events, grocery lists, trips, links, and saved places',
               'Contact details you choose to import, select, or save in supported tools — for example when picking recipients for user-initiated messages or saving contacts linked to your records',
-              'Message content you compose when you manually start a supported sending action in Smart Khata, Event Book, Birthdays & Anniversaries, or Festival Studio',
+              'Message content you compose when you manually start a supported messaging action within BharatVow.',
               'Photos, documents, audio, or other media you choose to capture or attach to your records',
               'Support and grievance correspondence when you contact us',
             ],
@@ -87,7 +87,7 @@ export const LEGAL_PAGES = {
               'Master cloud backup stores encrypted module payloads on Google Firebase / Cloud Firestore when you run backup for supported premium modules. Photos attached to backed-up records may be uploaded to Cloudinary so they can be restored from cloud URLs.',
               'Optional Google Drive backup (where available in the app): If you choose to back up to Google Drive, you sign in with your Google account and upload a copy of your local app database to your Google Drive. This is separate from master cloud backup on BharatVow servers and is governed by Google\'s terms.',
               'You can disable cloud backup in app settings where that option is available. Disabling backup stops new backup uploads; existing backup copies remain until you delete them, delete your account, or we remove them under our Delete Account policy.',
-              'Master cloud backup applies only to supported premium modules. Link Vault and Status Viewer are not included in master cloud backup scope.',
+              'Master cloud backup applies only to supported premium modules. Link Vault and Status Saver are not included in master cloud backup scope.',
               'Backup copies may include contact names, numbers, or message text you saved inside BharatVow records (for example guest lists or reminder entries) — not your entire device contact list.',
             ],
           },
@@ -151,17 +151,17 @@ export const LEGAL_PAGES = {
               'Disable: Deny Camera permission in Android settings, or avoid in-app capture actions.',
             ],
           },
-          {
-            heading: '2.5E Photos, videos, and files (storage and media permissions)',
-            paragraphs: [
-              'Permissions may include READ_EXTERNAL_STORAGE (maxSdkVersion 32 on older Android versions), WRITE_EXTERNAL_STORAGE (maxSdkVersion 29 on older Android versions), READ_MEDIA_IMAGES, READ_MEDIA_VIDEO, READ_MEDIA_VISUAL_USER_SELECTED, and related media access on your Android version.',
-              'Why: So you can attach, save, or browse photos and videos you choose — for example status media in Status Viewer (from a folder you explicitly allow via Android\'s folder picker), photos in Vehicle Vault or Home Vault, or files you add to your records.',
-              'When: Only when you choose to pick, save, or attach media or files in the app.',
-              'Optional: Yes for each attachment action. Status Viewer works only for folders or selections you approve.',
-              'Exports (PDF/Excel): Generated in the app\'s private storage and shared through your device\'s share sheet — not by writing directly to public Downloads with legacy storage permission.',
-              'Disable: Deny storage/media permissions in Android settings, or do not use attach/save/browse actions that require them.',
-            ],
-          },
+{
+  heading: '2.5E Photos, videos, and files (storage and media access)',
+  paragraphs: [
+    'Depending on your Android version, BharatVow may request only the minimum storage or media access required for the feature you choose to use.',
+    'Why: To let you attach, save, or browse photos, videos, or files that you choose — for example status media in Status Saver, photos in Vehicle Vault or Home Vault, or files attached to your personal records.',
+    'When: Only when you choose to pick, save, or attach media or files within the app.',
+    'Optional: Yes. Media and file access is requested only when required for the feature you use.',
+    'Exports (PDF/Excel): Reports are generated in the app\'s private storage and shared using Android\'s standard share options.',
+    'Disable: You can deny storage or media access in Android Settings or simply avoid using features that require media selection or file attachments.',
+  ],
+},
           {
             heading: '2.5G Location (ACCESS_COARSE_LOCATION, ACCESS_FINE_LOCATION)',
             paragraphs: [
@@ -175,12 +175,10 @@ export const LEGAL_PAGES = {
             heading: '2.5H Accessibility Service (optional, user-initiated messaging only)',
             paragraphs: [
               'Accessibility Service is optional. It is used only for optional, user-initiated productivity features in BharatVow — a Personal Digital Life Platform — where you explicitly start each messaging session. You remain in control at all times.',
-              'Supported features when you choose to enable Accessibility Service and start a session:',
+              'Supported messaging features within BharatVow that you manually start may use this optional service, including Smart Khata, Event Book, Festival Studio, and other supported messaging features. The app remains fully functional without enabling Accessibility Service.',
             ],
             list: [
-              'Smart Khata — you manually start sending payment reminder messages to contacts you select',
-              'Event Book — you manually start sending invitations and location details to guests you select',
-              'Birthdays & Anniversaries and Festival Studio — you manually start sending birthday, anniversary, and festival greeting messages to contacts you select',
+              'Accessibility Service is never used automatically and remains under your control.',
             ],
             afterList: [
               'Manual control: Every messaging session is initiated by you inside the app. You select recipients before sending. You can stop or cancel the process at any time before it completes.',
@@ -312,7 +310,7 @@ export const LEGAL_PAGES = {
               'Master module cloud backup stores encrypted record payloads on Google Firebase / Cloud Firestore. Photos linked to backed-up records may be stored on Cloudinary. Data is transmitted using HTTPS/TLS.',
               'Trip collaboration and optional user-initiated cloud sharing use Firestore separately from master backup and follow the feature you choose to use.',
               'Optional Google Drive backup (where available) uploads a copy of your local app database to your Google Drive when you sign in and confirm — separate from master cloud backup on BharatVow servers.',
-              'Master cloud backup applies only to supported premium modules. Link Vault and Status Viewer are not included in master cloud backup scope.',
+              'Master cloud backup applies only to supported premium modules. Link Vault and Status Saver are not included in master cloud backup scope.',
               'If you delete your account, optional cloud backup copies linked to your account are removed as described in section 4.4 and on our Delete Account page.',
             ],
           },
@@ -365,7 +363,7 @@ export const LEGAL_PAGES = {
       {
         heading: '5A. Messaging and third-party apps',
         paragraphs: [
-          'BharatVow messaging features are limited to user-requested actions you manually start in Smart Khata (payment reminders), Event Book (invitations and location details), Birthdays & Anniversaries (birthday and anniversary greetings), and Festival Studio (festival greetings). These are not automated broadcasts.',
+          'BharatVow messaging features are limited to user-requested actions you manually start in Smart Khata (payment reminders), Event Book (invitations and location details), Birthdays & Anniversaries (birthday and anniversary greetings), and Festival Studio (festival greetings). These messaging actions are always initiated by the user.',
           'When you use optional Accessibility Service messaging features, delivery happens through messaging apps already on your device. Those apps are governed by their own terms and privacy policies.',
           'BharatVow does not control, store, or monitor messages in those third-party apps except where you saved related information in your BharatVow module records or optional cloud backup.',
         ],
@@ -389,8 +387,8 @@ export const LEGAL_PAGES = {
         heading: '6A. Accessibility Service transparency',
         paragraphs: [
           'Because Accessibility Service is sensitive, we provide this summary in addition to section 2.5H:',
-          'BharatVow uses Accessibility Service only when you enable it and only to help complete messaging actions you manually start in Smart Khata, Event Book, Birthdays & Anniversaries, or Festival Studio.',
-          'You select each recipient. Each message is sent individually at your direction. You can stop the process at any time. There is no unrestricted bulk messaging.',
+          'BharatVow uses Accessibility Service only when you enable it and only to assist with supported messaging actions that you manually start within the app.',
+          'You select each recipient. Each message is sent individually at your direction. You can stop the process at any time. The service is used only for messaging actions that you manually start and can be stopped or disabled at any time.',
           'Accessibility session content is not transmitted to BharatVow servers except where optional cloud backup includes module records you saved.',
           'We do not use Accessibility Service for surveillance, credential harvesting, unrelated screen reading, monitoring other apps, user tracking, behavioural analytics, advertising, profiling, background messaging, promotional messages, or spam.',
           'You can disable Accessibility Service for BharatVow at any time in Android settings.',
@@ -489,7 +487,7 @@ export const LEGAL_PAGES = {
         heading: '4. Services Description',
         paragraphs: [
           'BharatVow is a Personal Digital Life Platform providing Digital Tools for everyday records — including budgets, expenses, home information, vehicles, events, grocery lists, travel, links, saved places, and related utilities.',
-          'Link Vault and Status Viewer (Android) are available without a subscription. Other Digital Tools require an active subscription after the 7-day free trial unless stated otherwise in-app.',
+          'Link Vault and Status Saver (Android) are available without a subscription. Other Digital Tools require an active subscription after the 7-day free trial unless stated otherwise in-app.',
           'Features are described on our website and in the app. We may modify features with reasonable notice where practicable.',
           'BharatVow is for personal organization and record keeping. It is not a bank, wallet, payment service, money transfer service, lending platform, investment platform, or professional advisory service.',
         ],
@@ -628,9 +626,9 @@ export const LEGAL_PAGES = {
         afterList: ['Consult qualified professionals for decisions that require expert advice.'],
       },
       {
-        heading: 'Status Viewer and Media on Your Device',
+        heading: 'Status Saver and Media on Your Device',
         paragraphs: [
-          'Status Viewer helps you browse and save photos or videos already available in storage locations you explicitly allow on your Android device. BharatVow does not bypass encryption, access private messaging accounts, or collect status media without your action in the app.',
+          'Status Saver helps you browse and save photos or videos already available in storage locations you explicitly allow on your Android device. BharatVow does not bypass encryption, access private messaging accounts, or collect status media without your action in the app.',
           'You are responsible for saving and sharing media lawfully and for respecting the rights of others.',
         ],
       },
@@ -773,7 +771,7 @@ export const LEGAL_PAGES = {
       {
         heading: '2. Free Tools',
         paragraphs: [
-          'Link Vault and Status Viewer are available without a subscription. No subscription charge or refund applies to those tools.',
+          'Link Vault and Status Saver are available without a subscription. No subscription charge or refund applies to those tools.',
         ],
       },
       {

@@ -248,7 +248,7 @@ const placeStorePage = {
     },
     {
       q: 'Can I back up my saved places?',
-      a: 'Yes. Optional cloud backup is available for this module when you enable it — useful when you change phones. Link Vault and Status Viewer are not included in master cloud backup scope.',
+      a: 'Yes. Optional cloud backup is available for this module when you enable it — useful when you change phones. Link Vault and Status Saver are not included in master cloud backup scope.',
     },
     {
       q: 'How is Place Store different from Trip Ledger?',

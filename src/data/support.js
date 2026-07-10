@@ -61,7 +61,7 @@ export const DELETE_ACCOUNT = {
     'Your BharatVow account profile linked to your registered mobile number is removed',
     'Optional cloud backup copies linked to your account are deleted from our backup storage where applicable',
     'Locally stored module data on your device is removed when you uninstall or reset the app after deletion',
-    'Link Vault and Status Viewer records remain on your device until you uninstall the app — they are not included in master cloud backup scope',
+    'Link Vault and Status Saver records remain on your device until you uninstall the app — they are not included in master cloud backup scope',
   ],
   cloudBackup: {
     title: 'Cloud backup deletion',

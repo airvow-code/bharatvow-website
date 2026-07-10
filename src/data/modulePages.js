@@ -363,7 +363,7 @@ export const MODULE_PAGES = {
     ],
   },
   'status-viewer': {
-    headline: 'Status Viewer',
+    headline: 'Status Saver',
     purpose:
       'Conveniently view, save, and share status media that is already available on your device — free on Android.',
     problemHeadline: 'Status clips disappear before you can save or share them.',
@@ -384,11 +384,11 @@ export const MODULE_PAGES = {
     },
     faq: [
       {
-        q: 'Is Status Viewer on iPhone?',
-        a: 'No — Status Viewer is free on Android only.',
+        q: 'Is Status Saver on iPhone?',
+        a: 'No — Status Saver is free on Android only.',
       },
       {
-        q: 'Does Status Viewer send messages or process transactions?',
+        q: 'Does Status Saver send messages or process transactions?',
         a: 'No. It only helps you view, save, and share status media already stored on your device.',
       },
     ],

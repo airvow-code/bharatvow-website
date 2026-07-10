@@ -140,3 +140,8 @@ React 18 · Vite 5 · React Router 6 · Tailwind CSS 3 · Lucide React
 ## Support
 
 support@bharatvow.com · +91 9509945745
+
+git add .
+git commit -m "update with new modules"
+git tag v1.0.0-baseline
+git push origin main

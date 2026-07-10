@@ -90,7 +90,7 @@ export const ABOUT_PAGE = {
     ],
     points: [
       'Core module data is stored on your device for everyday use. You can work with your records locally without needing constant internet access.',
-      'Optional cloud backup is available for applicable premium modules when you choose to use it — useful when changing phones or keeping a backup copy linked to your account. Link Vault and Status Viewer are not included in master cloud backup scope.',
+      'Optional cloud backup is available for applicable premium modules when you choose to use it — useful when changing phones or keeping a backup copy linked to your account. Link Vault and Status Saver are not included in master cloud backup scope.',
       'You remain in control of your data. You can export records where the app supports it, manage your account, and request account deletion through the in-app flow or our Delete Account page.',
       'BharatVow is for personal organization — not professional legal, tax, or medical advice. We describe only functionality that exists in the app today.',
       'Subscriptions are billed through Google Play. Cancel renewal anytime through Google Play subscription settings before the next billing period.',
@@ -149,7 +149,7 @@ export const ABOUT_PAGE = {
   cta: {
     title: 'Start Organizing Your Digital Life.',
     description:
-      `Download BharatVow on Google Play — start with Link Vault and Status Viewer free, then explore ${MARKETING_COUNT_COPY.premiumToolsPhrase} with a 7-day free trial before subscribing.`,
+      `Download BharatVow on Google Play — start with Link Vault and Status Saver free, then explore ${MARKETING_COUNT_COPY.premiumToolsPhrase} with a 7-day free trial before subscribing.`,
     primaryLabel: 'Download BharatVow',
     secondaryLabel: 'Explore Digital Life',
     secondaryPath: PATHS.digitalLife,
