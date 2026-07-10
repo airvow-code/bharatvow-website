@@ -94,6 +94,7 @@ export const SCREENSHOT_FILE_PATTERNS = Object.freeze({
     'link-vault.svg',
   ],
   'status-viewer': [
+    'status-saver-dashboard.webp',
     'status-viewer-dashboard.webp',
     'status-viewer.webp',
     'status-viewer.png',

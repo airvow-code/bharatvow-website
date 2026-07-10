@@ -21,7 +21,7 @@ export const SCREENSHOT_MANIFEST = {
   "main-dashboard": {
     "id": "main-dashboard",
     "width": 1080,
-    "height": 2392,
+    "height": 2400,
     "src": "/images/screenshots/main-dashboard-720.webp",
     "srcSet": "/images/screenshots/main-dashboard-360.webp 360w, /images/screenshots/main-dashboard-480.webp 480w, /images/screenshots/main-dashboard-720.webp 720w",
     "sizes": "(max-width: 640px) 360px, (max-width: 1024px) 480px, 720px",
