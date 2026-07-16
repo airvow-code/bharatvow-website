@@ -7,9 +7,12 @@ import {
   Scale,
   Trash2,
   Users,
+  CreditCard,
+  RefreshCw,
 } from 'lucide-react';
 import { LEGAL_PATHS, PATHS } from '@/config/paths';
 import { LEGAL_PAGES, LEGAL_PAGE_LIST } from '@/data/legal';
+import { API_LEGAL_DOCUMENTS, API_LEGAL_DOCUMENT_LIST } from '@/data/legalRegistry';
 
 export const LEGAL_HUB = {
   path: LEGAL_PATHS.hub,
@@ -28,48 +31,66 @@ export const LEGAL_HUB = {
   },
 };
 
+function hubDescription(id) {
+  return API_LEGAL_DOCUMENTS[id]?.description || LEGAL_PAGES[id]?.description || '';
+}
+
 export const LEGAL_HUB_CARDS = [
   {
     id: 'privacy-policy',
     path: LEGAL_PATHS.privacyPolicy,
     icon: Shield,
     title: 'Privacy Policy',
-    description: LEGAL_PAGES['privacy-policy'].description,
+    description: hubDescription('privacy-policy'),
   },
   {
     id: 'terms',
     path: LEGAL_PATHS.terms,
     icon: FileText,
     title: 'Terms & Conditions',
-    description: LEGAL_PAGES.terms.description,
+    description: hubDescription('terms'),
   },
   {
     id: 'disclaimer',
     path: LEGAL_PATHS.disclaimer,
     icon: AlertCircle,
     title: 'Disclaimer',
-    description: LEGAL_PAGES.disclaimer.description,
+    description: hubDescription('disclaimer'),
   },
   {
     id: 'legal-information',
     path: LEGAL_PATHS.legalInformation,
     icon: Building2,
     title: 'Legal Information',
-    description: LEGAL_PAGES['legal-information'].description,
+    description: hubDescription('legal-information'),
   },
   {
     id: 'refund-policy',
     path: LEGAL_PATHS.refundPolicy,
     icon: Receipt,
     title: 'Cancellation & Refund Policy',
-    description: LEGAL_PAGES['refund-policy'].description,
+    description: hubDescription('refund-policy'),
+  },
+  {
+    id: 'subscription-policy',
+    path: LEGAL_PATHS.subscriptionPolicy,
+    icon: RefreshCw,
+    title: 'Subscription Policy',
+    description: hubDescription('subscription-policy'),
+  },
+  {
+    id: 'pricing-policy',
+    path: LEGAL_PATHS.pricingPolicy,
+    icon: CreditCard,
+    title: 'Pricing Policy',
+    description: hubDescription('pricing-policy'),
   },
   {
     id: 'grievance-redressal',
     path: LEGAL_PATHS.grievanceRedressal,
     icon: Scale,
     title: 'Grievance Redressal',
-    description: LEGAL_PAGES['grievance-redressal'].description,
+    description: hubDescription('grievance-redressal'),
   },
   {
     id: 'delete-account',
@@ -83,7 +104,7 @@ export const LEGAL_HUB_CARDS = [
     path: LEGAL_PATHS.distributorAgreement,
     icon: Users,
     title: 'Distributor Agreement',
-    description: LEGAL_PAGES['distributor-agreement'].description,
+    description: hubDescription('distributor-agreement'),
   },
 ];
 
@@ -101,6 +122,8 @@ export const LEGAL_FOOTER_LINKS = [
   { label: 'Disclaimer', path: LEGAL_PATHS.disclaimer },
   { label: 'Grievance', path: LEGAL_PATHS.grievanceRedressal },
   { label: 'Refund', path: LEGAL_PATHS.refundPolicy },
+  { label: 'Subscription', path: LEGAL_PATHS.subscriptionPolicy },
+  { label: 'Pricing Policy', path: LEGAL_PATHS.pricingPolicy },
   { label: 'Delete Account', path: LEGAL_PATHS.deleteAccount },
   { label: 'Contact', path: PATHS.contact },
   { label: 'Legal Center', path: LEGAL_PATHS.hub },
@@ -108,21 +131,28 @@ export const LEGAL_FOOTER_LINKS = [
 
 const RELATED_BY_ID = {
   'privacy-policy': ['terms', 'disclaimer', 'delete-account', 'grievance-redressal'],
-  terms: ['privacy-policy', 'disclaimer', 'refund-policy', 'distributor-agreement'],
+  terms: ['privacy-policy', 'disclaimer', 'refund-policy', 'subscription-policy'],
   disclaimer: ['terms', 'privacy-policy', 'legal-information'],
   'legal-information': ['privacy-policy', 'terms', 'grievance-redressal'],
-  'refund-policy': ['terms', 'privacy-policy', 'grievance-redressal'],
+  'refund-policy': ['terms', 'subscription-policy', 'pricing-policy'],
+  'subscription-policy': ['pricing-policy', 'refund-policy', 'terms'],
+  'pricing-policy': ['subscription-policy', 'refund-policy', 'terms'],
   'grievance-redressal': ['privacy-policy', 'refund-policy', 'legal-information'],
   'delete-account': ['privacy-policy', 'terms', 'refund-policy'],
   'distributor-agreement': ['terms', 'privacy-policy', 'refund-policy'],
 };
 
+function resolveRelatedMeta(id) {
+  const api = API_LEGAL_DOCUMENTS[id];
+  if (api) return { title: api.title, path: api.path };
+  const page = LEGAL_PAGE_LIST.find((p) => p.id === id);
+  if (page) return { title: page.title, path: page.path };
+  return null;
+}
+
 export function getLegalRelatedDocs(pageId) {
   const ids = RELATED_BY_ID[pageId] ?? [];
-  return ids
-    .map((id) => LEGAL_PAGE_LIST.find((page) => page.id === id))
-    .filter(Boolean)
-    .map(({ title, path }) => ({ title, path }));
+  return ids.map(resolveRelatedMeta).filter(Boolean);
 }
 
 /** @deprecated use getLegalPageByPath */
@@ -130,4 +160,4 @@ export function getLegalPage(slug) {
   return LEGAL_PAGES[slug] ?? null;
 }
 
-export { LEGAL_PAGES };
+export { LEGAL_PAGES, API_LEGAL_DOCUMENT_LIST };

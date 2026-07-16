@@ -18,7 +18,7 @@ export const PRICING_INCLUDED_TOOLS = MAIN_DASHBOARD_TOOLS.map(({ label }) => la
 export const PRICING_INCLUDED_NOTE = MARKETING_COUNT_COPY.subscriptionUnlockNote;
 
 export const PRICING_BALANCE_NOTE =
-  'In-app balance from the distributor referral program is separate from Google Play subscription billing. Refund and balance handling follow our Cancellation & Refund Policy.';
+  '';
 
 export const PRICING_PAGE = {
   path: PATHS.pricing,

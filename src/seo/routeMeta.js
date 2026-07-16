@@ -89,6 +89,16 @@ export const ROUTE_META = {
     description: 'Cancellation and refund terms for BharatVow subscriptions and in-app purchases.',
     keywords: 'BharatVow refund, subscription cancellation',
   },
+  [LEGAL_PATHS.subscriptionPolicy]: {
+    title: 'Subscription Policy',
+    description: 'Lifecycle rules for BharatVow Subscription Services under Manual Renewal.',
+    keywords: 'BharatVow subscription policy, Manual Renewal',
+  },
+  [LEGAL_PATHS.pricingPolicy]: {
+    title: 'Pricing Policy',
+    description: 'Pricing and display rules for BharatVow Subscription Services.',
+    keywords: 'BharatVow pricing policy',
+  },
   [LEGAL_PATHS.disclaimer]: {
     title: 'Disclaimer',
     description:

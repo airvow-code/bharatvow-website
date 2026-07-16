@@ -89,6 +89,8 @@ export const routeConfig = [
       { path: 'disclaimer', element: lazyPage(LegalDocument) },
       { path: 'legal-information', element: lazyPage(LegalDocument) },
       { path: 'refund-policy', element: lazyPage(LegalDocument) },
+      { path: 'subscription-policy', element: lazyPage(LegalDocument) },
+      { path: 'pricing-policy', element: lazyPage(LegalDocument) },
       { path: 'grievance-redressal', element: lazyPage(LegalDocument) },
       { path: 'distributor-agreement', element: lazyPage(LegalDocument) },
       { path: 'delete-account', element: lazyPage(DeleteAccount) },

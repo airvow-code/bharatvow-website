@@ -31,8 +31,6 @@ export const DOWNLOAD_PAGE = {
   },
   trialNote:
     `A 7-day free trial lets you explore all ${premiumToolsPhrase} before choosing a Monthly (₹300/month) or Yearly (₹2,000/year) plan billed through Google Play. GST and applicable taxes are added before you confirm purchase.`,
-  inAppBalanceNote:
-    'If you have an in-app balance from the distributor referral program, review the Cancellation & Refund Policy before deleting your account. Balance handling follows that policy and is separate from Google Play subscription billing.',
   playStorePending:
     'The official Google Play link will appear here as soon as the listing is live. Set VITE_PLAY_STORE_URL for production builds, or use the header download button when available.',
   helpLinks: [

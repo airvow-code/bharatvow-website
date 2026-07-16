@@ -10,12 +10,14 @@ import PageHeader from '@/components/ui/PageHeader';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import LegalProse, { InternalLink, slugifyLegalHeading } from '@/components/common/LegalProse';
+import LegalMarkdown, { buildMarkdownToc } from '@/components/common/LegalMarkdown';
+import LegalDocumentStatus from '@/components/common/LegalDocumentStatus';
 import { LEGAL_FOOTER_LINKS, getLegalRelatedDocs } from '@/data/legalHub';
 import { SITE } from '@/utils/constants';
 import { PATHS } from '@/config/paths';
 import { cn } from '@/utils/cn';
 
-function buildToc(sections = []) {
+function buildTocFromSections(sections = []) {
   const items = [];
   sections.forEach((section) => {
     items.push({ id: slugifyLegalHeading(section.heading), label: section.heading });
@@ -30,61 +32,137 @@ function buildToc(sections = []) {
   return items;
 }
 
-export default function LegalDocumentLayout({ page, children }) {
+function formatLegalDate(value) {
+  if (!value) return null;
+  if (/^\d{4}-\d{2}-\d{2}/.test(String(value))) {
+    const d = new Date(`${String(value).slice(0, 10)}T00:00:00Z`);
+    if (!Number.isNaN(d.getTime())) {
+      return d.toLocaleDateString('en-IN', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+        timeZone: 'UTC',
+      });
+    }
+  }
+  const d = new Date(value);
+  if (Number.isNaN(d.getTime())) return String(value);
+  return d.toLocaleDateString('en-IN', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
+}
+
+/**
+ * @param {object} props
+ * @param {object} props.page — layout shell (title, path, description, …)
+ * @param {'static'|'api'} [props.mode]
+ * @param {object} [props.apiDoc] — API payload when mode=api success
+ * @param {'loading'|'success'|'error'} [props.apiStatus]
+ * @param {string} [props.errorKind]
+ * @param {string} [props.errorMessage]
+ * @param {() => void} [props.onRetry]
+ * @param {import('react').ReactNode} [props.children]
+ */
+export default function LegalDocumentLayout({
+  page,
+  children,
+  mode = 'static',
+  apiDoc = null,
+  apiStatus = null,
+  errorKind = null,
+  errorMessage = null,
+  onRetry,
+}) {
   const location = useLocation();
-  const meta = getPageMeta(page.path);
-  const crumbs = legalBreadcrumbs(page.title, page.path);
-  const ogTitle = page.seo?.ogTitle ?? page.title;
-  const ogDescription = page.seo?.ogDescription ?? page.description;
-  const toc = useMemo(() => buildToc(page.sections), [page.sections]);
-  const related = getLegalRelatedDocs(page.id);
+  const title = apiDoc?.title || page.title;
+  const description = apiDoc?.summary || page.description;
+  const path = page.path;
+  const meta = getPageMeta(path);
+  const crumbs = legalBreadcrumbs(title, path);
+  const ogTitle = page.seo?.ogTitle ?? title;
+  const ogDescription = page.seo?.ogDescription ?? description;
+  const related = getLegalRelatedDocs(page.id || page.documentId);
+
+  const toc = useMemo(() => {
+    if (mode === 'api' && apiDoc?.content) {
+      return buildMarkdownToc(apiDoc.content);
+    }
+    return buildTocFromSections(page.sections);
+  }, [mode, apiDoc?.content, page.sections]);
+
+  const version = apiDoc?.version ?? null;
+  const effectiveDate = formatLegalDate(apiDoc?.effectiveDate ?? page.effectiveDate);
+  const lastUpdated = formatLegalDate(
+    apiDoc?.publishedDate ?? apiDoc?.effectiveDate ?? page.lastUpdated,
+  );
 
   useEffect(() => {
     if (!location.hash) return;
     const id = location.hash.replace('#', '');
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, [location.hash, page.path]);
+  }, [location.hash, path, apiStatus]);
+
+  let body;
+  if (children) {
+    body = children;
+  } else if (mode === 'api') {
+    if (apiStatus === 'loading') {
+      body = <p className="text-base text-muted">Loading document…</p>;
+    } else if (apiStatus === 'error') {
+      body = (
+        <LegalDocumentStatus kind={errorKind} message={errorMessage} onRetry={onRetry} />
+      );
+    } else if (apiDoc?.content) {
+      body = <LegalMarkdown content={apiDoc.content} className="px-0 py-0" />;
+    } else {
+      body = <LegalDocumentStatus kind="not_found" />;
+    }
+  } else {
+    body = (
+      <LegalProse sections={page.sections} className="px-0 py-0 md:px-0 md:py-0 lg:px-0" />
+    );
+  }
 
   return (
     <>
       <SEO
-        title={page.title}
+        title={title}
         fullTitle={ogTitle}
-        description={page.description}
+        description={description}
         keywords={meta?.keywords ?? page.keywords}
-        path={page.path}
+        path={path}
         breadcrumbs={crumbs}
-        ogImageAlt={`${SITE.name} — ${page.title}`}
+        ogImageAlt={`${SITE.name} — ${title}`}
         jsonLd={jsonLdGraph(
           webPageJsonLd({
-            title: page.title,
+            title,
             description: ogDescription,
-            path: page.path,
+            path,
           }),
         )}
       />
       <Breadcrumbs items={crumbs} />
-      <PageHeader title={page.title} lead={page.lead} />
+      <PageHeader title={title} lead={page.lead} />
 
       <Container className="pb-section-y md:pb-section-y-lg">
-        {(page.lastUpdated || page.effectiveDate) && (
+        {(version || effectiveDate || lastUpdated) && apiStatus !== 'error' && (
           <p className="mx-auto mb-8 max-w-5xl text-sm text-muted">
-            {page.effectiveDate && <>Effective date: {page.effectiveDate}</>}
-            {page.effectiveDate && page.lastUpdated && ' · '}
-            {page.lastUpdated && <>Last updated: {page.lastUpdated}</>}
+            {version && <>Version {version}</>}
+            {version && (effectiveDate || lastUpdated) && ' · '}
+            {effectiveDate && <>Effective date: {effectiveDate}</>}
+            {effectiveDate && lastUpdated && ' · '}
+            {lastUpdated && <>Last updated: {lastUpdated}</>}
           </p>
         )}
 
         <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-12">
           <div className="min-w-0">
-            {children ?? (
-              <LegalProse
-                sections={page.sections}
-                className="px-0 py-0 md:px-0 md:py-0 lg:px-0"
-              />
-            )}
+            {body}
 
-            {related.length > 0 && (
+            {related.length > 0 && apiStatus !== 'loading' && (
               <section
                 className="mt-12 border-t border-border pt-10"
                 aria-labelledby="related-legal-heading"
@@ -93,9 +171,9 @@ export default function LegalDocumentLayout({ page, children }) {
                   Related legal documents
                 </h2>
                 <ul className="mt-4 space-y-2">
-                  {related.map(({ title, path }) => (
-                    <li key={path}>
-                      <InternalLink to={path}>{title} →</InternalLink>
+                  {related.map(({ title: relatedTitle, path: relatedPath }) => (
+                    <li key={relatedPath}>
+                      <InternalLink to={relatedPath}>{relatedTitle} →</InternalLink>
                     </li>
                   ))}
                 </ul>
@@ -127,10 +205,10 @@ export default function LegalDocumentLayout({ page, children }) {
               aria-label="Legal footer links"
               className="mt-10 flex flex-wrap gap-x-5 gap-y-2 border-t border-border pt-8"
             >
-              {LEGAL_FOOTER_LINKS.map(({ label, path }) => (
+              {LEGAL_FOOTER_LINKS.map(({ label, path: footerPath }) => (
                 <Link
-                  key={path}
-                  to={path}
+                  key={footerPath}
+                  to={footerPath}
                   className="text-sm font-medium text-primary-light hover:text-primary"
                 >
                   {label}
@@ -139,7 +217,7 @@ export default function LegalDocumentLayout({ page, children }) {
             </nav>
           </div>
 
-          {toc.length > 0 && (
+          {toc.length > 0 && apiStatus !== 'error' && apiStatus !== 'loading' && (
             <aside className="hidden lg:block">
               <div className="sticky top-24 rounded-xl border border-border bg-surface p-5 shadow-sm">
                 <p className="font-display text-xs font-bold uppercase tracking-wider text-eyebrow">
@@ -147,7 +225,7 @@ export default function LegalDocumentLayout({ page, children }) {
                 </p>
                 <ul className="mt-4 max-h-[70vh] space-y-2 overflow-y-auto text-sm">
                   {toc.map(({ id, label, indent }) => (
-                    <li key={id}>
+                    <li key={`${id}-${label}`}>
                       <a
                         href={`#${id}`}
                         className={cn(

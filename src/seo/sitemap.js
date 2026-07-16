@@ -20,6 +20,8 @@ const STATIC_ROUTES = [
   { path: LEGAL_PATHS.disclaimer, changefreq: 'yearly', priority: '0.5' },
   { path: LEGAL_PATHS.legalInformation, changefreq: 'yearly', priority: '0.5' },
   { path: LEGAL_PATHS.refundPolicy, changefreq: 'yearly', priority: '0.5' },
+  { path: LEGAL_PATHS.subscriptionPolicy, changefreq: 'yearly', priority: '0.5' },
+  { path: LEGAL_PATHS.pricingPolicy, changefreq: 'yearly', priority: '0.5' },
   { path: LEGAL_PATHS.grievanceRedressal, changefreq: 'yearly', priority: '0.5' },
   { path: LEGAL_PATHS.distributorAgreement, changefreq: 'yearly', priority: '0.5' },
   { path: LEGAL_PATHS.deleteAccount, changefreq: 'monthly', priority: '0.6' },
