@@ -20,7 +20,8 @@ jobs:
       - run: npm ci
 
       - run: npm run build
-
+        env:
+          VITE_LEGAL_API_BASE_URL: ${{ secrets.VITE_LEGAL_API_BASE_URL }}
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
