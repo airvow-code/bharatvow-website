@@ -10,6 +10,7 @@ import PageHeader from '@/components/ui/PageHeader';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import LegalProse, { InternalLink, slugifyLegalHeading } from '@/components/common/LegalProse';
+import LegalDocumentMeta, { formatLegalDate } from '@/components/common/LegalDocumentMeta';
 import LegalMarkdown, { buildMarkdownToc } from '@/components/common/LegalMarkdown';
 import LegalDocumentStatus from '@/components/common/LegalDocumentStatus';
 import { LEGAL_FOOTER_LINKS, getLegalRelatedDocs } from '@/data/legalHub';
@@ -30,29 +31,6 @@ function buildTocFromSections(sections = []) {
     });
   });
   return items;
-}
-
-function formatLegalDate(value) {
-  if (!value) return null;
-  if (/^\d{4}-\d{2}-\d{2}/.test(String(value))) {
-    const d = new Date(`${String(value).slice(0, 10)}T00:00:00Z`);
-    if (!Number.isNaN(d.getTime())) {
-      return d.toLocaleDateString('en-IN', {
-        day: 'numeric',
-        month: 'long',
-        year: 'numeric',
-        timeZone: 'UTC',
-      });
-    }
-  }
-  const d = new Date(value);
-  if (Number.isNaN(d.getTime())) return String(value);
-  return d.toLocaleDateString('en-IN', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-    timeZone: 'UTC',
-  });
 }
 
 /**
@@ -93,11 +71,12 @@ export default function LegalDocumentLayout({
     return buildTocFromSections(page.sections);
   }, [mode, apiDoc?.content, page.sections]);
 
-  const version = apiDoc?.version ?? null;
+  const version = apiDoc?.version ?? page.version ?? null;
   const effectiveDate = formatLegalDate(apiDoc?.effectiveDate ?? page.effectiveDate);
   const lastUpdated = formatLegalDate(
     apiDoc?.publishedDate ?? apiDoc?.effectiveDate ?? page.lastUpdated,
   );
+  const showMeta = Boolean(version || effectiveDate || lastUpdated) && apiStatus !== 'error';
 
   useEffect(() => {
     if (!location.hash) return;
@@ -145,19 +124,23 @@ export default function LegalDocumentLayout({
         )}
       />
       <Breadcrumbs items={crumbs} />
-      <PageHeader title={title} lead={page.lead} />
+      <PageHeader
+        title={title}
+        lead={page.lead}
+        meta={
+          showMeta ? (
+            <LegalDocumentMeta
+              variant="header"
+              version={version}
+              effectiveDate={effectiveDate}
+              lastUpdated={lastUpdated}
+              className="mt-5"
+            />
+          ) : null
+        }
+      />
 
       <Container className="pb-section-y md:pb-section-y-lg">
-        {(version || effectiveDate || lastUpdated) && apiStatus !== 'error' && (
-          <p className="mx-auto mb-8 max-w-5xl text-sm text-muted">
-            {version && <>Version {version}</>}
-            {version && (effectiveDate || lastUpdated) && ' · '}
-            {effectiveDate && <>Effective date: {effectiveDate}</>}
-            {effectiveDate && lastUpdated && ' · '}
-            {lastUpdated && <>Last updated: {lastUpdated}</>}
-          </p>
-        )}
-
         <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-12">
           <div className="min-w-0">
             {body}
@@ -201,9 +184,19 @@ export default function LegalDocumentLayout({
               </div>
             </section>
 
+            {showMeta && (
+              <LegalDocumentMeta
+                variant="footer"
+                version={version}
+                effectiveDate={effectiveDate}
+                lastUpdated={lastUpdated}
+                className="mt-10 border-t border-border pt-6"
+              />
+            )}
+
             <nav
               aria-label="Legal footer links"
-              className="mt-10 flex flex-wrap gap-x-5 gap-y-2 border-t border-border pt-8"
+              className="mt-8 flex flex-wrap gap-x-5 gap-y-2 border-t border-border pt-8"
             >
               {LEGAL_FOOTER_LINKS.map(({ label, path: footerPath }) => (
                 <Link

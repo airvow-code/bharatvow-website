@@ -1,6 +1,15 @@
 import { cn } from '@/utils/cn';
 
-export default function PageHeader({ eyebrow, title, lead, leadClassName, sublead, subleadClassName, className }) {
+export default function PageHeader({
+  eyebrow,
+  title,
+  lead,
+  leadClassName,
+  sublead,
+  subleadClassName,
+  meta,
+  className,
+}) {
   return (
     <header
       className={cn(
@@ -36,6 +45,7 @@ export default function PageHeader({ eyebrow, title, lead, leadClassName, sublea
             {sublead}
           </p>
         )}
+        {meta}
       </div>
     </header>
   );

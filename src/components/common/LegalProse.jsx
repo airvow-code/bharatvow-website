@@ -60,16 +60,9 @@ function Section({ section, id }) {
   );
 }
 
-export default function LegalProse({ sections, effectiveDate, lastUpdated, className }) {
+export default function LegalProse({ sections, className }) {
   return (
     <article className={cn('mx-auto max-w-prose px-4 py-12 md:px-6 md:py-16 lg:px-8', className)}>
-      {(effectiveDate || lastUpdated) && (
-        <p className="mb-8 text-sm text-muted">
-          {effectiveDate && <>Effective date: {effectiveDate}</>}
-          {effectiveDate && lastUpdated && ' · '}
-          {lastUpdated && <>Last updated: {lastUpdated}</>}
-        </p>
-      )}
       {sections.map((section) => (
         <Section
           key={section.heading}

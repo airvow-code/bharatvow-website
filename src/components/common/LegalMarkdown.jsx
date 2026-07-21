@@ -15,7 +15,7 @@ export function stripDocumentMetadataSection(markdown = '') {
   for (let i = 0; i < lines.length; i += 1) {
     const line = lines[i];
 
-    if (/^##\s+Document Metadata\s*$/i.test(line)) {
+    if (/^#{1,3}\s+Document Metadata\s*$/i.test(line)) {
       skipping = true;
       while (out.length && /^\s*$/.test(out[out.length - 1])) out.pop();
       if (out.length && /^---\s*$/.test(out[out.length - 1])) out.pop();
@@ -24,7 +24,7 @@ export function stripDocumentMetadataSection(markdown = '') {
     }
 
     if (skipping) {
-      if (/^##\s+/.test(line)) {
+      if (/^#{1,3}\s+/.test(line) && !/^#{1,3}\s+Document Metadata\s*$/i.test(line)) {
         skipping = false;
       } else {
         continue;
