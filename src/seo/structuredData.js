@@ -126,7 +126,7 @@ export function softwareApplicationJsonLd() {
         },
       ],
     },
-    downloadUrl: SITE.playStoreUrl !== '#' ? SITE.playStoreUrl : undefined,
+    downloadUrl: SITE.playStoreUrl,
     image: DEFAULT_OG_IMAGE,
   };
 }

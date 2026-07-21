@@ -69,7 +69,8 @@ export default function Footer() {
             </div>
 
             <div className="space-y-0 text-center">
-              <p className="m-0">{FOOTER_COMPLIANCE.productOf}</p>
+              <p className="m-0">{FOOTER_COMPLIANCE.developedOperatedBy}</p>
+              <p className="m-0">{FOOTER_COMPLIANCE.businessType}</p>
 
               <p className="m-0 text-[12px]">
                 CIN: {SITE.cin} | GSTIN: {SITE.gstin}

@@ -49,27 +49,21 @@ export const TRUST_PILLARS = [
     icon: LayoutGrid,
     title: 'Smart Daily Management',
     description:
-      'Track budgets, home upkeep, vehicles, reminders, groceries and more from one app.',
+      'Organize reminders, documents, home upkeep, grocery lists, vehicles, and personal records from one app.',
   },
   {
     icon: Sparkles,
     title: 'Free to Start',
-    description: 'Start free and unlock premium tools only when you need them.',
+    description: 'Start free and subscribe for premium software features when you need them.',
   },
 ];
 
 /** Relatable family moments — used only in FamiliarMoments section */
 export const FAMILIAR_MOMENTS = [
   {
-    icon: Receipt,
-    title: 'Month-end already?',
-    story: 'Salary arrived on Monday — and by Friday everyone is asking where it went.',
-    tone: 'money',
-  },
-  {
-    icon: Home,
-    title: 'Service due… again?',
-    story: 'The geyser, the AC, the water purifier — you remember only when something stops working.',
+    icon: FileSearch,
+    title: 'Where did we keep that paper?',
+    story: 'School forms, rent receipts, ID copies — each in a different drawer or phone gallery.',
     tone: 'home',
   },
   {
@@ -79,16 +73,22 @@ export const FAMILIAR_MOMENTS = [
     tone: 'family',
   },
   {
+    icon: Home,
+    title: 'Service due… again?',
+    story: 'The geyser, the AC, the water purifier — you remember only when something stops working.',
+    tone: 'home',
+  },
+  {
+    icon: ShoppingCart,
+    title: 'List banayi thi, mil nahi rahi',
+    story: 'Groceries discussed at breakfast, written in a chat, and half the items still missed at the store.',
+    tone: 'grocery',
+  },
+  {
     icon: PartyPopper,
     title: 'Festival wish ready?',
     story: 'Diwali morning — you meant to send cards to family, but the right greeting and contact list were not ready in time.',
     tone: 'family',
-  },
-  {
-    icon: FileSearch,
-    title: 'Where did we keep that paper?',
-    story: 'School forms, rent receipts, ID copies — each in a different drawer or phone gallery.',
-    tone: 'home',
   },
   {
     icon: Car,
@@ -97,10 +97,10 @@ export const FAMILIAR_MOMENTS = [
     tone: 'vehicle',
   },
   {
-    icon: ShoppingCart,
-    title: 'List banayi thi, mil nahi rahi',
-    story: 'Groceries discussed at breakfast, written in a chat, and half the items still missed at the store.',
-    tone: 'grocery',
+    icon: Receipt,
+    title: 'Month-end already?',
+    story: 'Salary arrived on Monday — and by Friday everyone is asking where it went.',
+    tone: 'money',
   },
 ];
 
@@ -111,22 +111,13 @@ export const FAMILIAR_MOMENTS_CLOSING =
   'Thankfully, these daily problems don\u2019t have to stay complicated.';
 
 export const LIFE_AREAS_INTRO =
-  'BharatVow is one connected platform for the different parts of your digital life — budget and accounts, home, vehicles, celebrations, reminders, festivals, grocery, travel, and daily tools. Each area has dedicated Digital Tools that work together in the same app.';
+  'BharatVow is subscription-based productivity software for the different parts of your digital life — personal organization, reminders, documents, grocery planning, personal records, home upkeep, vehicles, celebrations, festivals, travel, and daily tools. Each area has dedicated Digital Tools that work together in the same app.';
 
 export const LIFE_AREAS_CLOSING =
   'Every tool connects to simplify your complete digital life.';
 
 /** Life areas hub — used only in LifeAreasBento section */
 export const LIFE_AREAS_HOME = [
-  {
-    slug: 'money',
-    title: 'Manage Your Budget',
-    description: 'Salary, udhaar, and daily expenses — organised without juggling notebooks or chats.',
-    icon: PieChart,
-    chip: 'money',
-    toolLabel: getLifeAreaToolLabel('money'),
-    tools: resolveModuleDisplayNames(LIFE_AREA_MODULE_SLUGS.money),
-  },
   {
     slug: 'home',
     title: 'Manage Your Home',
@@ -146,15 +137,6 @@ export const LIFE_AREAS_HOME = [
     tools: resolveModuleDisplayNames(LIFE_AREA_MODULE_SLUGS.family),
   },
   {
-    slug: 'vehicle',
-    title: 'Manage Your Vehicles',
-    description: 'RC, insurance, and service history — on your phone when it matters.',
-    icon: Car,
-    chip: 'vehicle',
-    toolLabel: getLifeAreaToolLabel('vehicle'),
-    tools: resolveModuleDisplayNames(LIFE_AREA_MODULE_SLUGS.vehicle),
-  },
-  {
     slug: 'grocery',
     title: 'Manage Your Grocery',
     description: 'One shopping list that travels with you to the market.',
@@ -162,6 +144,24 @@ export const LIFE_AREAS_HOME = [
     chip: 'grocery',
     toolLabel: getLifeAreaToolLabel('grocery'),
     tools: resolveModuleDisplayNames(LIFE_AREA_MODULE_SLUGS.grocery),
+  },
+  {
+    slug: 'daily-life',
+    title: 'Manage Your Daily Life',
+    description: 'Links, WhatsApp status, and everyday capture — free tools that stay with your account.',
+    icon: Link2,
+    chip: 'daily',
+    toolLabel: getLifeAreaToolLabel('daily-life'),
+    tools: resolveModuleDisplayNames(LIFE_AREA_MODULE_SLUGS['daily-life']),
+  },
+  {
+    slug: 'vehicle',
+    title: 'Manage Your Vehicles',
+    description: 'RC, insurance, and service history — on your phone when it matters.',
+    icon: Car,
+    chip: 'vehicle',
+    toolLabel: getLifeAreaToolLabel('vehicle'),
+    tools: resolveModuleDisplayNames(LIFE_AREA_MODULE_SLUGS.vehicle),
   },
   {
     slug: 'travel',
@@ -173,13 +173,13 @@ export const LIFE_AREAS_HOME = [
     tools: resolveModuleDisplayNames(LIFE_AREA_MODULE_SLUGS.travel),
   },
   {
-    slug: 'daily-life',
-    title: 'Manage Your Daily Life',
-    description: 'Links, WhatsApp status, and everyday capture — free tools that stay with your account.',
-    icon: Link2,
-    chip: 'daily',
-    toolLabel: getLifeAreaToolLabel('daily-life'),
-    tools: resolveModuleDisplayNames(LIFE_AREA_MODULE_SLUGS['daily-life']),
+    slug: 'money',
+    title: 'Manage Your Budget',
+    description: 'Salary, udhaar, and daily expenses — organised without juggling notebooks or chats.',
+    icon: PieChart,
+    chip: 'money',
+    toolLabel: getLifeAreaToolLabel('money'),
+    tools: resolveModuleDisplayNames(LIFE_AREA_MODULE_SLUGS.money),
   },
 ];
 
@@ -210,24 +210,36 @@ export const MORNING_STORY = {
 };
 
 export const HERO = {
-  eyebrow: 'Personal Digital Life Platform',
+  eyebrow: 'Personal Productivity & Life Organization Software',
   title: 'Organize your personal digital life in one place',
   description:
-    'You already manage many parts of your life every day — budgets, home, vehicles, events, celebrations, reminders, festivals, grocery, and everyday records. BharatVow helps you organize personal records, expenses, reminders, documents, and daily tools in one privacy-first, easy-to-use platform.',
+    'You already manage reminders, personal records, documents, home upkeep, grocery, events, celebrations, vehicles, and everyday tools. BharatVow is subscription-based productivity software that helps you organize these in one privacy-first, easy-to-use app.',
   topics: [
-    'Home',
-    'Budget',
-    'Expenses',
-    'Vehicles',
-    'Events',
-    'Festivals',
-    'Grocery',
-    'Trips',
-    'Links',
     'Reminders',
     'Records',
+    'Home',
+    'Grocery',
+    'Events',
+    'Festivals',
+    'Vehicles',
+    'Trips',
+    'Links',
+    'Budget',
+    'Expenses',
   ],
   ctaSecondary: 'Explore Your Digital Life',
+};
+
+export const BUSINESS_IDENTITY = {
+  statement:
+    'BharatVow is a subscription-based Personal Productivity & Life Organization Software developed by Atulit Baldhama Digital Solutions Private Limited.',
+  subscriptionHighlights: [
+    'Monthly Subscription',
+    'Yearly Subscription',
+    'Premium Software Features',
+  ],
+  positioningNote:
+    'Digital software subscription for personal productivity — not a wallet, bank, lending, investment, or payment platform.',
 };
 
 export const DOWNLOAD = {

@@ -3,6 +3,10 @@ import { digitalLifePath, legalPath } from '@/utils/routes';
 
 const SUPPORT_EMAIL = 'support@bharatvow.com';
 
+/** Official Google Play listing — single source of truth for all download CTAs */
+export const PLAY_STORE_URL =
+  'https://play.google.com/store/apps/details?id=com.bharatvow.app';
+
 /** Footer link columns — all routes must exist */
 export const FOOTER_COLUMNS = [
   {
@@ -40,7 +44,7 @@ export const FOOTER_COLUMNS = [
 
 export const SITE_CONFIG = {
   name: 'BharatVow',
-  tagline: 'Personal Digital Life Platform',
+  tagline: 'Personal Productivity & Life Organization Software',
   url: 'https://bharatvow.com',
   email: import.meta.env.VITE_SUPPORT_EMAIL?.trim() || SUPPORT_EMAIL,
   /** Defaults to support@ — override with VITE_PRIVACY_EMAIL when a dedicated inbox is used */
@@ -54,12 +58,12 @@ export const SITE_CONFIG = {
     import.meta.env.VITE_SUPPORT_EMAIL?.trim() ||
     SUPPORT_EMAIL,
   phone: '+91 9509945745',
-  company: 'Atulit Baldhama Digital Solutions Pvt. Ltd.',
+  company: 'Atulit Baldhama Digital Solutions Private Limited',
   address: '507, 5th Floor, Gordhansky Tower, Jhotwara, Jaipur, Rajasthan – 302012, India',
   cin: 'U51909RJ2019PTC066479',
   gstin: '08AASCA7856P1ZJ',
-  /** Set VITE_PLAY_STORE_URL in .env before launch — e.g. https://play.google.com/store/apps/details?id=... */
-  playStoreUrl: import.meta.env.VITE_PLAY_STORE_URL?.trim() || '#',
+  /** Override with VITE_PLAY_STORE_URL in .env when needed; defaults to PLAY_STORE_URL */
+  playStoreUrl: import.meta.env.VITE_PLAY_STORE_URL?.trim() || PLAY_STORE_URL,
   /** Optional — shown on Download and Legal Information when set */
   androidPackageName: import.meta.env.VITE_ANDROID_PACKAGE?.trim() || '',
 };
@@ -68,11 +72,14 @@ export const SITE_CONFIG = {
 export const FOOTER_COMPLIANCE = {
   copyrightSuffix: 'All rights reserved.',
   countryOfOrigin: 'Made in India 🇮🇳',
+  developedOperatedBy:
+    'Developed & Operated by Atulit Baldhama Digital Solutions Private Limited',
+  businessType: 'Business Type: Software as a Service (SaaS)',
   productOf: `${SITE_CONFIG.name} is a product of ${SITE_CONFIG.company}`,
   paymentNotice:
-    'BharatVow is a Personal Digital Life Platform for personal record keeping. App subscriptions are billed through Google Play. BharatVow does not provide banking, wallet, payment, money transfer, lending, investment, or insurance services.',
+    'BharatVow is subscription-based personal productivity software. App subscriptions are billed through Google Play. BharatVow does not provide banking, wallet, payment, money transfer, lending, investment, or insurance services.',
   serviceDisclaimer:
-    'BharatVow helps you organize personal records, expenses, reminders, documents, and everyday digital life tools. No physical goods are sold or delivered.',
+    'BharatVow helps you organize personal records, reminders, documents, grocery planning, and everyday productivity tools. No physical goods are sold or delivered.',
 };
 
 /** @deprecated use SITE_CONFIG — kept for existing imports */

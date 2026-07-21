@@ -12,7 +12,7 @@ const crumbs = [
   { label: 'Download', path: DOWNLOAD_PAGE.path },
 ];
 
-const playStoreLive = SITE.playStoreUrl !== '#' && SITE.playStoreUrl.startsWith('http');
+const playStoreLive = SITE.playStoreUrl.startsWith('http');
 
 export default function Download() {
   return (

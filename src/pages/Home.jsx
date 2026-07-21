@@ -10,6 +10,7 @@ import {
 import LazySection from '@/components/common/LazySection';
 import { HOME_SECTIONS } from '@/config/homeSections';
 import HeroSection from '@/components/sections/home/HeroSection';
+import BusinessIdentityBand from '@/components/sections/home/BusinessIdentityBand';
 import TrustBar from '@/components/sections/home/TrustBar';
 
 const meta = getPageMeta('/');
@@ -50,6 +51,7 @@ export default function Home() {
       />
 
       <HeroSection />
+      <BusinessIdentityBand />
       <TrustBar />
       <LazySection loader={sectionLoaders.familiar} minHeight={420} fallbackLabel="Loading familiar moments" />
       <LazySection loader={sectionLoaders.lifeAreas} minHeight={520} fallbackLabel="Loading life areas" />

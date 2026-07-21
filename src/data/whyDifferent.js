@@ -15,7 +15,7 @@ export const WHY_DIFFERENT = {
   eyebrow: 'The difference is connection',
   title: 'Your digital life shouldn\u2019t live across six different apps',
   intro:
-    'Most people already juggle a budget tracker, in-app reminders, grocery lists in chat, vehicle papers in a folder, and notes scattered everywhere. BharatVow brings those everyday needs into one calm platform — so less time is spent searching, and more time stays on what matters.',
+    'Most people already juggle reminder apps, document folders, grocery lists in chat, vehicle papers in a drawer, and notes scattered everywhere. BharatVow brings those everyday needs into one subscription-based productivity app — so less time is spent searching, and more time stays on what matters.',
   traditional: {
     label: 'The traditional way',
     caption: 'Separate apps. Separate habits. Nothing shared.',
@@ -32,13 +32,13 @@ export const WHY_DIFFERENT = {
     label: 'BharatVow',
     caption: 'One account. Seven life areas. Always together.',
     lifeAreas: [
-      'Budget',
       'Home',
+      'Reminders',
+      'Grocery',
       'Events',
       'Vehicles',
-      'Grocery',
       'Travel',
-      'Daily life',
+      'Budget',
     ],
   },
   benefits: [
@@ -46,7 +46,7 @@ export const WHY_DIFFERENT = {
       icon: Link2,
       title: 'Everything connected',
       description:
-        'Budget, home, and daily updates sit in the same place — not spread across five home screens.',
+        'Reminders, home records, and daily tools sit in the same place — not spread across five home screens.',
     },
     {
       icon: Search,
