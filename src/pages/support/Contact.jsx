@@ -12,7 +12,6 @@ import PageHeader from '@/components/ui/PageHeader';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import SurfaceCard from '@/components/ui/SurfaceCard';
-import ContactForm from '@/components/support/ContactForm';
 import { InternalLink } from '@/components/common/LegalProse';
 import { CONTACT } from '@/data/support';
 import { SITE } from '@/utils/constants';
@@ -54,7 +53,7 @@ export default function Contact() {
       <PageHeader title={CONTACT.headline} lead={CONTACT.intro} />
 
       <Container className="pb-section-y md:pb-section-y-lg">
-        {/* Support option cards */}
+        {/* Support channels */}
         <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-3 md:gap-6">
           <SurfaceCard hover="lift" className="p-6 motion-safe:animate-fade-up">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-soft text-primary">
@@ -113,6 +112,9 @@ export default function Contact() {
               <MapPin size={20} strokeWidth={2} aria-hidden />
             </div>
             <h2 className="mt-4 font-display text-lg font-bold text-heading">Business Address</h2>
+            {addressOption?.description && (
+              <p className="mt-1 text-xs leading-relaxed text-muted">{addressOption.description}</p>
+            )}
             <address className="mt-3 not-italic text-sm leading-relaxed text-body">
               <span className="font-medium text-heading">{SITE.company}</span>
               {addressOption?.addressLines.map((line) => (
@@ -121,7 +123,7 @@ export default function Contact() {
                 </span>
               ))}
             </address>
-            <p className="mt-3 text-xs text-muted">
+            <p className="mt-4 text-xs text-muted">
               Grievance enquiries:{' '}
               <a
                 href={`mailto:${SITE.grievanceEmail}?subject=${encodeURIComponent('Grievance')}`}
@@ -132,11 +134,15 @@ export default function Contact() {
               with subject &ldquo;Grievance&rdquo;. See{' '}
               <InternalLink to="/grievance-redressal">Grievance Redressal</InternalLink>.
             </p>
+            <p className="mt-3 text-xs text-muted">
+              {CONTACT.grievanceOfficerNote}{' '}
+              <InternalLink to="/grievance-redressal">Grievance procedure →</InternalLink>
+            </p>
           </SurfaceCard>
         </div>
 
-        {/* Business hours banner */}
-        <SurfaceCard className="mx-auto mt-6 max-w-5xl p-5 md:p-6">
+        {/* Business hours */}
+        <SurfaceCard className="mx-auto mt-6 max-w-5xl p-5 md:mt-8 md:p-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-secondary-soft text-secondary-dark">
               <Clock size={20} strokeWidth={2} aria-hidden />
@@ -150,91 +156,47 @@ export default function Contact() {
           </div>
         </SurfaceCard>
 
-        {/* Form + location */}
-        <div className="mx-auto mt-12 grid max-w-5xl gap-8 lg:grid-cols-5 lg:gap-10">
-          <div className="lg:col-span-3">
-            <ContactForm />
-          </div>
-
-          <div className="space-y-6 lg:col-span-2">
-            <SurfaceCard className="p-6">
-              <h2 className="font-display text-lg font-bold text-heading">{CONTACT.responseInfo.title}</h2>
-              <div className="mt-4 space-y-3">
-                {CONTACT.responseInfo.paragraphs.map((paragraph) => (
-                  <p key={paragraph.slice(0, 48)} className="text-sm leading-relaxed text-muted">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-            </SurfaceCard>
-
-            <SurfaceCard className="p-6">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-soft text-primary">
-                <MapPin size={20} strokeWidth={2} aria-hidden />
-              </div>
-              <h2 className="mt-4 font-display text-lg font-bold text-heading">Office Location</h2>
-              <address className="mt-3 not-italic text-sm leading-relaxed text-body">
-                <span className="font-medium text-heading">{SITE.company}</span>
-                {addressOption?.addressLines.map((line) => (
-                  <span key={line} className="block">
-                    {line}
-                  </span>
-                ))}
-              </address>
-              <p className="mt-4 text-xs text-muted">
-                {CONTACT.grievanceOfficerNote}{' '}
-                <InternalLink to="/grievance-redressal">Grievance procedure →</InternalLink>
-              </p>
-            </SurfaceCard>
-          </div>
-        </div>
-
-        {/* Need help links */}
-        <section className="mx-auto mt-14 max-w-5xl" aria-labelledby="contact-help-heading">
-          <div className="flex items-center gap-3">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-soft text-primary">
-              <HelpCircle size={18} strokeWidth={2} aria-hidden />
-            </span>
-            <h2 id="contact-help-heading" className="font-display text-xl font-bold text-heading">
-              Need Help?
+        {/* What to expect — primary information section */}
+        <section
+          className="mx-auto mt-12 max-w-5xl md:mt-16"
+          aria-labelledby="contact-expect-heading"
+        >
+          <SurfaceCard variant="moment" className="p-6 md:p-10 lg:p-12">
+            <h2
+              id="contact-expect-heading"
+              className="font-display text-xl font-bold text-heading md:text-2xl"
+            >
+              {CONTACT.responseInfo.title}
             </h2>
-          </div>
-          <nav
-            aria-label="Quick help links"
-            className="mt-5 flex flex-wrap gap-3"
-          >
-            {CONTACT.helpLinks.map(({ label, path }) => (
-              <InternalLink
-                key={path}
-                to={path}
-                className={cn(
-                  'rounded-full border border-border bg-surface px-4 py-2.5 text-sm font-medium min-h-[44px] inline-flex items-center',
-                  'transition-colors duration-200 hover:border-primary-mid hover:bg-primary-soft/40',
-                )}
-              >
-                {label}
-              </InternalLink>
-            ))}
-          </nav>
+            <div className="mt-6 grid gap-5 md:mt-8 md:grid-cols-2 md:gap-x-10 md:gap-y-6">
+              {CONTACT.responseInfo.paragraphs.map((paragraph) => (
+                <p key={paragraph.slice(0, 48)} className="text-sm leading-relaxed text-muted">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </SurfaceCard>
         </section>
 
-        {/* Company information */}
-        <SurfaceCard className="mx-auto mt-12 max-w-5xl p-6 md:p-8">
+        {/* Company information — trust anchor */}
+        <SurfaceCard className="mx-auto mt-12 max-w-5xl p-7 md:mt-16 md:p-10">
           <div className="flex items-center gap-3">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-soft text-primary">
-              <Building2 size={18} strokeWidth={2} aria-hidden />
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-soft text-primary">
+              <Building2 size={20} strokeWidth={2} aria-hidden />
             </span>
-            <h2 className="font-display text-xl font-bold text-heading">{CONTACT.company.title}</h2>
+            <h2 className="font-display text-xl font-bold text-heading md:text-2xl">
+              {CONTACT.company.title}
+            </h2>
           </div>
-          <dl className="mt-6 grid gap-4 sm:grid-cols-2">
+          <dl className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {CONTACT.company.fields.map(({ label, value, href }) => (
               <div key={label}>
                 <dt className="text-xs font-medium uppercase tracking-wide text-muted">{label}</dt>
-                <dd className="mt-1 text-sm font-medium text-heading">
+                <dd className="mt-1.5 text-sm font-medium text-heading">
                   {href ? (
                     <a
                       href={href}
-                      className="inline-flex items-center gap-1.5 text-primary-light hover:text-primary"
+                      className="inline-flex items-center gap-1.5 break-anywhere text-primary-light hover:text-primary"
                       {...(href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                     >
                       {href.startsWith('http') && <Globe size={14} strokeWidth={2} aria-hidden />}
@@ -249,6 +211,35 @@ export default function Contact() {
             ))}
           </dl>
         </SurfaceCard>
+
+        {/* Need help links */}
+        <section
+          className="mx-auto mt-12 max-w-5xl border-t border-border pt-10 md:mt-14"
+          aria-labelledby="contact-help-heading"
+        >
+          <div className="flex items-center gap-3">
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-soft text-primary">
+              <HelpCircle size={18} strokeWidth={2} aria-hidden />
+            </span>
+            <h2 id="contact-help-heading" className="font-display text-xl font-bold text-heading">
+              Need Help?
+            </h2>
+          </div>
+          <nav aria-label="Quick help links" className="mt-5 flex flex-wrap gap-3">
+            {CONTACT.helpLinks.map(({ label, path }) => (
+              <InternalLink
+                key={path}
+                to={path}
+                className={cn(
+                  'inline-flex min-h-[44px] items-center rounded-full border border-border bg-surface px-4 py-2.5 text-sm font-medium',
+                  'transition-colors duration-200 hover:border-primary-mid hover:bg-primary-soft/40',
+                )}
+              >
+                {label}
+              </InternalLink>
+            ))}
+          </nav>
+        </section>
 
         {/* Final CTA */}
         <div className="mx-auto mt-14 max-w-2xl">

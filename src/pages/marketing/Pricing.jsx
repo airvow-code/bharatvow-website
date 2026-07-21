@@ -215,7 +215,7 @@ export default function Pricing() {
         </section>
 
         {/* FAQ */}
-        <section className="mx-auto mt-16 max-w-2xl md:mt-20">
+        <section className="mx-auto mt-16 max-w-4xl md:mt-20">
           <h2 className="font-display text-xl font-bold text-heading md:text-2xl">
             Frequently Asked Questions
           </h2>
